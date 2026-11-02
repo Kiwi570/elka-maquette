@@ -1,0 +1,33 @@
+{
+  "nom": "Elka Hypnose",
+  "adresse": "https://elka-maquette.vercel.app",
+  "siteActuel": "elkahypnose.fr",
+  "version": 1,
+  "langues": ["fr"],
+  "navigation": [
+    "accueil",
+    { "page": "suivi" },
+    { "page": "accueil", "ancre": "ateliers", "libelle": "nav.ateliers" },
+    { "page": "accueil", "ancre": "parcours", "libelle": "nav.parcours" },
+    { "page": "tarifs-rendez-vous" }
+  ],
+  "actionEntete": { "page": "tarifs-rendez-vous", "ancre": "rendez-vous" },
+  "couleurs": { "fond": "#F1ECE2", "texte": "#2F3A2C", "voile": "#2F3A2C", "ouverture": "#F1ECE2", "menu": "#2F3A2C", "theme": "#F1ECE2" },
+  "contact": {
+    "telephone": "09 53 72 51 14",
+    "telephoneLien": "+33953725114",
+    "email": "elkahypnose@free.fr",
+    "adresse": "6, rue Victor de Lanneau, 21460 Bard-lès-Époisses",
+    "rue": "6, rue Victor de Lanneau",
+    "ville": "21460 Bard-lès-Époisses",
+    "stationnement": "Stationnement facile sur la place du village, à 50 m de l'église."
+  },
+  "liens": {
+    "resalib": "https://www.resalib.fr/praticien/106137-laurence-katchavenda-ei-elkahypnose-praticien-en-hypnose-bard-les-epoisses",
+    "facebook": "https://www.facebook.com/profile.php?id=61572601529462",
+    "instagram": "https://instagram.com/elkahypnose/"
+  },
+  "polices": ["/assets/fonts/fraunces.woff2", "/assets/fonts/manrope.woff2"],
+  "imagePartage": "grok/accueil-ouverture-1280.webp",
+  "curseur": true
+}

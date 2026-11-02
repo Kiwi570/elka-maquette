@@ -1,0 +1,74 @@
+[
+ {
+  "source": "recu/site/laurence/portrait-etalonne.jpg",
+  "nom": "laurence-portrait",
+  "cadrage": [
+   50,
+   40
+  ]
+ },
+ {
+  "source": "recu/site/visio-laurence-etalonne.jpg",
+  "nom": "visio-laurence",
+  "cadrage": [
+   52,
+   42
+  ]
+ },
+ {
+  "source": "recu/site/autres/image-06-etalonne.jpg",
+  "nom": "cabinet-salle",
+  "cadrage": [
+   45,
+   55
+  ]
+ },
+ {
+  "source": "recu/site/cabinet/voyage-interieur-etalonne.jpg",
+  "nom": "cabinet-fauteuil",
+  "cadrage": [
+   50,
+   45
+  ]
+ },
+ {
+  "source": "recu/site/cabinet/entretien-etalonne.jpg",
+  "nom": "seance-entretien",
+  "cadrage": [
+   62,
+   45
+  ]
+ },
+ {
+  "source": "recu/site/cabinet/seance-allongee-etalonne.jpg",
+  "nom": "seance-allongee",
+  "cadrage": [
+   45,
+   45
+  ]
+ },
+ {
+  "source": "recu/site/cabinet/seance-debout-etalonne.jpg",
+  "nom": "seance-debout",
+  "cadrage": [
+   48,
+   40
+  ]
+ },
+ {
+  "source": "recu/site/blog/responsable-mais-pas-coupable.png",
+  "nom": "grok/carnet-responsable",
+  "cadrage": [
+   50,
+   50
+  ]
+ },
+ {
+  "source": "recu/site/blog/reprendre-les-commandes.png",
+  "nom": "grok/carnet-commandes",
+  "cadrage": [
+   50,
+   50
+  ]
+ }
+]

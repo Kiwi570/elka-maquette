@@ -1,0 +1,33 @@
+{
+  "cabinet": {
+    "nom": "Bard-lès-Époisses",
+    "lat": 47.5322,
+    "lon": 4.2167
+  },
+  "villes": [
+    {
+      "nom": "Époisses",
+      "lat": 47.5078,
+      "lon": 4.1744,
+      "position": "gauche"
+    },
+    {
+      "nom": "Semur-en-Auxois",
+      "lat": 47.4914,
+      "lon": 4.3336,
+      "position": "bas"
+    },
+    {
+      "nom": "Montbard",
+      "lat": 47.6236,
+      "lon": 4.3378,
+      "position": "gauche"
+    },
+    {
+      "nom": "Avallon",
+      "lat": 47.4908,
+      "lon": 3.9092,
+      "position": "haut"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+[
+  {
+    "id": "stress-confiance",
+    "image": "grok/accompagnement-stress-confiance",
+    "cadrage": "42% 55%",
+    "titre": "Gérer le stress et l’anxiété, renforcer la confiance en soi",
+    "alt": "Étang calme au lever du jour, brume légère sur l’eau",
+    "liste": [
+      "Sensation d’être constamment sous pression",
+      "Difficultés à se détendre ou à lâcher prise",
+      "Inquiétudes excessives et persistantes",
+      "Troubles du sommeil liés au mental agité",
+      "Irritabilité ou sautes d’humeur inexpliquées"
+    ]
+  },
+  {
+    "id": "habitudes",
+    "image": "grok/accompagnement-habitudes",
+    "cadrage": "58% 55%",
+    "titre": "Rompre avec une habitude ou une addiction",
+    "alt": "Vieille barrière de bois ouverte dans un mur de pierre sèche, chemin dans la brume",
+    "liste": [
+      "Sensation de perte de contrôle face à une habitude néfaste",
+      "Culpabilité ou frustration liées à des comportements répétitifs",
+      "Difficultés à résister à des envies ou à des déclencheurs",
+      "Isolement ou sentiment de honte à cause de l’habitude"
+    ]
+  },
+  {
+    "id": "changements",
+    "image": "grok/accompagnement-changements",
+    "cadrage": "50% 62%",
+    "titre": "Accompagner les changements de vie",
+    "alt": "Chemin de campagne qui se sépare en deux au lever du soleil",
+    "liste": [
+      "Changement de carrière, déménagement, maladie ou deuil",
+      "Peur de l’inconnu et des conséquences des changements",
+      "Manque de soutien ou de compréhension de l’entourage",
+      "Résistance au changement, même lorsqu’il semble nécessaire"
+    ]
+  },
+  {
+    "id": "enfants",
+    "image": "grok/accompagnement-enfants",
+    "cadrage": "50% 50%",
+    "titre": "Les enfants, dès 5 ans",
+    "alt": "Mains d’enfant qui dessinent un soleil et un arbre aux craies grasses",
+    "liste": [
+      "Une première séance d’une heure avec le ou les parents, sans l’enfant",
+      "Puis une séance d’une heure avec l’enfant seul",
+      "Uniquement au cabinet, jamais en visio"
+    ]
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "stress-sommeil-lundis",
+    "theme": "Stress et sommeil",
+    "jour": "les lundis",
+    "debut": "19:30",
+    "fin": "21:00",
+    "seances": ["2026-11-02", "2026-11-09", "2026-11-16", "2026-11-23"],
+    "texte": "Des outils simples et concrets pour mieux gérer les moments de tension et favoriser le relâchement."
+  },
+  {
+    "id": "dialogue-interieur-samedis-matin",
+    "theme": "Dialogue intérieur",
+    "jour": "les samedis matin",
+    "debut": "10:30",
+    "fin": "12:00",
+    "seances": ["2026-11-07", "2026-11-14", "2026-11-21", "2026-11-28"],
+    "texte": "Apprendre à formuler vos objectifs et à dialoguer avec votre inconscient pour faire émerger des solutions."
+  },
+  {
+    "id": "confiance-en-soi-mardis",
+    "theme": "Confiance en soi",
+    "jour": "les mardis",
+    "debut": "19:00",
+    "fin": "20:30",
+    "seances": ["2026-11-17", "2026-11-24", "2026-12-01", "2026-12-08"],
+    "texte": "Des outils simples pour mieux mobiliser vos ressources et avancer avec davantage de sérénité."
+  },
+  {
+    "id": "stress-sommeil-mercredis",
+    "theme": "Stress et sommeil",
+    "jour": "les mercredis",
+    "debut": "19:00",
+    "fin": "20:30",
+    "seances": ["2026-11-18", "2026-11-25", "2026-12-02", "2026-12-09"],
+    "texte": "Des outils simples et concrets pour mieux gérer les moments de tension et favoriser le relâchement."
+  },
+  {
+    "id": "dialogue-interieur-samedis-apres-midi",
+    "theme": "Dialogue intérieur",
+    "jour": "les samedis après-midi",
+    "debut": "13:00",
+    "fin": "14:30",
+    "seances": ["2026-11-21", "2026-11-28", "2026-12-05", "2026-12-12"],
+    "texte": "Apprendre à formuler vos objectifs et à dialoguer avec votre inconscient pour faire émerger des solutions."
+  }
+]

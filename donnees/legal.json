@@ -1,0 +1,177 @@
+{
+  "mentions": {
+    "titre": "Mentions légales",
+    "intro": "Informations relevées sur le site actuel, à vérifier par Laurence Katchavenda avant la mise en ligne.",
+    "sections": [
+      {
+        "id": "fiche",
+        "titre": "Fiche récapitulative : informations à fournir",
+        "aCompleter": true,
+        "liste": [
+          "Directeur ou directrice de la publication : à compléter (Laurence Katchavenda ?).",
+          "Auteur des photos du cabinet et du portrait : à compléter.",
+          "Accord écrit de la personne accompagnée visible sur les photos de séance : à compléter.",
+          "Assurance de responsabilité civile professionnelle : à compléter.",
+          "Médiateur de la consommation désigné dans les CGV : nom et coordonnées à compléter.",
+          "Mutuelles qui prennent en charge les séances : à compléter.",
+          "Congés et fermetures exceptionnelles du cabinet : à compléter.",
+          "Durée de conservation des demandes de rappel : à compléter.",
+          "Conditions de paiement et d’annulation à harmoniser entre les CGV et les fiches de réservation : à compléter.",
+          "Texte intégral de la charte d’engagement et des CGV : à compléter."
+        ]
+      },
+      {
+        "id": "editeur",
+        "titre": "Éditeur du site",
+        "paragraphes": [
+          "Laurence Katchavenda EI, exploitée sous le nom Elka Hypnose. Micro-entreprise, entrepreneur individuel, profession libérale.",
+          "SIRET : 940 534 191 00017 · Code APE : 9609Z.",
+          "6, rue Victor de Lanneau, 21460 Bard-lès-Époisses.",
+          "Téléphone : 09 53 72 51 14 · E-mail : elkahypnose@free.fr.",
+          "Membre affiliée au Syndicat national des hypnothérapeutes (SNH)."
+        ]
+      },
+      {
+        "id": "hebergeur",
+        "titre": "Hébergeur",
+        "paragraphes": [
+          "Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, États-Unis."
+        ]
+      },
+      {
+        "id": "credits",
+        "titre": "Crédits",
+        "paragraphes": [
+          "Logo, portrait de Laurence Katchavenda et photos du cabinet : Elka Hypnose (auteur des photos à compléter).",
+          "Illustrations générées par intelligence artificielle (Grok) : paysages, textures, ambiances et couvertures d’articles. Chacune porte la mention « Illustration générée » ; aucune ne représente le cabinet ni une séance réelle.",
+          "Polices : Fraunces et Manrope, sous licence SIL Open Font License."
+        ]
+      },
+      {
+        "id": "avertissement",
+        "titre": "Avertissement",
+        "paragraphes": [
+          "Laurence Katchavenda n’est pas médecin et ne pose pas de diagnostic. L’hypnothérapie ne se substitue en aucun cas aux suivis ou traitements médicaux.",
+          "En cas d’urgence vitale : 15 ou 112. En cas d’idées suicidaires : 3114, numéro national de prévention du suicide."
+        ]
+      },
+      {
+        "id": "propriete",
+        "titre": "Propriété intellectuelle",
+        "paragraphes": [
+          "Les textes, photos et le logo de ce site appartiennent à Elka Hypnose. Toute reproduction sans autorisation est interdite."
+        ]
+      }
+    ]
+  },
+  "confidentialite": {
+    "titre": "Politique de confidentialité",
+    "intro": "Version de travail pour la maquette : à valider par Laurence Katchavenda avant la mise en ligne.",
+    "sections": [
+      {
+        "id": "responsable",
+        "titre": "Responsable du traitement",
+        "paragraphes": [
+          "Laurence Katchavenda EI (Elka Hypnose), 6, rue Victor de Lanneau, 21460 Bard-lès-Époisses · elkahypnose@free.fr."
+        ]
+      },
+      {
+        "id": "donnees",
+        "titre": "Données recueillies",
+        "paragraphes": [
+          "Le formulaire de demande de rappel recueille votre nom, votre téléphone et, si vous le souhaitez, votre e-mail, le meilleur moment pour vous rappeler et un message.",
+          "Dans cette maquette, le formulaire est simulé : rien n’est envoyé ni enregistré."
+        ]
+      },
+      {
+        "id": "finalite",
+        "titre": "Finalité",
+        "paragraphes": [
+          "Ces données servent uniquement à vous recontacter au sujet de votre demande. Elles ne sont ni cédées ni utilisées à d’autres fins."
+        ]
+      },
+      {
+        "id": "conservation",
+        "titre": "Durée de conservation",
+        "aCompleter": true,
+        "paragraphes": [
+          "Durée de conservation des demandes : à compléter."
+        ]
+      },
+      {
+        "id": "preferences",
+        "titre": "Préférences enregistrées dans votre navigateur",
+        "paragraphes": [
+          "Le site ne dépose aucun cookie. Votre choix « Réduire les animations » est simplement gardé dans votre navigateur, qui peut l’effacer à tout moment."
+        ]
+      },
+      {
+        "id": "droits",
+        "titre": "Vos droits",
+        "paragraphes": [
+          "Vous pouvez demander l’accès, la rectification ou l’effacement de vos données en écrivant à elkahypnose@free.fr. Vous pouvez aussi adresser une réclamation à la CNIL."
+        ]
+      }
+    ]
+  },
+  "cgv": {
+    "titre": "Conditions générales de vente",
+    "intro": "Résumé des conditions générales de vente actuelles : texte intégral à compléter.",
+    "sections": [
+      {
+        "id": "prix",
+        "titre": "Prix",
+        "paragraphes": [
+          "Les tarifs sont indiqués en euros, sans TVA (TVA non applicable, art. 293 B du CGI). L’hypnose régressive, exploration des vies passées, est facturée à l’heure."
+        ]
+      },
+      {
+        "id": "reservation",
+        "titre": "Réservation",
+        "paragraphes": [
+          "Une réservation par Résalib est confirmée par son règlement à l’avance. Une séance en visio non réglée 24 h avant n’est pas garantie. Un SMS de confirmation est envoyé 24 h avant le rendez-vous.",
+          "Pour les ateliers d’autohypnose, la réservation devient définitive après paiement, au plus tard une semaine après la réservation."
+        ]
+      },
+      {
+        "id": "paiement",
+        "titre": "Paiement",
+        "paragraphes": [
+          "Par virement ; par chèque ou en espèces avec l’accord préalable de la praticienne ; par carte bancaire uniquement via Résalib. Une facture est remise après paiement intégral.",
+          "Pour les entreprises, le paiement peut intervenir jusqu’à 30 jours après la prestation ; un devis est valable deux mois."
+        ]
+      },
+      {
+        "id": "annulation",
+        "titre": "Annulation et absence",
+        "paragraphes": [
+          "Une annulation sans demande de report et une absence ne sont pas remboursées. Des annulations répétées peuvent conduire à refuser de nouvelles réservations.",
+          "Entreprises et événements : une annulation dans les quinze jours précédant la prestation rend le montant total dû (délai à préciser : jours ou jours ouvrés, à compléter)."
+        ]
+      },
+      {
+        "id": "retard",
+        "titre": "Retards",
+        "paragraphes": [
+          "Au-delà de 20 minutes de retard, la prestation peut être refusée. En entreprise, le temps facturé court à partir de l’heure prévue."
+        ]
+      },
+      {
+        "id": "reclamation",
+        "titre": "Réclamations et médiation",
+        "paragraphes": [
+          "Une réclamation se fait dès la fin de la séance. Si elle est fondée, une nouvelle prestation gratuite ou à tarif réduit est proposée.",
+          "En cas de litige : réclamation écrite d’abord, puis, sans réponse satisfaisante après deux mois, recours au médiateur de la consommation (coordonnées à compléter)."
+        ]
+      },
+      {
+        "id": "sante",
+        "titre": "Santé",
+        "paragraphes": [
+          "La praticienne peut refuser une prestation en cas de contre-indication médicale. L’hypnose ne remplace pas les soins médicaux : consultez votre médecin, notamment en cas de grossesse.",
+          "En cas de force majeure, un report de la séance est proposé."
+        ]
+      }
+    ]
+  }
+}

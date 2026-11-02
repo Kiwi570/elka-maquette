@@ -1,0 +1,420 @@
+{
+  "commun": {
+    "navigation": "Navigation principale",
+    "menu": "Menu",
+    "fermer": "Fermer",
+    "langueAutre": "Autre langue",
+    "actionEntete": "Prendre rendez-vous",
+    "appeler": "Appeler",
+    "calmeReduire": "Réduire les animations",
+    "calmeRetablir": "Rétablir les animations",
+    "calmeSysteme": "Animations réduites par le réglage de votre appareil",
+    "sommaire": "Sommaire",
+    "confort": "Confort de lecture",
+    "retourHaut": "Retour en haut",
+    "maquette": "Maquette : les informations marquées « à compléter » seront fournies par Laurence Katchavenda.",
+    "evitement": "Aller au contenu",
+    "mentionIa": "Illustration générée",
+    "pause": "Pause",
+    "lecture": "Lecture",
+    "introLigne": "Hypnose · Bard-lès-Époisses",
+    "nouvelOnglet": "(nouvel onglet)",
+    "aCompleter": "à compléter",
+    "contact": "Contact",
+    "informations": "Informations",
+    "suivre": "Suivre Elka Hypnose",
+    "resalib": "Rendez-vous sur Résalib",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "logoAlt": "Elka Hypn’ose, retour à l’accueil",
+    "avertissement": "Je ne suis pas médecin : l’hypnothérapie ne remplace pas un suivi ou un traitement médical.",
+    "piedTexte": "Hypnothérapie au cabinet ou en visio, ateliers d’autohypnose en petits groupes.",
+    "rdvCourt": "Rendez-vous",
+    "faireDefiler": "Faites défiler",
+    "glisser": "Faites glisser",
+    "appelerNumero": "Appeler le {tel}"
+  },
+  "statut": {
+    "ouvert": "Joignable maintenant",
+    "ferme": "Fermé en ce moment",
+    "rouvre": "réouverture {quand}",
+    "aujourdhui": "aujourd’hui à {h}",
+    "demain": "demain à {h}",
+    "jour": "{jour} à {h}",
+    "ferie": "Jour férié : horaires à confirmer",
+    "fermeture": "Fermeture exceptionnelle",
+    "horaires": "Lundi au vendredi 9 h – 12 h et 13 h 30 – 19 h, samedi 9 h – 12 h"
+  },
+  "nav": {
+    "ateliers": "Ateliers",
+    "parcours": "Mon parcours"
+  },
+  "pages": {
+    "accueil": {
+      "titre": "Elka Hypnose : hypnothérapie à Bard-lès-Époisses et en visio",
+      "description": "Laurence Katchavenda, hypnothérapeute à Bard-lès-Époisses : séances individuelles et personnalisées au cabinet ou en visio, ateliers d’autohypnose en petits groupes.",
+      "nav": "Accueil",
+      "partageAlt": "Elka Hypnose : collines de l’Auxois au lever du soleil, vues à travers une arche",
+      "accroche": "Libérez votre potentiel grâce à l’hypnose"
+    },
+    "suivi": {
+      "titre": "L’hypnose et le suivi : Elka Hypnose",
+      "description": "Comment se passe un suivi en hypnose avec Laurence Katchavenda : premier rendez-vous, séances, cabinet ou visio, enfants, cadre, charte d’engagement et questions fréquentes.",
+      "nav": "L’hypnose et le suivi",
+      "partageAlt": "Arche de pierre et porte entrouverte sur un pré dans la brume",
+      "accroche": "Comment se passe un suivi"
+    },
+    "tarifs-rendez-vous": {
+      "titre": "Tarifs et rendez-vous : Elka Hypnose",
+      "description": "Tarifs des séances d’hypnose et des ateliers, prise de rendez-vous en ligne, par téléphone ou par rappel, horaires et accès au cabinet de Bard-lès-Époisses.",
+      "nav": "Tarifs et rendez-vous",
+      "partageAlt": "Porte de bois entrouverte, lumière chaude sur la pierre",
+      "accroche": "Tarifs et rendez-vous"
+    },
+    "mentions-legales": {
+      "titre": "Mentions légales : Elka Hypnose",
+      "description": "Éditeur, hébergeur, crédits et informations à compléter du site Elka Hypnose.",
+      "nav": "Mentions légales",
+      "partageAlt": "Arbre seul dans un champ brumeux à l’aube",
+      "accroche": "Mentions légales"
+    },
+    "confidentialite": {
+      "titre": "Politique de confidentialité : Elka Hypnose",
+      "description": "Données personnelles recueillies par le site Elka Hypnose, finalités, durée de conservation et droits.",
+      "nav": "Confidentialité",
+      "partageAlt": "Arbre seul dans un champ brumeux à l’aube",
+      "accroche": "Politique de confidentialité"
+    },
+    "cgv": {
+      "titre": "Conditions générales de vente : Elka Hypnose",
+      "description": "Résumé des conditions générales de vente d’Elka Hypnose : réservation, paiement, annulation, retards, ateliers.",
+      "nav": "Conditions générales de vente",
+      "partageAlt": "Arbre seul dans un champ brumeux à l’aube",
+      "accroche": "Conditions générales de vente"
+    },
+    "404": {
+      "titre": "Page introuvable : Elka Hypnose",
+      "description": "Cette page n’existe pas ou plus.",
+      "nav": "Page introuvable",
+      "partageAlt": "Chemin qui se perd dans la brume",
+      "accroche": "Page introuvable"
+    }
+  },
+  "accueil": {
+    "hero": {
+      "titre1": "Libérez votre",
+      "titreMot": "potentiel",
+      "titre2": "grâce à l’hypnose.",
+      "texte": "Séances d’hypnothérapie individuelles et personnalisées, au cabinet de Bard-lès-Époisses ou en visio, et ateliers d’autohypnose en petits groupes.",
+      "action": "Prendre rendez-vous",
+      "alt": "Collines de l’Auxois au lever du soleil, brume dans les vallons, chemin d’herbe vers l’horizon"
+    },
+    "rencontre": {
+      "surtitre": "Laurence Katchavenda, hypnothérapeute",
+      "titre": "Avancer en douceur, à votre rythme",
+      "texte1": "Je vous accompagne avec bienveillance pour dépasser vos blocages et retrouver un équilibre intérieur, en douceur et à votre rythme.",
+      "texte2": "Ensemble, dans un cadre de totale confidentialité, nous explorons vos pensées et vos émotions : l’objectif est de mieux vous comprendre, afin de mieux vous aider.",
+      "alt": "Portrait de Laurence Katchavenda, souriante",
+      "r1Chiffre": "25 ans",
+      "r1Texte": "environ, comme professeure des écoles",
+      "r2Chiffre": "IFHE",
+      "r2Texte": "formée à l’hypnose ericksonienne et humaniste",
+      "r3Chiffre": "SNH",
+      "r3Texte": "membre affiliée au Syndicat national des hypnothérapeutes",
+      "p1Titre": "Des séances personnalisées",
+      "p1Texte": "Chaque séance est adaptée à vos besoins.",
+      "p2Titre": "Une thérapie brève",
+      "p2Texte": "Des objectifs précis, définis ensemble dès le premier rendez-vous.",
+      "p3Titre": "Un cabinet facile d’accès",
+      "p3Texte": "Parking à proximité, horaires flexibles, et visio possible."
+    },
+    "accompagnements": {
+      "titre": "Mes accompagnements",
+      "intro": "Vous ressentez le besoin de changer, de retrouver un équilibre ? L’hypnose peut vous accompagner pour atteindre vos objectifs et mieux vivre au quotidien.",
+      "rubanTitre": "Thèmes abordés en séance",
+      "ruban": "Confiance en soi · Sommeil · Arrêt du tabac · Stress · Deuil · Phobies · Prise de parole en public · Anxiété · Burn-out ·",
+      "lien": "Comment se passe un suivi"
+    },
+    "chemin": {
+      "titre": "Le chemin d’un suivi",
+      "texte": "Trois étapes, sans précipitation : chacune a sa place et son rythme.",
+      "lien": "Le déroulé en détail",
+      "alt": "Chemin de terre bordé d’une barrière de bois, qui s’enfonce dans la brume lumineuse"
+    },
+    "respirer": {
+      "titre": "Respirer un instant",
+      "texte": "Un exemple d’outil respiratoire, comme ceux que Laurence peut proposer entre les séances. Suivez l’arche : elle s’ouvre quand vous inspirez, se referme quand vous expirez.",
+      "demarrer": "Commencer · 1 minute",
+      "arreter": "Arrêter",
+      "inspirez": "Inspirez",
+      "expirez": "Expirez",
+      "pret": "Prêt quand vous l’êtes",
+      "restant": "{n} s",
+      "fini": "C’est terminé. Prenez le temps de revenir.",
+      "rythme": "6 respirations · 5 s pour inspirer, 5 s pour expirer",
+      "note": "Exercice de démonstration pour la maquette : le rythme sera validé par Laurence. Il ne remplace pas un avis médical.",
+      "alt": "Ciel pâle de l’aube au-dessus de collines dans la brume"
+    },
+    "parcours": {
+      "titre": "Mon parcours",
+      "texte": "Après environ 25 ans auprès d’enfants de 4 à 11 ans comme professeure des écoles, Laurence s’est formée à l’hypnose à partir de 2023, à l’Institut français d’hypnose humaniste et ericksonienne (IFHE).",
+      "snh": "Membre affiliée au Syndicat national des hypnothérapeutes",
+      "snhAlt": "Syndicat national des hypnothérapeutes",
+      "alt": "Laurence en entretien au cabinet, ses diplômes au mur"
+    },
+    "ateliers": {
+      "titre": "Ateliers d’autohypnose",
+      "texte": "En visio, en petit groupe : 4 séances de 1 h 30, une par semaine, pour apprendre une méthode simple d’autohypnose à reproduire seul.",
+      "contenu": "Chaque séance : une introduction pédagogique, des questionnaires de prise de conscience, des exercices préparatoires et un voyage hypnotique guidé de 30 à 40 minutes.",
+      "prix": "80 €",
+      "prixUnite": "les 4 séances",
+      "places": "4 places",
+      "zoom": "Sur Zoom",
+      "aVenir": "À venir",
+      "enCours": "En cours",
+      "termine": "Terminé",
+      "dans": "dans {n} jours",
+      "demain": "demain",
+      "aujourdhui": "aujourd’hui",
+      "passee1": "1 séance sur 4 passée",
+      "passees": "{n} séances sur 4 passées",
+      "inscrire": "Demander une place",
+      "ferme": "Atelier commencé : inscriptions closes",
+      "prochain": "Être prévenu du prochain atelier",
+      "horaire": "{jour}, de {debut} à {fin}",
+      "periode": "Du {d1} au {d2}",
+      "engagement": "Engagement sur les 4 séances. Annulation remboursée si elle a lieu au moins 48 h avant la première séance ; moins de 48 h avant, report possible sur une autre prestation ; aucun remboursement après la première séance.",
+      "alt": "Coin de bureau le soir : ordinateur fermé, carnet ouvert, tasse de tisane et lampe",
+      "region": "Les ateliers, défilement horizontal",
+      "prochainCourt": "Me prévenir du prochain atelier",
+      "autreTitre": "Un autre thème, un autre horaire ?",
+      "autreTexte": "Les ateliers reviennent au fil des saisons. Laissez vos coordonnées : Laurence vous prévient de la prochaine session.",
+      "autreAction": "Être prévenu"
+    },
+    "avis": {
+      "titre": "Ce qu’en disent les personnes accompagnées",
+      "note": "5,0 sur 5",
+      "nombre": "· 4 avis publiés sur Résalib",
+      "source": "Extraits d’avis publiés sur Résalib.",
+      "voir": "Voir les avis sur Résalib",
+      "etoiles": "Note de 5 sur 5"
+    },
+    "carnet": {
+      "titre": "Le carnet",
+      "texte": "Les derniers articles de Laurence.",
+      "a1Titre": "Responsable mais pas coupable",
+      "a1Date": "7 septembre 2026",
+      "a1Duree": "5 min de lecture",
+      "a1Resume": "Certaines personnes s’excusent même sans avoir rien fait. L’article distingue la culpabilité, qui ramène sans cesse en arrière, de la responsabilité, qui remet en mouvement, et montre comment l’hypnose aide à ne plus seulement comprendre, mais à expérimenter autrement.",
+      "a1Alt": "Personne assise dans une pièce baignée de lumière orangée",
+      "a2Titre": "Changer consiste à reprendre les commandes",
+      "a2Date": "5 septembre 2026",
+      "a2Duree": "3 min de lecture",
+      "a2Resume": "Nos réactions automatiques ont souvent eu, un jour, une raison d’être. Changer, ce n’est ni se réparer ni devenir quelqu’un d’autre : c’est retrouver la liberté de répondre différemment.",
+      "a2Alt": "Personne à la barre d’un voilier face au soleil couchant",
+      "bientot": "Article complet : page à construire"
+    },
+    "venir": {
+      "titre": "Venir au cabinet",
+      "texte": "Au cœur de l’Auxois, à Bard-lès-Époisses. Le cabinet reçoit sur rendez-vous ; les séances en visio se font depuis chez vous.",
+      "horairesTitre": "Horaires du cabinet",
+      "horairesNote": "Si vous ne trouvez pas l’horaire qui vous convient, n’hésitez pas à appeler.",
+      "carteTitre": "Le cabinet et les villes voisines",
+      "carteNote": "Distances à vol d’oiseau, calculées d’après les coordonnées des communes.",
+      "alt": "Le cabinet : murs vert d’eau, bureau, deux fauteuils et un tapis rouge",
+      "action": "Prendre rendez-vous"
+    }
+  },
+  "suivi": {
+    "tete": {
+      "surtitre": "L’hypnose et le suivi",
+      "titre": "Comment se passe un suivi",
+      "texte": "Un accompagnement bienveillant, dans un cadre de totale confidentialité, au cabinet ou en visio.",
+      "info": "Premier rendez-vous d’environ 1 h 30, puis 1 à 10 séances",
+      "action": "Prendre rendez-vous",
+      "alt": "Arche de pierre couverte de lierre, porte de bois entrouverte sur un pré dans la brume au lever du soleil"
+    },
+    "chemin": {
+      "titre": "Trois étapes",
+      "texte": "Le suivi avance pas à pas, à votre rythme.",
+      "region": "Les trois étapes du suivi"
+    },
+    "lieux": {
+      "titre": "Au cabinet ou en visio",
+      "cabinetTitre": "Au cabinet",
+      "cabinetTexte": "À Bard-lès-Époisses, avec un stationnement facile sur la place du village. Les enfants sont reçus uniquement au cabinet.",
+      "cabinetAlt": "Le fauteuil de cuir vert du cabinet devant un papier peint végétal",
+      "visioTitre": "En visio",
+      "visioTexte": "Depuis chez vous, sur Zoom. Le lien vous est envoyé une fois la réservation confirmée, après paiement par virement.",
+      "visioAlt": "Laurence en visioconférence, casque sur les oreilles, souriante"
+    },
+    "enfants": {
+      "titre": "Les enfants, dès 5 ans",
+      "texte": "Laurence a été professeure des écoles pendant environ 25 ans. Pour un enfant, le suivi commence par une séance d’une heure avec le ou les parents, sans l’enfant, puis une séance d’une heure avec l’enfant seul.",
+      "lieu": "Uniquement au cabinet.",
+      "alt": "Dessin d’enfant aux craies grasses : un soleil et trois fleurs, sur une table de bois"
+    },
+    "cadre": {
+      "titre": "Le cadre et les limites",
+      "l1": "Je ne suis pas médecin, je ne fais pas de diagnostic.",
+      "l2": "L’hypnothérapie ne se substitue en aucun cas aux suivis ou traitements médicaux.",
+      "l3": "Je recommande de consulter un professionnel de santé avant de prendre rendez-vous.",
+      "l4": "Une hypnothérapie de bien-être est contre-indiquée en cas de psychose ou de troubles dissociatifs de l’identité : signalez tout suivi psychiatrique lors de la prise de rendez-vous.",
+      "urgenceTitre": "En cas de détresse",
+      "urgence": "Si vous avez des idées suicidaires ou si vous êtes en grande détresse, appelez le 3114, numéro national de prévention du suicide, gratuit, 24 h/24. En cas d’urgence vitale : 15 ou 112.",
+      "alt": "Mur de pierre sèche couvert de mousse et de fougères"
+    },
+    "charte": {
+      "titre": "Charte d’engagement",
+      "texte": "Des engagements réciproques, posés dès le départ.",
+      "praticienne": "La praticienne s’engage",
+      "patient": "La personne accompagnée s’engage",
+      "note": "Résumé de la charte d’engagement de Laurence : texte intégral à compléter.",
+      "alt": "Toile de lin naturel et brin d’herbe sauvage dans la lumière du matin"
+    },
+    "faq": {
+      "titre": "Questions fréquentes",
+      "alt": "Feuilles de chêne couvertes de rosée, pré dans la brume en arrière-plan"
+    },
+    "fin": {
+      "titre": "Faire le premier pas",
+      "texte": "Un premier échange vaut souvent mieux qu’un formulaire : Laurence vous rappelle dès votre premier contact.",
+      "action": "Prendre rendez-vous",
+      "tarifs": "Voir les tarifs",
+      "alt": "Le cabinet : murs vert d’eau, bureau, deux fauteuils et un tapis rouge"
+    }
+  },
+  "tarifs": {
+    "tete": {
+      "surtitre": "Tarifs et rendez-vous",
+      "titre": "Tarifs et rendez-vous",
+      "texte": "La séance individuelle, au cabinet ou en visio :",
+      "prix": "70 €",
+      "action": "Prendre rendez-vous",
+      "alt": "Porte de bois entrouverte dans une pièce sombre, lumière chaude venue de l’extérieur"
+    },
+    "grille": {
+      "titre": "Les tarifs",
+      "seanceNom": "Séance individuelle",
+      "seanceDetail": "Adulte ou adolescent : première séance d’environ 1 h 30, puis 1 h à 1 h 15. Enfant dès 5 ans : une séance avec les parents, puis une avec l’enfant, au cabinet.",
+      "seancePrix": "70 €",
+      "seanceUnite": "la séance",
+      "etudiantNom": "Séance étudiant",
+      "etudiantDetail": "Même déroulé que la séance individuelle.",
+      "etudiantPrix": "60 €",
+      "etudiantUnite": "la séance",
+      "atelierNom": "Atelier d’autohypnose",
+      "atelierDetail": "4 séances de 1 h 30 en visio, 4 places.",
+      "atelierPrix": "80 €",
+      "atelierUnite": "les 4 séances",
+      "regressiveNom": "Hypnose régressive",
+      "regressiveDetail": "Exploration des vies passées. Adultes uniquement, séance de 2 à 3 h.",
+      "regressivePrix": "60 €",
+      "regressiveUnite": "de l’heure",
+      "mutuelles": "Certaines mutuelles peuvent prendre en charge les séances : liste à confirmer.",
+      "tva": "TVA non applicable, art. 293 B du CGI.",
+      "paiementTitre": "Moyens de paiement",
+      "paiement1": "Au cabinet : virement, chèque ou espèces, le jour de la séance.",
+      "paiement2": "En visio : virement, avant la séance.",
+      "paiement3": "Carte bancaire : lors de la réservation sur Résalib.",
+      "paiement4": "Une facture vous est remise après paiement.",
+      "alt": "Tasse de tisane et carnet ouvert sur une nappe de lin"
+    },
+    "rdv": {
+      "titre": "Prendre rendez-vous",
+      "texte": "Trois façons de réserver, selon ce qui vous convient.",
+      "enLigneTitre": "En ligne",
+      "enLigneTexte": "Choisissez votre créneau sur Résalib, au cabinet ou en visio.",
+      "enLigneAction": "Réserver sur Résalib",
+      "telTitre": "Par téléphone",
+      "telTexte": "Pour poser vos questions de vive voix avant de réserver.",
+      "rappelTitre": "Être rappelé",
+      "rappelTexte": "Laissez vos coordonnées : Laurence vous rappelle.",
+      "rappelAction": "Remplir la demande",
+      "alt": "Laurence échange debout avec une personne accompagnée, de dos, dans le cabinet"
+    },
+    "form": {
+      "titre": "Demande de rappel",
+      "deroule": "En 2 étapes : votre demande, puis vos coordonnées.",
+      "etape1": "Votre demande",
+      "etape2": "Vos coordonnées",
+      "etapeSur": "Étape {n} sur 2",
+      "sujet": "Votre demande",
+      "sujetPremiere": "Une première séance",
+      "sujetSuivi": "Un suivi en cours",
+      "sujetEnfant": "Une séance pour un enfant",
+      "sujetAtelier": "Un atelier d’autohypnose",
+      "sujetProchain": "Être prévenu du prochain atelier",
+      "sujetAutre": "Une autre question",
+      "atelier": "Quel atelier ?",
+      "atelierChoisir": "Choisir un atelier",
+      "lieu": "Où ?",
+      "lieuCabinet": "Au cabinet",
+      "lieuVisio": "En visio",
+      "lieuIndifferent": "Peu importe",
+      "message": "Votre message (facultatif)",
+      "nom": "Nom et prénom",
+      "tel": "Téléphone",
+      "email": "E-mail (facultatif)",
+      "moment": "Le meilleur moment pour vous rappeler (facultatif)",
+      "consentement": "J’accepte que ces coordonnées servent uniquement à me recontacter.",
+      "donnees": "Vos données servent uniquement à vous recontacter et ne sont jamais cédées. Durée de conservation : à compléter.",
+      "confidentialite": "Politique de confidentialité",
+      "suivant": "Continuer",
+      "precedent": "Retour",
+      "envoyer": "Envoyer la demande",
+      "recap": "Récapitulatif",
+      "recapVide": "Votre demande s’affichera ici au fil de vos choix.",
+      "recapSujet": "Demande",
+      "recapAtelier": "Atelier",
+      "recapLieu": "Lieu",
+      "recapNom": "Nom",
+      "recapTel": "Téléphone",
+      "simule": "Demande simulée : rien n’a été envoyé. Sur le site final, elle arrivera directement à Laurence.",
+      "atelierOption": "{theme}, {jour}, à partir du {date}",
+      "atelierErreur": "Choisissez un atelier pour continuer."
+    },
+    "conditions": {
+      "titre": "Conditions",
+      "c1Titre": "Annulation",
+      "c1": "Prévenez au moins 48 h à l’avance pour être remboursé ; moins de 48 h avant, la séance peut être reportée sur une autre prestation. Une annulation le jour même ou une absence reste due.",
+      "c2Titre": "Retard",
+      "c2": "Au-delà de 20 minutes de retard, la séance peut ne pas avoir lieu.",
+      "c3Titre": "Confirmation",
+      "c3": "Un SMS de confirmation est envoyé 24 h avant le rendez-vous.",
+      "c4Titre": "Ateliers",
+      "c4": "Engagement sur les 4 séances. Annulation remboursée au moins 48 h avant la première séance ; moins de 48 h avant, report possible sur une autre prestation ; aucun remboursement après la première séance. Le lien Zoom est envoyé après paiement.",
+      "note": "Conditions à harmoniser avec les conditions générales de vente : à compléter.",
+      "cgv": "Lire les conditions générales de vente",
+      "alt": "Le fauteuil de cuir vert du cabinet devant un papier peint végétal"
+    },
+    "horaires": {
+      "titre": "Horaires",
+      "texte": "Le cabinet reçoit sur rendez-vous.",
+      "aujourdhui": "Aujourd’hui",
+      "ferme": "Fermé",
+      "fermetures": "Fermetures exceptionnelles et congés : à compléter.",
+      "alt": "Lumière du matin sur un mur de pierre claire, ombre d’une fenêtre à petits carreaux"
+    },
+    "acces": {
+      "titre": "Accès",
+      "alt": "Petite route de campagne bordée d’arbres dans les collines de l’Auxois, au matin"
+    },
+    "fin": {
+      "titre": "Une question avant de réserver ?",
+      "texte": "Appelez le cabinet : Laurence vous répond ou vous rappelle dès que possible.",
+      "suivi": "Comment se passe un suivi"
+    }
+  },
+  "legal": {
+    "alt": "Arbre seul dans un champ brumeux, ciel rose de l’aube",
+    "aCompleterTitre": "Fiche récapitulative : informations à fournir"
+  },
+  "introuvable": {
+    "titre": "Vous avez fait un détour",
+    "texte": "Ce chemin se perd dans la brume : la page demandée n’existe pas ou plus.",
+    "retour": "Revenir à l’accueil",
+    "rdv": "Prendre rendez-vous",
+    "alt": "Chemin de campagne bordé de piquets, qui se perd dans un épais brouillard"
+  }
+}

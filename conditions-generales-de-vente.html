@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="fr" data-v="1" data-gabarit="cgv" data-curseur>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Conditions générales de vente : Elka Hypnose</title>
+<meta name="description" content="Résumé des conditions générales de vente d’Elka Hypnose : réservation, paiement, annulation, retards, ateliers.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://elka-maquette.vercel.app/conditions-generales-de-vente">
+<style>:root{--fond:#F1ECE2;--texte:#2F3A2C;--voile-fond:#2F3A2C;--ouverture-fond:#F1ECE2;--menu-fond:#2F3A2C}:root { --entete-h: 72px; --barres-h: 0px; } html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; } body { margin: 0; background: var(--fond); } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; } [data-voile] { position: fixed; inset: 0; z-index: 900; background: var(--voile-fond); transform: translateY(100%); visibility: hidden; pointer-events: none; } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] { transform: none; visibility: visible; } html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; } .ouverture-panneau { position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center; background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; } html.defilement-bloque, html.defilement-bloque body, html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie), html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body, html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours), html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }</style>
+<script>(function () {
+var d = document.documentElement, ss = null, ls = null;
+try { ss = window.sessionStorage; ls = window.localStorage; } catch (e) {}
+d.classList.add('js');
+var calme = false;
+try { calme = !!ls && ls.getItem('socle:calme') === 'oui'; } catch (e) {}
+if (!calme && window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) calme = true;
+if (calme) d.classList.add('calme');
+var nav = performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+var type = nav ? nav.type : 'navigate';
+var depart = null;
+try { depart = JSON.parse(ss.getItem('socle:depart') || 'null'); ss.removeItem('socle:depart'); } catch (e) {}
+if (depart && !(Date.now() - depart.t < 15000)) depart = null;
+var retourSection = false;
+try { retourSection = !!ss.getItem('socle:calme-retour'); } catch (e) {}
+var mode = type === 'back_forward' || retourSection ? 'retour' : type === 'reload' ? 'intro' : depart ? 'voile' : 'intro';
+d.setAttribute('data-arrivee', mode);
+if (mode === 'voile' && depart.couleur) d.style.setProperty('--voile-fond', depart.couleur);
+if (type === 'reload' && 'scrollRestoration' in history) {
+if (!retourSection) history.scrollRestoration = 'manual';
+}
+try {
+var choisie = ls && ls.getItem('socle:langue');
+var langue = (d.lang || '').slice(0, 2);
+if (choisie && choisie !== langue && type === 'navigate' && !depart) {
+var alt = document.querySelector('link[rel="alternate"][hreflang="' + choisie + '"]');
+if (alt) location.replace(new URL(alt.href).pathname + location.search + location.hash);
+}
+} catch (e) {}
+setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('secours'); }, 2000);
+})();</script>
+<link rel="preload" href="/assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/socle.css?v=1">
+<link rel="stylesheet" href="/assets/css/site.css?v=1">
+<link rel="modulepreload" href="/assets/js/site.js?v=1">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=1">
+<script src="/assets/vendor/gsap.min.js" defer></script>
+<script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/assets/vendor/SplitText.min.js" defer></script>
+<script type="module" src="/assets/js/site.js?v=1"></script>
+<meta name="theme-color" content="#F1ECE2">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Elka Hypnose">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Conditions générales de vente : Elka Hypnose">
+<meta property="og:description" content="Résumé des conditions générales de vente d’Elka Hypnose : réservation, paiement, annulation, retards, ateliers.">
+<meta property="og:url" content="https://elka-maquette.vercel.app/conditions-generales-de-vente">
+<meta property="og:image" content="https://elka-maquette.vercel.app/assets/partage/cgv-fr.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Arbre seul dans un champ brumeux à l’aube">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Elka Hypnose","description":"Séances d’hypnothérapie individuelles et personnalisées sur rendez-vous, au cabinet de Bard-lès-Époisses ou en visio, et ateliers d’initiation à l’autohypnose en petits groupes, en visio.","url":"https://elka-maquette.vercel.app/","image":"https://elka-maquette.vercel.app/assets/partage/accueil-fr.jpg","logo":"https://elka-maquette.vercel.app/assets/images/logo-pastille.svg","telephone":"+33953725114","email":"elkahypnose@free.fr","address":{"@type":"PostalAddress","streetAddress":"6, rue Victor de Lanneau","postalCode":"21460","addressLocality":"Bard-lès-Époisses","addressCountry":"FR"},"geo":{"@type":"GeoCoordinates","latitude":47.5322,"longitude":4.2167},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"12:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"13:30","closes":"19:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"12:00"}],"founder":{"@type":"Person","name":"Laurence Katchavenda","jobTitle":"Hypnothérapeute"},"sameAs":["https://www.resalib.fr/praticien/106137-laurence-katchavenda-ei-elkahypnose-praticien-en-hypnose-bard-les-epoisses","https://www.facebook.com/profile.php?id=61572601529462","https://instagram.com/elkahypnose/"]}</script>
+</head>
+<body id="haut" class="page-cgv">
+<div data-voile aria-hidden="true"><div class="voile-contenu">
+  <svg class="voile-arche" viewBox="0 0 120 170" aria-hidden="true"><path d="M2 170 V60 A58 58 0 0 1 118 60 V170" /></svg>
+  <img src="/assets/images/logo-clair.svg" alt="" width="108" height="60">
+  <span data-voile-libelle>Conditions générales de vente</span>
+</div></div>
+<div class="ouverture-panneau" data-ouverture aria-hidden="true">
+  <div class="seuil-arche" data-seuil-arche>
+    <div class="seuil-vue" data-seuil-vue>
+      <figure class="media seuil-media" data-grok style="--cadrage:50% 62%;--cadrage-mobile:62% 55%">
+  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/grok/legal-mobile-640.webp 640w, /assets/images/grok/legal-mobile-941.webp 941w" sizes="(max-width: 760px) 92vw, 600px">
+    <img src="/assets/images/grok/legal-1280.webp" srcset="/assets/images/grok/legal-640.webp 640w, /assets/images/grok/legal-1280.webp 1280w, /assets/images/grok/legal-1568.webp 1568w" sizes="(max-width: 760px) 92vw, 600px" alt="" width="1280" height="720" fetchpriority="high" loading="eager" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+      <div class="seuil-brume" data-seuil-brume></div>
+    </div>
+    <div class="seuil-battants" data-seuil-battants><span class="seuil-battant seuil-battant--g"></span><span class="seuil-battant seuil-battant--d"></span><span class="seuil-lueur" data-seuil-lueur></span></div>
+    <svg class="seuil-cadre" data-seuil-cadre><path /></svg>
+  </div>
+  <p class="ouverture-ligne">Hypnose · Bard-lès-Époisses</p>
+</div>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header data-entete>
+  <div class="entete-rangee">
+    <a class="entete-logo" href="/" aria-label="Elka Hypn’ose, retour à l’accueil" data-libelle="Accueil">
+      <img src="/assets/images/logo.svg" alt="" width="90" height="50">
+    </a>
+    <nav data-nav aria-label="Navigation principale">
+      <ul><li><a href="/hypnose-et-suivi" class="lien-trace" data-libelle="L’hypnose et le suivi">L’hypnose et le suivi</a></li><li><a href="/#ateliers" class="lien-trace" data-libelle="Accueil">Ateliers</a></li><li><a href="/#parcours" class="lien-trace" data-libelle="Accueil">Mon parcours</a></li><li><a href="/tarifs-et-rendez-vous" class="lien-trace" data-libelle="Tarifs et rendez-vous">Tarifs et rendez-vous</a></li></ul>
+    </nav>
+    <div class="entete-actions">
+      <a class="bouton bouton--entete" href="/tarifs-et-rendez-vous#rendez-vous" data-libelle="Tarifs et rendez-vous" data-magnetique>Prendre rendez-vous</a>
+      <button type="button" data-menu-bouton aria-controls="menu" aria-expanded="false" data-libelle-ouvrir="Menu" data-libelle-fermer="Fermer"><span class="menu-icone" aria-hidden="true"></span><span data-libelle-bouton>Menu</span></button>
+    </div>
+  </div>
+</header>
+<div id="menu" data-menu role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="menu-grille">
+    <ul class="menu-liens"><li style="--i:0"><a href="/" class="menu-lien" data-libelle="Accueil">Accueil</a></li><li style="--i:1"><a href="/hypnose-et-suivi" class="menu-lien" data-libelle="L’hypnose et le suivi">L’hypnose et le suivi</a></li><li style="--i:2"><a href="/#ateliers" class="menu-lien" data-libelle="Accueil">Ateliers</a></li><li style="--i:3"><a href="/#parcours" class="menu-lien" data-libelle="Accueil">Mon parcours</a></li><li style="--i:4"><a href="/tarifs-et-rendez-vous" class="menu-lien" data-libelle="Tarifs et rendez-vous">Tarifs et rendez-vous</a></li></ul>
+    <div class="menu-contact">
+      <p class="menu-titre">Contact</p>
+      <p><a class="bouton bouton--clair" href="tel:+33953725114">Appeler le 09 53 72 51 14</a></p>
+      <p><a class="bouton bouton--contour-clair" href="/tarifs-et-rendez-vous#rendez-vous" data-libelle="Tarifs et rendez-vous">Prendre rendez-vous</a></p>
+      <p class="menu-adresse">6, rue Victor de Lanneau<br><span class="insecable">21460 Bard-lès-Époisses</span></p>
+      <p><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></p>
+    </div>
+  </div>
+</div>
+<main id="contenu" tabindex="-1" data-sans-action>
+<div data-barre-lecture aria-hidden="true"></div>
+<section class="seuil seuil--court" id="debut">
+  <div class="seuil-texte">
+    <h1 class="seuil-titre seuil-titre--legal" data-superpose><span class="mot-masque"><span class="mot" data-anime="gsap">Conditions générales de vente</span></span></h1>
+    <p class="seuil-intro" data-anime="gsap">Résumé des conditions générales de vente actuelles : texte intégral à compléter.</p>
+    <nav class="sommaire-legal" data-sommaire data-anime="gsap" aria-label="Sommaire"><ul><li><a href="#prix">Prix</a></li><li><a href="#reservation">Réservation</a></li><li><a href="#paiement">Paiement</a></li><li><a href="#annulation">Annulation et absence</a></li><li><a href="#retard">Retards</a></li><li><a href="#reclamation">Réclamations et médiation</a></li><li><a href="#sante">Santé</a></li></ul></nav>
+  </div>
+  <div class="arche seuil-arche-page" data-arche>
+  <figure class="media arche-media" data-grok style="--cadrage:50% 62%;--cadrage-mobile:62% 55%">
+  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/grok/legal-mobile-640.webp 640w, /assets/images/grok/legal-mobile-941.webp 941w" sizes="(max-width: 760px) 92vw, 600px">
+    <img src="/assets/images/grok/legal-1280.webp" srcset="/assets/images/grok/legal-640.webp 640w, /assets/images/grok/legal-1280.webp 1280w, /assets/images/grok/legal-1568.webp 1568w" sizes="(max-width: 760px) 92vw, 600px" alt="Arbre seul dans un champ brumeux, ciel rose de l’aube" width="1280" height="720" fetchpriority="high" loading="eager" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  <canvas class="arche-brume" data-brume aria-hidden="true" data-audit-ignorer></canvas>
+  <div class="arche-brume-css" aria-hidden="true"></div>
+  <svg class="arche-cadre" aria-hidden="true" data-audit-ignorer><path data-cadre /></svg>
+</div>
+</section>
+<div class="texte-long conteneur" data-sans-visuel>
+  <section id="prix" data-sans-visuel>
+    <h2>Prix</h2>
+    <p>Les tarifs sont indiqués en euros, sans TVA (TVA non applicable, art. 293 B du CGI). L’hypnose régressive, exploration des vies passées, est facturée à l’heure.</p>
+  </section><section id="reservation" data-sans-visuel>
+    <h2>Réservation</h2>
+    <p>Une réservation par Résalib est confirmée par son règlement à l’avance. Une séance en visio non réglée 24 h avant n’est pas garantie. Un SMS de confirmation est envoyé 24 h avant le rendez-vous.</p><p>Pour les ateliers d’autohypnose, la réservation devient définitive après paiement, au plus tard une semaine après la réservation.</p>
+  </section><section id="paiement" data-sans-visuel>
+    <h2>Paiement</h2>
+    <p>Par virement ; par chèque ou en espèces avec l’accord préalable de la praticienne ; par carte bancaire uniquement via Résalib. Une facture est remise après paiement intégral.</p><p>Pour les entreprises, le paiement peut intervenir jusqu’à 30 jours après la prestation ; un devis est valable deux mois.</p>
+  </section><section id="annulation" data-sans-visuel>
+    <h2>Annulation et absence</h2>
+    <p>Une annulation sans demande de report et une absence ne sont pas remboursées. Des annulations répétées peuvent conduire à refuser de nouvelles réservations.</p><p>Entreprises et événements : une annulation dans les quinze jours précédant la prestation rend le montant total dû (délai à préciser : jours ou jours ouvrés, à compléter).</p>
+  </section><section id="retard" data-sans-visuel>
+    <h2>Retards</h2>
+    <p>Au-delà de 20 minutes de retard, la prestation peut être refusée. En entreprise, le temps facturé court à partir de l’heure prévue.</p>
+  </section><section id="reclamation" data-sans-visuel>
+    <h2>Réclamations et médiation</h2>
+    <p>Une réclamation se fait dès la fin de la séance. Si elle est fondée, une nouvelle prestation gratuite ou à tarif réduit est proposée.</p><p>En cas de litige : réclamation écrite d’abord, puis, sans réponse satisfaisante après deux mois, recours au médiateur de la consommation (coordonnées à compléter).</p>
+  </section><section id="sante" data-sans-visuel>
+    <h2>Santé</h2>
+    <p>La praticienne peut refuser une prestation en cas de contre-indication médicale. L’hypnose ne remplace pas les soins médicaux : consultez votre médecin, notamment en cas de grossesse.</p><p>En cas de force majeure, un report de la séance est proposé.</p>
+  </section>
+</div>
+</main>
+<footer class="pied" id="pied">
+  <div class="conteneur pied-grille">
+    <div class="pied-marque">
+      <img src="/assets/images/logo-pastille.svg" alt="" width="88" height="88" loading="lazy">
+      <p>Hypnothérapie au cabinet ou en visio, ateliers d’autohypnose en petits groupes.</p>
+    </div>
+    <div>
+      <p class="pied-titre">Contact</p>
+      <p>6, rue Victor de Lanneau<br><span class="insecable">21460 Bard-lès-Époisses</span></p>
+      <ul><li><a href="tel:+33953725114">09 53 72 51 14</a></li><li><a href="mailto:elkahypnose@free.fr">elkahypnose@free.fr</a></li><li><a href="https://www.resalib.fr/praticien/106137-laurence-katchavenda-ei-elkahypnose-praticien-en-hypnose-bard-les-epoisses" target="_blank" rel="noopener">Rendez-vous sur Résalib<span class="visuellement-cache"> (nouvel onglet)</span></a></li></ul>
+    </div>
+    <nav aria-label="Sommaire">
+      <p class="pied-titre">Sommaire</p>
+      <ul><li><a href="/" data-libelle="Accueil">Accueil</a></li><li><a href="/hypnose-et-suivi" data-libelle="L’hypnose et le suivi">L’hypnose et le suivi</a></li><li><a href="/#ateliers" data-libelle="Accueil">Ateliers</a></li><li><a href="/#parcours" data-libelle="Accueil">Mon parcours</a></li><li><a href="/tarifs-et-rendez-vous" data-libelle="Tarifs et rendez-vous">Tarifs et rendez-vous</a></li></ul>
+    </nav>
+    <div>
+      <p class="pied-titre">Informations</p>
+      <ul><li><a href="/mentions-legales" data-libelle="Mentions légales">Mentions légales</a></li><li><a href="/confidentialite" data-libelle="Confidentialité">Confidentialité</a></li><li><a href="/conditions-generales-de-vente" data-libelle="Conditions générales de vente" aria-current="page">Conditions générales de vente</a></li></ul>
+      <p class="pied-titre pied-titre--suite">Suivre Elka Hypnose</p>
+      <ul><li><a href="https://www.facebook.com/profile.php?id=61572601529462" target="_blank" rel="noopener">Facebook<span class="visuellement-cache"> (nouvel onglet)</span></a></li><li><a href="https://instagram.com/elkahypnose/" target="_blank" rel="noopener">Instagram<span class="visuellement-cache"> (nouvel onglet)</span></a></li></ul>
+    </div>
+  </div>
+  <div class="conteneur pied-bas">
+    <p class="pied-avertissement">Je ne suis pas médecin : l’hypnothérapie ne remplace pas un suivi ou un traitement médical.</p>
+    <ul class="pied-confort">
+      <li><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></li>
+      <li><a href="#haut" data-sans-transition>Retour en haut</a></li>
+    </ul>
+    <p>Maquette : les informations marquées « à compléter » seront fournies par Laurence Katchavenda.</p>
+    <p>© Elka Hypnose</p>
+  </div>
+</footer>
+<div data-barre-fixe>
+  <a class="bouton bouton--contour" href="tel:+33953725114">Appeler</a>
+  <a class="bouton" href="/tarifs-et-rendez-vous#rendez-vous" data-libelle="Tarifs et rendez-vous">Rendez-vous</a>
+</div>
+</body>
+</html>

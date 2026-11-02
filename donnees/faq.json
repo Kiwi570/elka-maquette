@@ -1,0 +1,37 @@
+[
+  {
+    "id": "nombre",
+    "q": "Combien de séances faut-il prévoir ?",
+    "r": "Entre 1 et 10 séances, selon la problématique abordée. Le suivi se décide ensemble après la première séance, sans le prolonger inutilement."
+  },
+  {
+    "id": "duree",
+    "q": "Combien de temps dure une séance ?",
+    "r": "La première dure environ 1 h 30. Les suivantes durent généralement de 1 h à 1 h 15."
+  },
+  {
+    "id": "visio",
+    "q": "Comment se passe une séance en visio ?",
+    "r": "La séance a lieu sur Zoom, depuis chez vous. Le lien vous est envoyé une fois la réservation confirmée. Les enfants sont reçus uniquement au cabinet."
+  },
+  {
+    "id": "enfants",
+    "q": "Recevez-vous les enfants ?",
+    "r": "Oui, dès 5 ans et uniquement au cabinet : une séance d’une heure avec le ou les parents, puis une séance d’une heure avec l’enfant seul."
+  },
+  {
+    "id": "contre-indications",
+    "q": "Y a-t-il des contre-indications ?",
+    "r": "Une hypnothérapie de bien-être est contre-indiquée en cas de psychose ou de troubles dissociatifs de l’identité. Signalez tout suivi psychiatrique lors de la prise de rendez-vous. En cas de grossesse ou de suivi médical, consultez votre médecin avant de réserver."
+  },
+  {
+    "id": "regler",
+    "q": "Comment régler la séance ?",
+    "r": "Au cabinet : par virement, chèque ou espèces, le jour de la séance. En visio : par virement, avant la séance. Par carte bancaire : lors de la réservation sur Résalib. Une facture vous est remise après paiement."
+  },
+  {
+    "id": "annuler",
+    "q": "Et si je dois annuler ou si je suis en retard ?",
+    "r": "Merci de prévenir au moins 48 h à l’avance. Une annulation le jour même ou une absence reste due. Au-delà de 20 minutes de retard, la séance peut ne pas avoir lieu."
+  }
+]

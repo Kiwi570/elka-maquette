@@ -1,0 +1,20 @@
+{
+  "praticienne": [
+    { "titre": "Confidentialité", "texte": "Les informations partagées restent confidentielles, sauf consentement explicite ou obligation légale ou de sécurité." },
+    { "titre": "Bienveillance", "texte": "Un cadre bienveillant et sans jugement." },
+    { "titre": "Compétence", "texte": "Uniquement des services qui relèvent de ses compétences, et une orientation vers d’autres professionnels si besoin." },
+    { "titre": "Consentement", "texte": "Un consentement éclairé avant chaque séance." },
+    { "titre": "Limites", "texte": "Des limites professionnelles claires." },
+    { "titre": "Intégrité", "texte": "Répondre aux demandes saines, qui ne nuisent pas à votre intégrité physique ou psychique ni à celle d’autrui." },
+    { "titre": "Objectifs précis", "texte": "Une attitude neutre et positive, des objectifs précis, sans prolonger la thérapie inutilement." },
+    { "titre": "Pas de substitution", "texte": "L’hypnose ne remplace pas un traitement médical ou psychiatrique." },
+    { "titre": "Autonomie", "texte": "Un accompagnement vers l’autonomie : vous restez acteur de votre changement." },
+    { "titre": "Transparence", "texte": "Les tarifs sont annoncés avant chaque consultation." }
+  ],
+  "patient": [
+    { "titre": "Ponctualité", "texte": "Honorer les rendez-vous et prévenir en cas d’annulation. Une annulation le jour même reste due." },
+    { "titre": "Sincérité", "texte": "Être honnête et ouvert dans les échanges." },
+    { "titre": "Respect du cadre", "texte": "Respecter le champ de compétence de la praticienne." },
+    { "titre": "Participation", "texte": "Participer activement au processus." }
+  ]
+}

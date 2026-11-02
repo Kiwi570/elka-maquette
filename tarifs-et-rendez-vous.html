@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="fr" data-v="1" data-gabarit="tarifs-rendez-vous" data-curseur>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tarifs et rendez-vous : Elka Hypnose</title>
+<meta name="description" content="Tarifs des séances d’hypnose et des ateliers, prise de rendez-vous en ligne, par téléphone ou par rappel, horaires et accès au cabinet de Bard-lès-Époisses.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://elka-maquette.vercel.app/tarifs-et-rendez-vous">
+<style>:root{--fond:#F1ECE2;--texte:#2F3A2C;--voile-fond:#2F3A2C;--ouverture-fond:#F1ECE2;--menu-fond:#2F3A2C}:root { --entete-h: 72px; --barres-h: 0px; } html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; } body { margin: 0; background: var(--fond); } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; } [data-voile] { position: fixed; inset: 0; z-index: 900; background: var(--voile-fond); transform: translateY(100%); visibility: hidden; pointer-events: none; } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] { transform: none; visibility: visible; } html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; } .ouverture-panneau { position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center; background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; } html.defilement-bloque, html.defilement-bloque body, html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie), html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body, html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours), html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }</style>
+<script>(function () {
+var d = document.documentElement, ss = null, ls = null;
+try { ss = window.sessionStorage; ls = window.localStorage; } catch (e) {}
+d.classList.add('js');
+var calme = false;
+try { calme = !!ls && ls.getItem('socle:calme') === 'oui'; } catch (e) {}
+if (!calme && window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) calme = true;
+if (calme) d.classList.add('calme');
+var nav = performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+var type = nav ? nav.type : 'navigate';
+var depart = null;
+try { depart = JSON.parse(ss.getItem('socle:depart') || 'null'); ss.removeItem('socle:depart'); } catch (e) {}
+if (depart && !(Date.now() - depart.t < 15000)) depart = null;
+var retourSection = false;
+try { retourSection = !!ss.getItem('socle:calme-retour'); } catch (e) {}
+var mode = type === 'back_forward' || retourSection ? 'retour' : type === 'reload' ? 'intro' : depart ? 'voile' : 'intro';
+d.setAttribute('data-arrivee', mode);
+if (mode === 'voile' && depart.couleur) d.style.setProperty('--voile-fond', depart.couleur);
+if (type === 'reload' && 'scrollRestoration' in history) {
+if (!retourSection) history.scrollRestoration = 'manual';
+}
+try {
+var choisie = ls && ls.getItem('socle:langue');
+var langue = (d.lang || '').slice(0, 2);
+if (choisie && choisie !== langue && type === 'navigate' && !depart) {
+var alt = document.querySelector('link[rel="alternate"][hreflang="' + choisie + '"]');
+if (alt) location.replace(new URL(alt.href).pathname + location.search + location.hash);
+}
+} catch (e) {}
+setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('secours'); }, 2000);
+})();</script>
+<link rel="preload" href="/assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/socle.css?v=1">
+<link rel="stylesheet" href="/assets/css/site.css?v=1">
+<link rel="modulepreload" href="/assets/js/site.js?v=1">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=1">
+<script src="/assets/vendor/gsap.min.js" defer></script>
+<script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/assets/vendor/SplitText.min.js" defer></script>
+<script type="module" src="/assets/js/site.js?v=1"></script>
+<meta name="theme-color" content="#F1ECE2">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Elka Hypnose">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Tarifs et rendez-vous : Elka Hypnose">
+<meta property="og:description" content="Tarifs des séances d’hypnose et des ateliers, prise de rendez-vous en ligne, par téléphone ou par rappel, horaires et accès au cabinet de Bard-lès-Époisses.">
+<meta property="og:url" content="https://elka-maquette.vercel.app/tarifs-et-rendez-vous">
+<meta property="og:image" content="https://elka-maquette.vercel.app/assets/partage/tarifs-rendez-vous-fr.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Porte de bois entrouverte, lumière chaude sur la pierre">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Elka Hypnose","description":"Séances d’hypnothérapie individuelles et personnalisées sur rendez-vous, au cabinet de Bard-lès-Époisses ou en visio, et ateliers d’initiation à l’autohypnose en petits groupes, en visio.","url":"https://elka-maquette.vercel.app/","image":"https://elka-maquette.vercel.app/assets/partage/accueil-fr.jpg","logo":"https://elka-maquette.vercel.app/assets/images/logo-pastille.svg","telephone":"+33953725114","email":"elkahypnose@free.fr","address":{"@type":"PostalAddress","streetAddress":"6, rue Victor de Lanneau","postalCode":"21460","addressLocality":"Bard-lès-Époisses","addressCountry":"FR"},"geo":{"@type":"GeoCoordinates","latitude":47.5322,"longitude":4.2167},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"12:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"13:30","closes":"19:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"12:00"}],"founder":{"@type":"Person","name":"Laurence Katchavenda","jobTitle":"Hypnothérapeute"},"sameAs":["https://www.resalib.fr/praticien/106137-laurence-katchavenda-ei-elkahypnose-praticien-en-hypnose-bard-les-epoisses","https://www.facebook.com/profile.php?id=61572601529462","https://instagram.com/elkahypnose/"]}</script>
+</head>
+<body id="haut" class="page-tarifs-rendez-vous">
+<div data-voile aria-hidden="true"><div class="voile-contenu">
+  <svg class="voile-arche" viewBox="0 0 120 170" aria-hidden="true"><path d="M2 170 V60 A58 58 0 0 1 118 60 V170" /></svg>
+  <img src="/assets/images/logo-clair.svg" alt="" width="108" height="60">
+  <span data-voile-libelle>Tarifs et rendez-vous</span>
+</div></div>
+<div class="ouverture-panneau" data-ouverture aria-hidden="true">
+  <div class="seuil-arche" data-seuil-arche>
+    <div class="seuil-vue" data-seuil-vue>
+      <figure class="media seuil-media" data-grok style="--cadrage:47% 50%;--cadrage-mobile:58% 55%">
+  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/grok/tarifs-ouverture-mobile-640.webp 640w, /assets/images/grok/tarifs-ouverture-mobile-941.webp 941w" sizes="(max-width: 760px) 92vw, 600px">
+    <img src="/assets/images/grok/tarifs-ouverture-1280.webp" srcset="/assets/images/grok/tarifs-ouverture-640.webp 640w, /assets/images/grok/tarifs-ouverture-1280.webp 1280w, /assets/images/grok/tarifs-ouverture-1568.webp 1568w" sizes="(max-width: 760px) 92vw, 600px" alt="" width="1280" height="853" fetchpriority="high" loading="eager" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+      <div class="seuil-brume" data-seuil-brume></div>
+    </div>
+    <div class="seuil-battants" data-seuil-battants><span class="seuil-battant seuil-battant--g"></span><span class="seuil-battant seuil-battant--d"></span><span class="seuil-lueur" data-seuil-lueur></span></div>
+    <svg class="seuil-cadre" data-seuil-cadre><path /></svg>
+  </div>
+  <p class="ouverture-ligne">Hypnose · Bard-lès-Époisses</p>
+</div>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header data-entete>
+  <div class="entete-rangee">
+    <a class="entete-logo" href="/" aria-label="Elka Hypn’ose, retour à l’accueil" data-libelle="Accueil">
+      <img src="/assets/images/logo.svg" alt="" width="90" height="50">
+    </a>
+    <nav data-nav aria-label="Navigation principale">
+      <ul><li><a href="/hypnose-et-suivi" class="lien-trace" data-libelle="L’hypnose et le suivi">L’hypnose et le suivi</a></li><li><a href="/#ateliers" class="lien-trace" data-libelle="Accueil">Ateliers</a></li><li><a href="/#parcours" class="lien-trace" data-libelle="Accueil">Mon parcours</a></li><li><a href="/tarifs-et-rendez-vous" class="lien-trace" data-libelle="Tarifs et rendez-vous" aria-current="page">Tarifs et rendez-vous</a></li></ul>
+    </nav>
+    <div class="entete-actions">
+      <a class="bouton bouton--entete" href="/tarifs-et-rendez-vous#rendez-vous" data-libelle="Tarifs et rendez-vous" data-magnetique>Prendre rendez-vous</a>
+      <button type="button" data-menu-bouton aria-controls="menu" aria-expanded="false" data-libelle-ouvrir="Menu" data-libelle-fermer="Fermer"><span class="menu-icone" aria-hidden="true"></span><span data-libelle-bouton>Menu</span></button>
+    </div>
+  </div>
+</header>
+<div id="menu" data-menu role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="menu-grille">
+    <ul class="menu-liens"><li style="--i:0"><a href="/" class="menu-lien" data-libelle="Accueil">Accueil</a></li><li style="--i:1"><a href="/hypnose-et-suivi" class="menu-lien" data-libelle="L’hypnose et le suivi">L’hypnose et le suivi</a></li><li style="--i:2"><a href="/#ateliers" class="menu-lien" data-libelle="Accueil">Ateliers</a></li><li style="--i:3"><a href="/#parcours" class="menu-lien" data-libelle="Accueil">Mon parcours</a></li><li style="--i:4"><a href="/tarifs-et-rendez-vous" class="menu-lien" data-libelle="Tarifs et rendez-vous" aria-current="page">Tarifs et rendez-vous</a></li></ul>
+    <div class="menu-contact">
+      <p class="menu-titre">Contact</p>
+      <p><a class="bouton bouton--clair" href="tel:+33953725114">Appeler le 09 53 72 51 14</a></p>
+      <p><a class="bouton bouton--contour-clair" href="/tarifs-et-rendez-vous#rendez-vous" data-libelle="Tarifs et rendez-vous">Prendre rendez-vous</a></p>
+      <p class="menu-adresse">6, rue Victor de Lanneau<br><span class="insecable">21460 Bard-lès-Époisses</span></p>
+      <p><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></p>
+    </div>
+  </div>
+</div>
+<main id="contenu" tabindex="-1">
+<section class="seuil ecran" id="debut">
+  <div class="seuil-texte">
+    <p class="surtitre" data-anime="gsap">Tarifs et rendez-vous</p>
+    <h1 class="seuil-titre seuil-titre--page" data-superpose><span class="mot-masque"><span class="mot" data-anime="gsap">Tarifs</span></span> <span class="mot-masque"><span class="mot" data-anime="gsap">et</span></span> <span class="mot-masque"><span class="mot" data-anime="gsap">rendez-vous</span></span> </h1>
+    <p class="seuil-prix" data-anime="gsap">La séance individuelle, au cabinet ou en visio : <strong class="prix-appel" data-prix data-info-cle>70 €</strong></p>
+    <p class="seuil-actions" data-anime="gsap">
+      <a href="/tarifs-et-rendez-vous#rendez-vous" class="bouton" data-libelle="Tarifs et rendez-vous" data-action-principale data-magnetique>Prendre rendez-vous</a>
+      <a class="bouton bouton--contour" href="tel:+33953725114">Appeler</a>
+    </p>
+    <div class="seuil-statut" data-anime="gsap"><p class="statut" data-statut data-horaires-json="{&quot;fuseau&quot;:&quot;Europe/Paris&quot;,&quot;jours&quot;:[{&quot;j&quot;:1,&quot;nom&quot;:&quot;Lundi&quot;,&quot;plages&quot;:[[&quot;09:00&quot;,&quot;12:00&quot;],[&quot;13:30&quot;,&quot;19:00&quot;]]},{&quot;j&quot;:2,&quot;nom&quot;:&quot;Mardi&quot;,&quot;plages&quot;:[[&quot;09:00&quot;,&quot;12:00&quot;],[&quot;13:30&quot;,&quot;19:00&quot;]]},{&quot;j&quot;:3,&quot;nom&quot;:&quot;Mercredi&quot;,&quot;plages&quot;:[[&quot;09:00&quot;,&quot;12:00&quot;],[&quot;13:30&quot;,&quot;19:00&quot;]]},{&quot;j&quot;:4,&quot;nom&quot;:&quot;Jeudi&quot;,&quot;plages&quot;:[[&quot;09:00&quot;,&quot;12:00&quot;],[&quot;13:30&quot;,&quot;19:00&quot;]]},{&quot;j&quot;:5,&quot;nom&quot;:&quot;Vendredi&quot;,&quot;plages&quot;:[[&quot;09:00&quot;,&quot;12:00&quot;],[&quot;13:30&quot;,&quot;19:00&quot;]]},{&quot;j&quot;:6,&quot;nom&quot;:&quot;Samedi&quot;,&quot;plages&quot;:[[&quot;09:00&quot;,&quot;12:00&quot;]]},{&quot;j&quot;:0,&quot;nom&quot;:&quot;Dimanche&quot;,&quot;plages&quot;:[]}],&quot;fermetures&quot;:[]}" data-textes="{&quot;ouvert&quot;:&quot;Joignable maintenant&quot;,&quot;ferme&quot;:&quot;Fermé en ce moment&quot;,&quot;rouvre&quot;:&quot;réouverture {quand}&quot;,&quot;aujourdhui&quot;:&quot;aujourd’hui à {h}&quot;,&quot;demain&quot;:&quot;demain à {h}&quot;,&quot;jour&quot;:&quot;{jour} à {h}&quot;,&quot;ferie&quot;:&quot;Jour férié : horaires à confirmer&quot;,&quot;fermeture&quot;:&quot;Fermeture exceptionnelle&quot;}">
+  <span class="statut-point" aria-hidden="true"></span><span class="statut-texte" data-statut-texte>Lundi au vendredi 9 h – 12 h et 13 h 30 – 19 h, samedi 9 h – 12 h</span>
+  <a class="statut-tel" href="tel:+33953725114">09 53 72 51 14</a>
+</p></div>
+  </div>
+  <div class="arche seuil-arche-page" data-arche>
+  <figure class="media arche-media" data-grok style="--cadrage:47% 50%;--cadrage-mobile:58% 55%">
+  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/grok/tarifs-ouverture-mobile-640.webp 640w, /assets/images/grok/tarifs-ouverture-mobile-941.webp 941w" sizes="(max-width: 760px) 92vw, 600px">
+    <img src="/assets/images/grok/tarifs-ouverture-1280.webp" srcset="/assets/images/grok/tarifs-ouverture-640.webp 640w, /assets/images/grok/tarifs-ouverture-1280.webp 1280w, /assets/images/grok/tarifs-ouverture-1568.webp 1568w" sizes="(max-width: 760px) 92vw, 600px" alt="Porte de bois entrouverte dans une pièce sombre, lumière chaude venue de l’extérieur" width="1280" height="853" fetchpriority="high" loading="eager" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  <canvas class="arche-brume" data-brume aria-hidden="true" data-audit-ignorer></canvas>
+  <div class="arche-brume-css" aria-hidden="true"></div>
+  <svg class="arche-cadre" aria-hidden="true" data-audit-ignorer><path data-cadre /></svg>
+</div>
+</section>
+<section class="grille-tarifs conteneur" id="tarifs">
+  <div class="tarifs-texte">
+    <h2 class="titre-section" data-anime>Les tarifs</h2>
+    <ul class="tarifs-liste">
+      <li class="tarif tarif--seance" data-anime>
+        <div><h3>Séance individuelle</h3><p>Adulte ou adolescent : première séance d’environ 1 h 30, puis 1 h à 1 h 15. Enfant dès 5 ans : une séance avec les parents, puis une avec l’enfant, au cabinet.</p></div>
+        <p class="tarif-prix"><strong class="chiffres" data-prix>70 €</strong><span>la séance</span></p>
+      </li><li class="tarif tarif--etudiant" data-anime>
+        <div><h3>Séance étudiant</h3><p>Même déroulé que la séance individuelle.</p></div>
+        <p class="tarif-prix"><strong class="chiffres" data-prix>60 €</strong><span>la séance</span></p>
+      </li><li class="tarif tarif--atelier" data-anime>
+        <div><h3>Atelier d’autohypnose</h3><p>4 séances de 1 h 30 en visio, 4 places.</p></div>
+        <p class="tarif-prix"><strong class="chiffres" data-prix>80 €</strong><span>les 4 séances</span></p>
+      </li><li class="tarif tarif--regressive" data-anime>
+        <div><h3>Hypnose régressive</h3><p>Exploration des vies passées. Adultes uniquement, séance de 2 à 3 h.</p></div>
+        <p class="tarif-prix"><strong class="chiffres" data-prix>60 €</strong><span>de l’heure</span></p>
+      </li>
+    </ul>
+    <p class="a-completer" data-anime>Certaines mutuelles peuvent prendre en charge les séances : liste à confirmer.</p>
+    <p class="petite-note" data-anime>TVA non applicable, art. 293 B du CGI.</p>
+  </div>
+  <div class="tarifs-cote">
+    <figure class="media tarifs-media" data-grok style="--cadrage:45% 60%">
+  <picture>
+    <img src="/assets/images/grok/tarifs-tisane-1280.webp" srcset="/assets/images/grok/tarifs-tisane-640.webp 640w, /assets/images/grok/tarifs-tisane-1280.webp 1280w, /assets/images/grok/tarifs-tisane-1470.webp 1470w" sizes="(max-width: 760px) 92vw, 36vw" alt="Tasse de tisane et carnet ouvert sur une nappe de lin" width="1280" height="853" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+    <div class="paiement" data-anime>
+      <h3>Moyens de paiement</h3>
+      <ul><li>Au cabinet : virement, chèque ou espèces, le jour de la séance.</li><li>En visio : virement, avant la séance.</li><li>Carte bancaire : lors de la réservation sur Résalib.</li><li>Une facture vous est remise après paiement.</li></ul>
+    </div>
+  </div>
+</section>
+<section class="rdv" id="rendez-vous">
+  <div class="conteneur">
+    <div class="rdv-tete">
+      <h2 class="titre-section" data-anime>Prendre rendez-vous</h2>
+      <p data-anime>Trois façons de réserver, selon ce qui vous convient.</p>
+    </div>
+    <ul class="rdv-voies">
+      <li class="voie" data-anime>
+        <span class="voie-numero" aria-hidden="true">1</span>
+        <h3>En ligne</h3>
+        <p>Choisissez votre créneau sur Résalib, au cabinet ou en visio.</p>
+        <p><a class="bouton" href="https://www.resalib.fr/praticien/106137-laurence-katchavenda-ei-elkahypnose-praticien-en-hypnose-bard-les-epoisses" target="_blank" rel="noopener" data-magnetique>Réserver sur Résalib<span class="visuellement-cache"> (nouvel onglet)</span></a></p>
+      </li>
+      <li class="voie" data-anime>
+        <span class="voie-numero" aria-hidden="true">2</span>
+        <h3>Par téléphone</h3>
+        <p>Pour poser vos questions de vive voix avant de réserver.</p>
+        <p><a class="bouton bouton--contour voie-tel chiffres" href="tel:+33953725114">09 53 72 51 14</a></p>
+      </li>
+      <li class="voie" data-anime>
+        <span class="voie-numero" aria-hidden="true">3</span>
+        <h3>Être rappelé</h3>
+        <p>Laissez vos coordonnées : Laurence vous rappelle.</p>
+        <p><a href="/tarifs-et-rendez-vous#rappel" class="bouton bouton--contour" data-libelle="Tarifs et rendez-vous">Remplir la demande</a></p>
+      </li>
+    </ul>
+    <div class="rappel" id="rappel">
+      <div class="rappel-formulaire">
+        <h3 class="rappel-titre">Demande de rappel</h3>
+        <p class="rappel-deroule">En 2 étapes : votre demande, puis vos coordonnées.</p>
+        <form data-formulaire data-etapes-form novalidate>
+          <ol class="rappel-progres" aria-hidden="true"><li class="actif" data-progres="1">Votre demande</li><li data-progres="2">Vos coordonnées</li></ol>
+          <div class="rappel-pas" data-pas="1">
+            <fieldset class="champ">
+              <legend>Votre demande</legend>
+              <div class="choix"><label class="choix-option"><input type="radio" name="sujet" value="premiere" required checked><span>Une première séance</span></label><label class="choix-option"><input type="radio" name="sujet" value="suivi" required><span>Un suivi en cours</span></label><label class="choix-option"><input type="radio" name="sujet" value="enfant" required><span>Une séance pour un enfant</span></label><label class="choix-option"><input type="radio" name="sujet" value="atelier" required><span>Un atelier d’autohypnose</span></label><label class="choix-option"><input type="radio" name="sujet" value="prochain" required><span>Être prévenu du prochain atelier</span></label><label class="choix-option"><input type="radio" name="sujet" value="autre" required><span>Une autre question</span></label></div>
+            </fieldset>
+            <div class="champ" data-si-sujet="atelier">
+              <label for="atelier">Quel atelier ?</label>
+              <select id="atelier" name="atelier" aria-describedby="erreur-atelier-choix">
+                <option value="">Choisir un atelier</option>
+                <option value="dialogue-interieur-samedis-matin">Dialogue intérieur, les samedis matin, à partir du 7 novembre</option><option value="confiance-en-soi-mardis">Confiance en soi, les mardis, à partir du 17 novembre</option><option value="stress-sommeil-mercredis">Stress et sommeil, les mercredis, à partir du 18 novembre</option><option value="dialogue-interieur-samedis-apres-midi">Dialogue intérieur, les samedis après-midi, à partir du 21 novembre</option>
+              </select>
+              <p class="champ-erreur" id="erreur-atelier-choix" data-erreur-atelier aria-live="polite" hidden>Choisissez un atelier pour continuer.</p>
+            </div>
+            <fieldset class="champ" data-si-sujet="premiere,suivi,enfant,autre">
+              <legend>Où ?</legend>
+              <div class="choix choix--ligne"><label class="choix-option"><input type="radio" name="lieu" value="cabinet"><span>Au cabinet</span></label><label class="choix-option"><input type="radio" name="lieu" value="visio"><span>En visio</span></label><label class="choix-option"><input type="radio" name="lieu" value="indifferent" checked><span>Peu importe</span></label></div>
+            </fieldset>
+            <div class="champ">
+              <label for="message">Votre message (facultatif)</label>
+              <textarea id="message" name="message" rows="3"></textarea>
+            </div>
+            <p class="rappel-boutons"><button type="button" class="bouton" data-pas-suivant>Continuer</button></p>
+          </div>
+          <div class="rappel-pas" data-pas="2">
+            <div class="champ"><label for="nom">Nom et prénom</label><input id="nom" name="nom" type="text" autocomplete="name" required></div>
+            <div class="champ"><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" required></div>
+            <div class="champ"><label for="email">E-mail (facultatif)</label><input id="email" name="email" type="email" autocomplete="email"></div>
+            <div class="champ"><label for="moment">Le meilleur moment pour vous rappeler (facultatif)</label><input id="moment" name="moment" type="text"></div>
+            <div class="champ champ--case"><label class="case"><input type="checkbox" name="consentement" value="oui" required><span>J’accepte que ces coordonnées servent uniquement à me recontacter.</span></label></div>
+            <p class="mention-donnees">Vos données servent uniquement à vous recontacter et ne sont jamais cédées. Durée de conservation : à compléter. <a href="/confidentialite" class="lien-trace" data-libelle="Confidentialité">Politique de confidentialité</a></p>
+            <p class="rappel-boutons"><button type="button" class="bouton bouton--contour" data-pas-precedent>Retour</button> <button type="submit" class="bouton">Envoyer la demande</button></p>
+          </div>
+          <p data-message-envoi hidden tabindex="-1" data-texte="Demande simulée : rien n’a été envoyé. Sur le site final, elle arrivera directement à Laurence."></p>
+        </form>
+      </div>
+      <aside class="rappel-recap" aria-live="polite" data-recap data-libelles="{&quot;sujet&quot;:&quot;Demande&quot;,&quot;atelier&quot;:&quot;Atelier&quot;,&quot;lieu&quot;:&quot;Lieu&quot;,&quot;nom&quot;:&quot;Nom&quot;,&quot;tel&quot;:&quot;Téléphone&quot;}">
+        <figure class="media rappel-media" style="--cadrage:45% 30%">
+  <picture>
+    <img src="/assets/images/seance-debout-1280.webp" srcset="/assets/images/seance-debout-640.webp 640w, /assets/images/seance-debout-1280.webp 1280w, /assets/images/seance-debout-1920.webp 1920w" sizes="(max-width: 760px) 92vw, 30vw" alt="Laurence échange debout avec une personne accompagnée, de dos, dans le cabinet" width="1280" height="1218" loading="lazy" decoding="async">
+  </picture>
+</figure>
+        <h3>Récapitulatif</h3>
+        <dl data-recap-liste><div><dt>Demande</dt><dd>Une première séance</dd></div></dl>
+        <p class="petite-note">Votre demande s’affichera ici au fil de vos choix.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+<section class="conditions conteneur" id="conditions">
+  <div>
+    <h2 class="titre-section" data-anime>Conditions</h2>
+    <dl class="conditions-liste"><div data-anime><dt>Annulation</dt><dd>Prévenez au moins 48 h à l’avance pour être remboursé ; moins de 48 h avant, la séance peut être reportée sur une autre prestation. Une annulation le jour même ou une absence reste due.</dd></div><div data-anime><dt>Retard</dt><dd>Au-delà de 20 minutes de retard, la séance peut ne pas avoir lieu.</dd></div><div data-anime><dt>Confirmation</dt><dd>Un SMS de confirmation est envoyé 24 h avant le rendez-vous.</dd></div><div data-anime><dt>Ateliers</dt><dd>Engagement sur les 4 séances. Annulation remboursée au moins 48 h avant la première séance ; moins de 48 h avant, report possible sur une autre prestation ; aucun remboursement après la première séance. Le lien Zoom est envoyé après paiement.</dd></div></dl>
+    <p class="a-completer" data-anime>Conditions à harmoniser avec les conditions générales de vente : à compléter.</p>
+    <p data-anime><a href="/conditions-generales-de-vente" class="lien-trace lien-seul" data-libelle="Conditions générales de vente">Lire les conditions générales de vente</a></p>
+  </div>
+  <figure class="media conditions-media" style="--cadrage:50% 50%">
+  <picture>
+    <img src="/assets/images/cabinet-fauteuil-1280.webp" srcset="/assets/images/cabinet-fauteuil-640.webp 640w, /assets/images/cabinet-fauteuil-1280.webp 1280w" sizes="(max-width: 760px) 92vw, 40vw" alt="Le fauteuil de cuir vert du cabinet devant un papier peint végétal" width="1280" height="1113" loading="lazy" decoding="async">
+  </picture>
+</figure>
+</section>
+<section class="horaires-section conteneur" id="horaires">
+  <figure class="media horaires-media" data-grok style="--cadrage:55% 50%">
+  <picture>
+    <img src="/assets/images/grok/tarifs-horaires-1280.webp" srcset="/assets/images/grok/tarifs-horaires-640.webp 640w, /assets/images/grok/tarifs-horaires-1280.webp 1280w, /assets/images/grok/tarifs-horaires-1536.webp 1536w" sizes="(max-width: 760px) 92vw, 40vw" alt="Lumière du matin sur un mur de pierre claire, ombre d’une fenêtre à petits carreaux" width="1280" height="853" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  <div>
+    <h2 class="titre-section" data-anime>Horaires</h2>
+    <p data-anime>Le cabinet reçoit sur rendez-vous.</p>
+    <p class="statut" data-statut data-horaires-json="{&quot;fuseau&quot;:&quot;Europe/Paris&quot;,&quot;jours&quot;:[{&quot;j&quot;:1,&quot;nom&quot;:&quot;Lundi&quot;,&quot;plages&quot;:[[&quot;09:00&quot;,&quot;12:00&quot;],[&quot;13:30&quot;,&quot;19:00&quot;]]},{&quot;j&quot;:2,&quot;nom&quot;:&quot;Mardi&quot;,&quot;plages&quot;:[[&quot;09:00&quot;,&quot;12:00&quot;],[&quot;13:30&quot;,&quot;19:00&quot;]]},{&quot;j&quot;:3,&quot;nom&quot;:&quot;Mercredi&quot;,&quot;plages&quot;:[[&quot;09:00&quot;,&quot;12:00&quot;],[&quot;13:30&quot;,&quot;19:00&quot;]]},{&quot;j&quot;:4,&quot;nom&quot;:&quot;Jeudi&quot;,&quot;plages&quot;:[[&quot;09:00&quot;,&quot;12:00&quot;],[&quot;13:30&quot;,&quot;19:00&quot;]]},{&quot;j&quot;:5,&quot;nom&quot;:&quot;Vendredi&quot;,&quot;plages&quot;:[[&quot;09:00&quot;,&quot;12:00&quot;],[&quot;13:30&quot;,&quot;19:00&quot;]]},{&quot;j&quot;:6,&quot;nom&quot;:&quot;Samedi&quot;,&quot;plages&quot;:[[&quot;09:00&quot;,&quot;12:00&quot;]]},{&quot;j&quot;:0,&quot;nom&quot;:&quot;Dimanche&quot;,&quot;plages&quot;:[]}],&quot;fermetures&quot;:[]}" data-textes="{&quot;ouvert&quot;:&quot;Joignable maintenant&quot;,&quot;ferme&quot;:&quot;Fermé en ce moment&quot;,&quot;rouvre&quot;:&quot;réouverture {quand}&quot;,&quot;aujourdhui&quot;:&quot;aujourd’hui à {h}&quot;,&quot;demain&quot;:&quot;demain à {h}&quot;,&quot;jour&quot;:&quot;{jour} à {h}&quot;,&quot;ferie&quot;:&quot;Jour férié : horaires à confirmer&quot;,&quot;fermeture&quot;:&quot;Fermeture exceptionnelle&quot;}">
+  <span class="statut-point" aria-hidden="true"></span><span class="statut-texte" data-statut-texte>Lundi au vendredi 9 h – 12 h et 13 h 30 – 19 h, samedi 9 h – 12 h</span>
+  <a class="statut-tel" href="tel:+33953725114">09 53 72 51 14</a>
+</p>
+    <table class="horaires" data-horaires data-aujourdhui="Aujourd’hui">
+  <caption class="visuellement-cache">Horaires</caption>
+  <tbody><tr data-jour="1"><th scope="row">Lundi</th><td>9 h – 12 h · 13 h 30 – 19 h</td></tr><tr data-jour="2"><th scope="row">Mardi</th><td>9 h – 12 h · 13 h 30 – 19 h</td></tr><tr data-jour="3"><th scope="row">Mercredi</th><td>9 h – 12 h · 13 h 30 – 19 h</td></tr><tr data-jour="4"><th scope="row">Jeudi</th><td>9 h – 12 h · 13 h 30 – 19 h</td></tr><tr data-jour="5"><th scope="row">Vendredi</th><td>9 h – 12 h · 13 h 30 – 19 h</td></tr><tr data-jour="6"><th scope="row">Samedi</th><td>9 h – 12 h</td></tr><tr data-jour="0"><th scope="row">Dimanche</th><td>Fermé</td></tr></tbody>
+</table>
+    <p class="a-completer">Fermetures exceptionnelles et congés : à compléter.</p>
+  </div>
+</section>
+<section class="acces conteneur" id="acces">
+  <div class="acces-texte">
+    <h2 class="titre-section" data-anime>Accès</h2>
+    <address data-anime>6, rue Victor de Lanneau<br><span class="insecable">21460 Bard-lès-Époisses</span></address>
+    <p data-anime>Stationnement facile sur la place du village, à 50 m de l&#39;église.</p>
+    <figure class="media acces-media" data-grok style="--cadrage:60% 60%">
+  <picture>
+    <img src="/assets/images/grok/tarifs-acces-1280.webp" srcset="/assets/images/grok/tarifs-acces-640.webp 640w, /assets/images/grok/tarifs-acces-1280.webp 1280w, /assets/images/grok/tarifs-acces-1536.webp 1536w" sizes="(max-width: 760px) 92vw, 40vw" alt="Petite route de campagne bordée d’arbres dans les collines de l’Auxois, au matin" width="1280" height="853" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  </div>
+  <figure class="carte" data-carte data-visuel>
+  <div class="carte-plan" style="--ratio:600 / 359">
+  <svg viewBox="0 0 600 359" aria-hidden="true" preserveAspectRatio="none">
+    <g class="carte-relief"><path d="M0 65 C 120 39, 270 95, 420 55 S 600 79, 620 65" /><path d="M0 122 C 120 102, 270 152, 420 112 S 600 136, 620 122" /><path d="M0 180 C 120 166, 270 210, 420 170 S 600 194, 620 180" /><path d="M0 237 C 120 229, 270 267, 420 227 S 600 251, 620 237" /><path d="M0 294 C 120 292, 270 324, 420 284 S 600 308, 620 294" /></g>
+    <g class="carte-traits"><path data-trait d="M342.1 240.1 L377.2 210.2" /><path data-trait d="M473.9 260.2 L377.2 210.2" /><path data-trait d="M477.4 98.1 L377.2 210.2" /><path data-trait d="M122.6 260.9 L377.2 210.2" /></g>
+    <g class="carte-villes"><circle cx="342.1" cy="240.1" r="5" /><circle cx="473.9" cy="260.2" r="5" /><circle cx="477.4" cy="98.1" r="5" /><circle cx="122.6" cy="260.9" r="5" /></g>
+    <g class="carte-cabinet"><circle class="carte-onde" cx="377.2" cy="210.2" r="10" /><circle cx="377.2" cy="210.2" r="8" /></g>
+  </svg>
+  <ul class="carte-etiquettes">
+    <li class="carte-etiquette carte-etiquette--cabinet carte-etiquette--haut" style="--x:62.86%;--y:58.54%" data-repere><strong>Venir au cabinet</strong><span>Bard-lès-Époisses</span></li>
+    <li class="carte-etiquette carte-etiquette--gauche" style="--x:57.02%;--y:66.87%" data-repere><strong>Époisses</strong><span class="chiffres">4 km</span></li><li class="carte-etiquette carte-etiquette--bas" style="--x:78.99%;--y:72.47%" data-repere><strong>Semur-en-Auxois</strong><span class="chiffres">10 km</span></li><li class="carte-etiquette carte-etiquette--gauche" style="--x:79.57%;--y:27.32%" data-repere><strong>Montbard</strong><span class="chiffres">14 km</span></li><li class="carte-etiquette carte-etiquette--haut" style="--x:20.43%;--y:72.68%" data-repere><strong>Avallon</strong><span class="chiffres">24 km</span></li>
+  </ul>
+  </div>
+  <figcaption class="carte-note">Distances à vol d’oiseau, calculées d’après les coordonnées des communes.</figcaption>
+</figure>
+  <div class="acces-fin" data-anime>
+    <h3>Une question avant de réserver ?</h3>
+    <p>Appelez le cabinet : Laurence vous répond ou vous rappelle dès que possible.</p>
+    <p class="fin-actions">
+      <a class="bouton" href="tel:+33953725114" data-magnetique>Appeler le 09 53 72 51 14</a>
+      <a href="/hypnose-et-suivi" class="bouton bouton--contour" data-libelle="L’hypnose et le suivi">Comment se passe un suivi</a>
+    </p>
+  </div>
+</section>
+</main>
+<footer class="pied" id="pied">
+  <div class="conteneur pied-grille">
+    <div class="pied-marque">
+      <img src="/assets/images/logo-pastille.svg" alt="" width="88" height="88" loading="lazy">
+      <p>Hypnothérapie au cabinet ou en visio, ateliers d’autohypnose en petits groupes.</p>
+    </div>
+    <div>
+      <p class="pied-titre">Contact</p>
+      <p>6, rue Victor de Lanneau<br><span class="insecable">21460 Bard-lès-Époisses</span></p>
+      <ul><li><a href="tel:+33953725114">09 53 72 51 14</a></li><li><a href="mailto:elkahypnose@free.fr">elkahypnose@free.fr</a></li><li><a href="https://www.resalib.fr/praticien/106137-laurence-katchavenda-ei-elkahypnose-praticien-en-hypnose-bard-les-epoisses" target="_blank" rel="noopener">Rendez-vous sur Résalib<span class="visuellement-cache"> (nouvel onglet)</span></a></li></ul>
+    </div>
+    <nav aria-label="Sommaire">
+      <p class="pied-titre">Sommaire</p>
+      <ul><li><a href="/" data-libelle="Accueil">Accueil</a></li><li><a href="/hypnose-et-suivi" data-libelle="L’hypnose et le suivi">L’hypnose et le suivi</a></li><li><a href="/#ateliers" data-libelle="Accueil">Ateliers</a></li><li><a href="/#parcours" data-libelle="Accueil">Mon parcours</a></li><li><a href="/tarifs-et-rendez-vous" data-libelle="Tarifs et rendez-vous" aria-current="page">Tarifs et rendez-vous</a></li></ul>
+    </nav>
+    <div>
+      <p class="pied-titre">Informations</p>
+      <ul><li><a href="/mentions-legales" data-libelle="Mentions légales">Mentions légales</a></li><li><a href="/confidentialite" data-libelle="Confidentialité">Confidentialité</a></li><li><a href="/conditions-generales-de-vente" data-libelle="Conditions générales de vente">Conditions générales de vente</a></li></ul>
+      <p class="pied-titre pied-titre--suite">Suivre Elka Hypnose</p>
+      <ul><li><a href="https://www.facebook.com/profile.php?id=61572601529462" target="_blank" rel="noopener">Facebook<span class="visuellement-cache"> (nouvel onglet)</span></a></li><li><a href="https://instagram.com/elkahypnose/" target="_blank" rel="noopener">Instagram<span class="visuellement-cache"> (nouvel onglet)</span></a></li></ul>
+    </div>
+  </div>
+  <div class="conteneur pied-bas">
+    <p class="pied-avertissement">Je ne suis pas médecin : l’hypnothérapie ne remplace pas un suivi ou un traitement médical.</p>
+    <ul class="pied-confort">
+      <li><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></li>
+      <li><a href="#haut" data-sans-transition>Retour en haut</a></li>
+    </ul>
+    <p>Maquette : les informations marquées « à compléter » seront fournies par Laurence Katchavenda.</p>
+    <p>© Elka Hypnose</p>
+  </div>
+</footer>
+<div data-barre-fixe>
+  <a class="bouton bouton--contour" href="tel:+33953725114">Appeler</a>
+  <a class="bouton" href="/tarifs-et-rendez-vous#rendez-vous" data-libelle="Tarifs et rendez-vous">Rendez-vous</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "rencontre",
+    "numero": "1",
+    "duree": "environ 1 h 30",
+    "titre": "Une première rencontre",
+    "texte": "Faire connaissance, établir vos objectifs et découvrir l’hypnose. Avant ce premier rendez-vous, Laurence vous appelle pour parler de ce qui vous amène.",
+    "image": "seance-entretien",
+    "cadrage": "64% 45%",
+    "alt": "Laurence en entretien avec une personne accompagnée, de dos, dans le cabinet aux murs verts"
+  },
+  {
+    "id": "seances",
+    "numero": "2",
+    "duree": "1 à 10 séances de 1 h à 1 h 15",
+    "titre": "Une période de travail à votre rythme",
+    "texte": "Le nombre de séances dépend de la problématique abordée et se décide ensemble après la première. Entre les séances, des outils respiratoires et de régulation émotionnelle peuvent vous être proposés.",
+    "image": "seance-allongee",
+    "cadrage": "40% 45%",
+    "alt": "Séance d’hypnose au cabinet : Laurence prend des notes, la personne accompagnée est allongée dans un fauteuil, visage hors cadre"
+  },
+  {
+    "id": "graines",
+    "numero": "3",
+    "duree": "pas à pas",
+    "titre": "Les graines du changement",
+    "texte": "Pas à pas, de nouvelles façons de réagir peuvent prendre racine, à votre rythme. L’accompagnement vise votre autonomie.",
+    "image": "grok/suivi-etape-3-pousse",
+    "cadrage": "48% 62%",
+    "alt": "Jeune pousse à deux feuilles couverte de rosée, dans la lumière du matin"
+  }
+]

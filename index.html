@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="fr" data-v="1" data-gabarit="accueil" data-curseur>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Elka Hypnose : hypnothérapie à Bard-lès-Époisses et en visio</title>
+<meta name="description" content="Laurence Katchavenda, hypnothérapeute à Bard-lès-Époisses : séances individuelles et personnalisées au cabinet ou en visio, ateliers d’autohypnose en petits groupes.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://elka-maquette.vercel.app/">
+<style>:root{--fond:#F1ECE2;--texte:#2F3A2C;--voile-fond:#2F3A2C;--ouverture-fond:#F1ECE2;--menu-fond:#2F3A2C}:root { --entete-h: 72px; --barres-h: 0px; } html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; } body { margin: 0; background: var(--fond); } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; } [data-voile] { position: fixed; inset: 0; z-index: 900; background: var(--voile-fond); transform: translateY(100%); visibility: hidden; pointer-events: none; } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] { transform: none; visibility: visible; } html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; } .ouverture-panneau { position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center; background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; } html.defilement-bloque, html.defilement-bloque body, html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie), html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body, html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours), html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }</style>
+<script>(function () {
+var d = document.documentElement, ss = null, ls = null;
+try { ss = window.sessionStorage; ls = window.localStorage; } catch (e) {}
+d.classList.add('js');
+var calme = false;
+try { calme = !!ls && ls.getItem('socle:calme') === 'oui'; } catch (e) {}
+if (!calme && window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) calme = true;
+if (calme) d.classList.add('calme');
+var nav = performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+var type = nav ? nav.type : 'navigate';
+var depart = null;
+try { depart = JSON.parse(ss.getItem('socle:depart') || 'null'); ss.removeItem('socle:depart'); } catch (e) {}
+if (depart && !(Date.now() - depart.t < 15000)) depart = null;
+var retourSection = false;
+try { retourSection = !!ss.getItem('socle:calme-retour'); } catch (e) {}
+var mode = type === 'back_forward' || retourSection ? 'retour' : type === 'reload' ? 'intro' : depart ? 'voile' : 'intro';
+d.setAttribute('data-arrivee', mode);
+if (mode === 'voile' && depart.couleur) d.style.setProperty('--voile-fond', depart.couleur);
+if (type === 'reload' && 'scrollRestoration' in history) {
+if (!retourSection) history.scrollRestoration = 'manual';
+}
+try {
+var choisie = ls && ls.getItem('socle:langue');
+var langue = (d.lang || '').slice(0, 2);
+if (choisie && choisie !== langue && type === 'navigate' && !depart) {
+var alt = document.querySelector('link[rel="alternate"][hreflang="' + choisie + '"]');
+if (alt) location.replace(new URL(alt.href).pathname + location.search + location.hash);
+}
+} catch (e) {}
+setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('secours'); }, 2000);
+})();</script>
+<link rel="preload" href="/assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/socle.css?v=1">
+<link rel="stylesheet" href="/assets/css/site.css?v=1">
+<link rel="modulepreload" href="/assets/js/site.js?v=1">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=1">
+<script src="/assets/vendor/gsap.min.js" defer></script>
+<script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/assets/vendor/SplitText.min.js" defer></script>
+<script type="module" src="/assets/js/site.js?v=1"></script>
+<meta name="theme-color" content="#F1ECE2">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Elka Hypnose">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Elka Hypnose : hypnothérapie à Bard-lès-Époisses et en visio">
+<meta property="og:description" content="Laurence Katchavenda, hypnothérapeute à Bard-lès-Époisses : séances individuelles et personnalisées au cabinet ou en visio, ateliers d’autohypnose en petits groupes.">
+<meta property="og:url" content="https://elka-maquette.vercel.app/">
+<meta property="og:image" content="https://elka-maquette.vercel.app/assets/partage/accueil-fr.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Elka Hypnose : collines de l’Auxois au lever du soleil, vues à travers une arche">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Elka Hypnose","description":"Séances d’hypnothérapie individuelles et personnalisées sur rendez-vous, au cabinet de Bard-lès-Époisses ou en visio, et ateliers d’initiation à l’autohypnose en petits groupes, en visio.","url":"https://elka-maquette.vercel.app/","image":"https://elka-maquette.vercel.app/assets/partage/accueil-fr.jpg","logo":"https://elka-maquette.vercel.app/assets/images/logo-pastille.svg","telephone":"+33953725114","email":"elkahypnose@free.fr","address":{"@type":"PostalAddress","streetAddress":"6, rue Victor de Lanneau","postalCode":"21460","addressLocality":"Bard-lès-Époisses","addressCountry":"FR"},"geo":{"@type":"GeoCoordinates","latitude":47.5322,"longitude":4.2167},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"12:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"13:30","closes":"19:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"12:00"}],"founder":{"@type":"Person","name":"Laurence Katchavenda","jobTitle":"Hypnothérapeute"},"sameAs":["https://www.resalib.fr/praticien/106137-laurence-katchavenda-ei-elkahypnose-praticien-en-hypnose-bard-les-epoisses","https://www.facebook.com/profile.php?id=61572601529462","https://instagram.com/elkahypnose/"]}</script>
+</head>
+<body id="haut" class="page-accueil">
+<div data-voile aria-hidden="true"><div class="voile-contenu">
+  <svg class="voile-arche" viewBox="0 0 120 170" aria-hidden="true"><path d="M2 170 V60 A58 58 0 0 1 118 60 V170" /></svg>
+  <img src="/assets/images/logo-clair.svg" alt="" width="108" height="60">
+  <span data-voile-libelle>Accueil</span>
+</div></div>
+<div class="ouverture-panneau" data-ouverture aria-hidden="true">
+  <div class="seuil-arche" data-seuil-arche>
+    <div class="seuil-vue" data-seuil-vue>
+      <figure class="media seuil-media" data-grok style="--cadrage:50% 52%;--cadrage-mobile:50% 56%">
+  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/grok/accueil-ouverture-mobile-640.webp 640w, /assets/images/grok/accueil-ouverture-mobile-941.webp 941w" sizes="(max-width: 760px) 92vw, 600px">
+    <img src="/assets/images/grok/accueil-ouverture-1280.webp" srcset="/assets/images/grok/accueil-ouverture-640.webp 640w, /assets/images/grok/accueil-ouverture-1280.webp 1280w, /assets/images/grok/accueil-ouverture-1672.webp 1672w" sizes="(max-width: 760px) 92vw, 600px" alt="" width="1280" height="720" fetchpriority="high" loading="eager" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+      <div class="seuil-brume" data-seuil-brume></div>
+    </div>
+    <div class="seuil-battants" data-seuil-battants><span class="seuil-battant seuil-battant--g"></span><span class="seuil-battant seuil-battant--d"></span><span class="seuil-lueur" data-seuil-lueur></span></div>
+    <svg class="seuil-cadre" data-seuil-cadre><path /></svg>
+  </div>
+  <p class="ouverture-ligne">Hypnose · Bard-lès-Époisses</p>
+</div>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header data-entete>
+  <div class="entete-rangee">
+    <a class="entete-logo" href="/" aria-label="Elka Hypn’ose, retour à l’accueil" data-libelle="Accueil" aria-current="page">
+      <img src="/assets/images/logo.svg" alt="" width="90" height="50">
+    </a>
+    <nav data-nav aria-label="Navigation principale">
+      <ul><li><a href="/hypnose-et-suivi" class="lien-trace" data-libelle="L’hypnose et le suivi">L’hypnose et le suivi</a></li><li><a href="/#ateliers" class="lien-trace" data-libelle="Accueil">Ateliers</a></li><li><a href="/#parcours" class="lien-trace" data-libelle="Accueil">Mon parcours</a></li><li><a href="/tarifs-et-rendez-vous" class="lien-trace" data-libelle="Tarifs et rendez-vous">Tarifs et rendez-vous</a></li></ul>
+    </nav>
+    <div class="entete-actions">
+      <a class="bouton bouton--entete" href="/tarifs-et-rendez-vous#rendez-vous" data-libelle="Tarifs et rendez-vous" data-magnetique>Prendre rendez-vous</a>
+      <button type="button" data-menu-bouton aria-controls="menu" aria-expanded="false" data-libelle-ouvrir="Menu" data-libelle-fermer="Fermer"><span class="menu-icone" aria-hidden="true"></span><span data-libelle-bouton>Menu</span></button>
+    </div>
+  </div>
+</header>
+<div id="menu" data-menu role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="menu-grille">
+    <ul class="menu-liens"><li style="--i:0"><a href="/" class="menu-lien" data-libelle="Accueil" aria-current="page">Accueil</a></li><li style="--i:1"><a href="/hypnose-et-suivi" class="menu-lien" data-libelle="L’hypnose et le suivi">L’hypnose et le suivi</a></li><li style="--i:2"><a href="/#ateliers" class="menu-lien" data-libelle="Accueil">Ateliers</a></li><li style="--i:3"><a href="/#parcours" class="menu-lien" data-libelle="Accueil">Mon parcours</a></li><li style="--i:4"><a href="/tarifs-et-rendez-vous" class="menu-lien" data-libelle="Tarifs et rendez-vous">Tarifs et rendez-vous</a></li></ul>
+    <div class="menu-contact">
+      <p class="menu-titre">Contact</p>
+      <p><a class="bouton bouton--clair" href="tel:+33953725114">Appeler le 09 53 72 51 14</a></p>
+      <p><a class="bouton bouton--contour-clair" href="/tarifs-et-rendez-vous#rendez-vous" data-libelle="Tarifs et rendez-vous">Prendre rendez-vous</a></p>
+      <p class="menu-adresse">6, rue Victor de Lanneau<br><span class="insecable">21460 Bard-lès-Époisses</span></p>
+      <p><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></p>
+    </div>
+  </div>
+</div>
+<main id="contenu" tabindex="-1">
+<section class="seuil ecran" id="debut">
+  <div class="seuil-texte">
+    <p class="surtitre" data-anime="gsap">Laurence Katchavenda, hypnothérapeute</p>
+    <h1 class="seuil-titre" data-superpose><span class="mot-masque"><span class="mot" data-anime="gsap">Libérez</span></span> <span class="mot-masque"><span class="mot" data-anime="gsap">votre</span></span> <span class="mot-masque mot-masque--cle"><em class="mot mot--cle" data-anime="gsap">potentiel</em></span> <span class="mot-masque"><span class="mot" data-anime="gsap">grâce</span></span> <span class="mot-masque"><span class="mot" data-anime="gsap">à</span></span> <span class="mot-masque"><span class="mot" data-anime="gsap">l’hypnose.</span></span> </h1>
+    <p class="seuil-intro" data-anime="gsap">Séances d’hypnothérapie individuelles et personnalisées, au cabinet de Bard-lès-Époisses ou en visio, et ateliers d’autohypnose en petits groupes.</p>
+    <p class="seuil-actions" data-anime="gsap">
+      <a href="/tarifs-et-rendez-vous#rendez-vous" class="bouton" data-libelle="Tarifs et rendez-vous" data-action-principale data-magnetique>Prendre rendez-vous</a>
+    </p>
+    <div class="seuil-statut" data-anime="gsap"><p class="statut" data-info-cle data-statut data-horaires-json="{&quot;fuseau&quot;:&quot;Europe/Paris&quot;,&quot;jours&quot;:[{&quot;j&quot;:1,&quot;nom&quot;:&quot;Lundi&quot;,&quot;plages&quot;:[[&quot;09:00&quot;,&quot;12:00&quot;],[&quot;13:30&quot;,&quot;19:00&quot;]]},{&quot;j&quot;:2,&quot;nom&quot;:&quot;Mardi&quot;,&quot;plages&quot;:[[&quot;09:00&quot;,&quot;12:00&quot;],[&quot;13:30&quot;,&quot;19:00&quot;]]},{&quot;j&quot;:3,&quot;nom&quot;:&quot;Mercredi&quot;,&quot;plages&quot;:[[&quot;09:00&quot;,&quot;12:00&quot;],[&quot;13:30&quot;,&quot;19:00&quot;]]},{&quot;j&quot;:4,&quot;nom&quot;:&quot;Jeudi&quot;,&quot;plages&quot;:[[&quot;09:00&quot;,&quot;12:00&quot;],[&quot;13:30&quot;,&quot;19:00&quot;]]},{&quot;j&quot;:5,&quot;nom&quot;:&quot;Vendredi&quot;,&quot;plages&quot;:[[&quot;09:00&quot;,&quot;12:00&quot;],[&quot;13:30&quot;,&quot;19:00&quot;]]},{&quot;j&quot;:6,&quot;nom&quot;:&quot;Samedi&quot;,&quot;plages&quot;:[[&quot;09:00&quot;,&quot;12:00&quot;]]},{&quot;j&quot;:0,&quot;nom&quot;:&quot;Dimanche&quot;,&quot;plages&quot;:[]}],&quot;fermetures&quot;:[]}" data-textes="{&quot;ouvert&quot;:&quot;Joignable maintenant&quot;,&quot;ferme&quot;:&quot;Fermé en ce moment&quot;,&quot;rouvre&quot;:&quot;réouverture {quand}&quot;,&quot;aujourdhui&quot;:&quot;aujourd’hui à {h}&quot;,&quot;demain&quot;:&quot;demain à {h}&quot;,&quot;jour&quot;:&quot;{jour} à {h}&quot;,&quot;ferie&quot;:&quot;Jour férié : horaires à confirmer&quot;,&quot;fermeture&quot;:&quot;Fermeture exceptionnelle&quot;}">
+  <span class="statut-point" aria-hidden="true"></span><span class="statut-texte" data-statut-texte>Lundi au vendredi 9 h – 12 h et 13 h 30 – 19 h, samedi 9 h – 12 h</span>
+  <a class="statut-tel" href="tel:+33953725114">09 53 72 51 14</a>
+</p></div>
+  </div>
+  <div class="arche seuil-arche-page" data-arche>
+  <figure class="media arche-media" data-grok style="--cadrage:50% 52%;--cadrage-mobile:50% 56%">
+  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/grok/accueil-ouverture-mobile-640.webp 640w, /assets/images/grok/accueil-ouverture-mobile-941.webp 941w" sizes="(max-width: 760px) 92vw, 600px">
+    <img src="/assets/images/grok/accueil-ouverture-1280.webp" srcset="/assets/images/grok/accueil-ouverture-640.webp 640w, /assets/images/grok/accueil-ouverture-1280.webp 1280w, /assets/images/grok/accueil-ouverture-1672.webp 1672w" sizes="(max-width: 760px) 92vw, 600px" alt="Collines de l’Auxois au lever du soleil, brume dans les vallons, chemin d’herbe vers l’horizon" width="1280" height="720" fetchpriority="high" loading="eager" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  <canvas class="arche-brume" data-brume aria-hidden="true" data-audit-ignorer></canvas>
+  <div class="arche-brume-css" aria-hidden="true"></div>
+  <svg class="arche-cadre" aria-hidden="true" data-audit-ignorer><path data-cadre /></svg>
+</div>
+</section>
+<section class="rencontre conteneur" id="rencontre">
+  <figure class="media rencontre-portrait" style="--cadrage:50% 30%">
+  <picture>
+    <img src="/assets/images/laurence-portrait-623.webp" srcset="/assets/images/laurence-portrait-623.webp 623w" sizes="(max-width: 760px) 80vw, 420px" alt="Portrait de Laurence Katchavenda, souriante" width="623" height="661" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  <div class="rencontre-texte">
+    <h2 class="titre-section" data-anime>Avancer en douceur, à votre rythme</h2>
+    <p class="texte-fort" data-anime>Je vous accompagne avec bienveillance pour dépasser vos blocages et retrouver un équilibre intérieur, en douceur et à votre rythme.</p>
+    <p data-anime>Ensemble, dans un cadre de totale confidentialité, nous explorons vos pensées et vos émotions : l’objectif est de mieux vous comprendre, afin de mieux vous aider.</p>
+    <ul class="reperes">
+      <li data-anime><strong class="repere-chiffre">25 ans</strong><span>environ, comme professeure des écoles</span></li><li data-anime><strong class="repere-chiffre">IFHE</strong><span>formée à l’hypnose ericksonienne et humaniste</span></li><li data-anime><strong class="repere-chiffre">SNH</strong><span>membre affiliée au Syndicat national des hypnothérapeutes</span></li>
+    </ul>
+  </div>
+  <ul class="piliers">
+    <li class="pilier" data-anime><span class="pilier-arche" aria-hidden="true"></span><h3>Des séances personnalisées</h3><p>Chaque séance est adaptée à vos besoins.</p></li><li class="pilier" data-anime><span class="pilier-arche" aria-hidden="true"></span><h3>Une thérapie brève</h3><p>Des objectifs précis, définis ensemble dès le premier rendez-vous.</p></li><li class="pilier" data-anime><span class="pilier-arche" aria-hidden="true"></span><h3>Un cabinet facile d’accès</h3><p>Parking à proximité, horaires flexibles, et visio possible.</p></li>
+  </ul>
+</section>
+<section class="accompagnements" id="accompagnements">
+  <div class="conteneur entete-section">
+    <h2 class="titre-section" data-anime>Mes accompagnements</h2>
+    <p data-anime>Vous ressentez le besoin de changer, de retrouver un équilibre ? L’hypnose peut vous accompagner pour atteindre vos objectifs et mieux vivre au quotidien.</p>
+  </div>
+  <ul class="conteneur cartes-accompagnement">
+    <li class="carte-accompagnement" id="accompagnement-stress-confiance" data-anime data-incline>
+      <figure class="media carte-accompagnement-media" data-grok style="--cadrage:42% 55%">
+  <picture>
+    <img src="/assets/images/grok/accompagnement-stress-confiance-1200.webp" srcset="/assets/images/grok/accompagnement-stress-confiance-640.webp 640w, /assets/images/grok/accompagnement-stress-confiance-1200.webp 1200w" sizes="(max-width: 760px) 92vw, (max-width: 1100px) 46vw, 300px" alt="Étang calme au lever du jour, brume légère sur l’eau" width="1200" height="627" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+      <div class="carte-accompagnement-texte">
+        <h3>Gérer le stress et l’anxiété, renforcer la confiance en soi</h3>
+        <ul><li>Sensation d’être constamment sous pression</li><li>Difficultés à se détendre ou à lâcher prise</li><li>Inquiétudes excessives et persistantes</li><li>Troubles du sommeil liés au mental agité</li><li>Irritabilité ou sautes d’humeur inexpliquées</li></ul>
+      </div>
+    </li><li class="carte-accompagnement" id="accompagnement-habitudes" data-anime data-incline>
+      <figure class="media carte-accompagnement-media" data-grok style="--cadrage:58% 55%">
+  <picture>
+    <img src="/assets/images/grok/accompagnement-habitudes-1254.webp" srcset="/assets/images/grok/accompagnement-habitudes-640.webp 640w, /assets/images/grok/accompagnement-habitudes-1254.webp 1254w" sizes="(max-width: 760px) 92vw, (max-width: 1100px) 46vw, 300px" alt="Vieille barrière de bois ouverte dans un mur de pierre sèche, chemin dans la brume" width="1254" height="1254" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+      <div class="carte-accompagnement-texte">
+        <h3>Rompre avec une habitude ou une addiction</h3>
+        <ul><li>Sensation de perte de contrôle face à une habitude néfaste</li><li>Culpabilité ou frustration liées à des comportements répétitifs</li><li>Difficultés à résister à des envies ou à des déclencheurs</li><li>Isolement ou sentiment de honte à cause de l’habitude</li></ul>
+      </div>
+    </li><li class="carte-accompagnement" id="accompagnement-changements" data-anime data-incline>
+      <figure class="media carte-accompagnement-media" data-grok style="--cadrage:50% 62%">
+  <picture>
+    <img src="/assets/images/grok/accompagnement-changements-1254.webp" srcset="/assets/images/grok/accompagnement-changements-640.webp 640w, /assets/images/grok/accompagnement-changements-1254.webp 1254w" sizes="(max-width: 760px) 92vw, (max-width: 1100px) 46vw, 300px" alt="Chemin de campagne qui se sépare en deux au lever du soleil" width="1254" height="1254" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+      <div class="carte-accompagnement-texte">
+        <h3>Accompagner les changements de vie</h3>
+        <ul><li>Changement de carrière, déménagement, maladie ou deuil</li><li>Peur de l’inconnu et des conséquences des changements</li><li>Manque de soutien ou de compréhension de l’entourage</li><li>Résistance au changement, même lorsqu’il semble nécessaire</li></ul>
+      </div>
+    </li><li class="carte-accompagnement" id="accompagnement-enfants" data-anime data-incline>
+      <figure class="media carte-accompagnement-media" data-grok style="--cadrage:50% 50%">
+  <picture>
+    <img src="/assets/images/grok/accompagnement-enfants-1122.webp" srcset="/assets/images/grok/accompagnement-enfants-640.webp 640w, /assets/images/grok/accompagnement-enfants-1122.webp 1122w" sizes="(max-width: 760px) 92vw, (max-width: 1100px) 46vw, 300px" alt="Mains d’enfant qui dessinent un soleil et un arbre aux craies grasses" width="1122" height="1402" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+      <div class="carte-accompagnement-texte">
+        <h3>Les enfants, dès 5 ans</h3>
+        <ul><li>Une première séance d’une heure avec le ou les parents, sans l’enfant</li><li>Puis une séance d’une heure avec l’enfant seul</li><li>Uniquement au cabinet, jamais en visio</li></ul>
+      </div>
+    </li>
+  </ul>
+  <div class="ruban-section" aria-label="Thèmes abordés en séance" role="group">
+    <p class="ruban-titre">Thèmes abordés en séance</p>
+    <div class="ruban" id="ruban-themes" data-boucle-css data-ruban><p><span>Confiance en soi · Sommeil · Arrêt du tabac · Stress · Deuil · Phobies · Prise de parole en public · Anxiété · Burn-out ·</span> <span aria-hidden="true">Confiance en soi · Sommeil · Arrêt du tabac · Stress · Deuil · Phobies · Prise de parole en public · Anxiété · Burn-out ·</span></p></div>
+    <button type="button" class="ruban-pause" data-pause-pour="ruban-themes" data-libelle-pause="Pause" data-libelle-lecture="Lecture"><span data-libelle-bouton>Pause</span></button>
+  </div>
+</section>
+<section class="chemin chemin--apercu" id="chemin">
+  <div class="conteneur chemin-grille">
+    <div class="chemin-tete">
+      <h2 class="titre-section" data-anime>Le chemin d’un suivi</h2>
+      <p data-anime>Trois étapes, sans précipitation : chacune a sa place et son rythme.</p>
+      <figure class="media chemin-media" data-grok style="--cadrage:38% 60%">
+  <picture>
+    <img src="/assets/images/grok/accueil-chemin-1280.webp" srcset="/assets/images/grok/accueil-chemin-640.webp 640w, /assets/images/grok/accueil-chemin-1280.webp 1280w, /assets/images/grok/accueil-chemin-1568.webp 1568w" sizes="(max-width: 760px) 92vw, 40vw" alt="Chemin de terre bordé d’une barrière de bois, qui s’enfonce dans la brume lumineuse" width="1280" height="853" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+      <p data-anime><a href="/hypnose-et-suivi#etapes" class="bouton bouton--contour" data-libelle="L’hypnose et le suivi">Le déroulé en détail</a></p>
+    </div>
+    <div class="chemin-zone" data-chemin>
+    <svg class="chemin-trace" aria-hidden="true" data-audit-ignorer preserveAspectRatio="none"><path class="chemin-fond" /><path class="chemin-ligne" data-chemin-ligne /></svg>
+    <ol class="chemin-etapes">
+      <li class="chemin-etape" data-etape>
+        <span class="graine" aria-hidden="true"><svg viewBox="0 0 48 48"><circle class="graine-sol" cx="24" cy="40" r="5" /><path class="graine-tige" d="M24 40 V22" /><path class="graine-feuille" d="M24 27 C18 26 14 22 14 16 C20 16.5 23.4 20.4 24 25" /><path class="graine-feuille graine-feuille--d" d="M24 25 C25 18.5 29 14.5 35 14 C35 20 31 24.4 24 25.6" /></svg></span>
+        <p class="chemin-numero">1</p>
+        <h3>Une première rencontre</h3>
+        <p class="chemin-duree">environ 1 h 30</p>
+        <p>Faire connaissance, établir vos objectifs et découvrir l’hypnose. Avant ce premier rendez-vous, Laurence vous appelle pour parler de ce qui vous amène.</p>
+      </li><li class="chemin-etape" data-etape>
+        <span class="graine" aria-hidden="true"><svg viewBox="0 0 48 48"><circle class="graine-sol" cx="24" cy="40" r="5" /><path class="graine-tige" d="M24 40 V22" /><path class="graine-feuille" d="M24 27 C18 26 14 22 14 16 C20 16.5 23.4 20.4 24 25" /><path class="graine-feuille graine-feuille--d" d="M24 25 C25 18.5 29 14.5 35 14 C35 20 31 24.4 24 25.6" /></svg></span>
+        <p class="chemin-numero">2</p>
+        <h3>Une période de travail à votre rythme</h3>
+        <p class="chemin-duree">1 à 10 séances de 1 h à 1 h 15</p>
+        <p>Le nombre de séances dépend de la problématique abordée et se décide ensemble après la première. Entre les séances, des outils respiratoires et de régulation émotionnelle peuvent vous être proposés.</p>
+      </li><li class="chemin-etape" data-etape>
+        <span class="graine" aria-hidden="true"><svg viewBox="0 0 48 48"><circle class="graine-sol" cx="24" cy="40" r="5" /><path class="graine-tige" d="M24 40 V22" /><path class="graine-feuille" d="M24 27 C18 26 14 22 14 16 C20 16.5 23.4 20.4 24 25" /><path class="graine-feuille graine-feuille--d" d="M24 25 C25 18.5 29 14.5 35 14 C35 20 31 24.4 24 25.6" /></svg></span>
+        <p class="chemin-numero">3</p>
+        <h3>Les graines du changement</h3>
+        <p class="chemin-duree">pas à pas</p>
+        <p>Pas à pas, de nouvelles façons de réagir peuvent prendre racine, à votre rythme. L’accompagnement vise votre autonomie.</p>
+      </li>
+    </ol>
+    </div>
+  </div>
+</section>
+<section class="respirer" id="respirer" data-respirer data-textes="{&quot;inspirez&quot;:&quot;Inspirez&quot;,&quot;expirez&quot;:&quot;Expirez&quot;,&quot;fini&quot;:&quot;C’est terminé. Prenez le temps de revenir.&quot;,&quot;pret&quot;:&quot;Prêt quand vous l’êtes&quot;,&quot;demarrer&quot;:&quot;Commencer · 1 minute&quot;,&quot;arreter&quot;:&quot;Arrêter&quot;,&quot;restant&quot;:&quot;{n} s&quot;}">
+  <figure class="media respirer-fond" data-grok style="--cadrage:50% 70%;--cadrage-mobile:50% 70%">
+  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/grok/respirer-aube-mobile-640.webp 640w, /assets/images/grok/respirer-aube-mobile-941.webp 941w" sizes="100vw">
+    <img src="/assets/images/grok/respirer-aube-1280.webp" srcset="/assets/images/grok/respirer-aube-640.webp 640w, /assets/images/grok/respirer-aube-1280.webp 1280w, /assets/images/grok/respirer-aube-1672.webp 1672w" sizes="100vw" alt="Ciel pâle de l’aube au-dessus de collines dans la brume" width="1280" height="720" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  <div class="respirer-carte conteneur">
+    <div class="respirer-texte">
+      <h2 class="titre-section" data-anime>Respirer un instant</h2>
+      <p data-anime>Un exemple d’outil respiratoire, comme ceux que Laurence peut proposer entre les séances. Suivez l’arche : elle s’ouvre quand vous inspirez, se referme quand vous expirez.</p>
+      <p class="respirer-rythme" data-anime>6 respirations · 5 s pour inspirer, 5 s pour expirer</p>
+      <p data-anime><button type="button" class="bouton" data-respirer-bouton aria-pressed="false"><span data-libelle-bouton>Commencer · 1 minute</span></button></p>
+      <p class="note-demo" data-anime>Exercice de démonstration pour la maquette : le rythme sera validé par Laurence. Il ne remplace pas un avis médical.</p>
+    </div>
+    <div class="respirer-arche" aria-hidden="true">
+      <svg viewBox="0 0 200 280"><path class="respirer-contour" d="M10 280 V100 A90 90 0 0 1 190 100 V280" /></svg>
+      <span class="respirer-lumiere" data-respirer-lumiere></span>
+    </div>
+    <p class="respirer-consigne" aria-live="polite"><strong data-respirer-consigne>Prêt quand vous l’êtes</strong> <span class="chiffres" data-respirer-restant></span></p>
+  </div>
+</section>
+<section class="parcours conteneur" id="parcours">
+  <div class="parcours-tete">
+    <h2 class="titre-section" data-anime>Mon parcours</h2>
+    <p data-anime>Après environ 25 ans auprès d’enfants de 4 à 11 ans comme professeure des écoles, Laurence s’est formée à l’hypnose à partir de 2023, à l’Institut français d’hypnose humaniste et ericksonienne (IFHE).</p>
+    <p class="parcours-snh" data-anime><img src="/assets/images/logo-snh.png" alt="Syndicat national des hypnothérapeutes" width="240" height="72" loading="lazy"><span>Membre affiliée au Syndicat national des hypnothérapeutes</span></p>
+  </div>
+  <figure class="media parcours-media" style="--cadrage:72% 30%">
+  <picture>
+    <img src="/assets/images/seance-entretien-1280.webp" srcset="/assets/images/seance-entretien-640.webp 640w, /assets/images/seance-entretien-1280.webp 1280w, /assets/images/seance-entretien-1920.webp 1920w" sizes="(max-width: 760px) 92vw, 45vw" alt="Laurence en entretien au cabinet, ses diplômes au mur" width="1280" height="853" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  <div class="frise-zone" data-frise>
+  <span class="frise-trace" aria-hidden="true"><span class="frise-ligne" data-frise-ligne></span></span>
+  <ol class="frise">
+    <li class="frise-etape" data-anime><p class="frise-quand">Environ 25 ans</p><p class="frise-quoi">Professeure des écoles auprès d’enfants de 4 à 11 ans</p></li><li class="frise-etape" data-anime><p class="frise-quand">2023</p><p class="frise-quoi">Début de la reconversion vers l’hypnose</p></li><li class="frise-etape" data-anime><p class="frise-quand">2024</p><p class="frise-quoi">Maître praticienne en hypnose ericksonienne, nouvelle hypnose et PNL, à l’IFHE</p></li><li class="frise-etape" data-anime><p class="frise-quand">2024</p><p class="frise-quoi">Praticienne en hypnothérapie de l’enfance</p></li><li class="frise-etape" data-anime><p class="frise-quand">2024 – 2025</p><p class="frise-quoi">Spécialisations : stress, anxiété et dépression ; traumatismes ; addictions</p></li><li class="frise-etape" data-anime><p class="frise-quand">2025</p><p class="frise-quoi">Praticienne en hypnose humaniste et thérapie symbolique avancée, à l’IFHE</p></li>
+  </ol>
+  </div>
+</section>
+<section class="ateliers" id="ateliers">
+  <div class="conteneur ateliers-tete">
+    <div>
+      <h2 class="titre-section" data-anime>Ateliers d’autohypnose</h2>
+      <p data-anime>En visio, en petit groupe : 4 séances de 1 h 30, une par semaine, pour apprendre une méthode simple d’autohypnose à reproduire seul.</p>
+      <p class="ateliers-contenu" data-anime>Chaque séance : une introduction pédagogique, des questionnaires de prise de conscience, des exercices préparatoires et un voyage hypnotique guidé de 30 à 40 minutes.</p>
+      <ul class="ateliers-infos" data-anime>
+        <li><strong data-prix>80 €</strong> les 4 séances</li>
+        <li>4 places</li>
+        <li>Sur Zoom</li>
+      </ul>
+    </div>
+    <figure class="media ateliers-media" data-grok style="--cadrage:50% 55%">
+  <picture>
+    <img src="/assets/images/grok/ateliers-visio-1280.webp" srcset="/assets/images/grok/ateliers-visio-640.webp 640w, /assets/images/grok/ateliers-visio-1280.webp 1280w, /assets/images/grok/ateliers-visio-1536.webp 1536w" sizes="(max-width: 760px) 92vw, 44vw" alt="Coin de bureau le soir : ordinateur fermé, carnet ouvert, tasse de tisane et lampe" width="1280" height="853" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  </div>
+  <div class="conteneur">
+    <p class="indication-glisser" aria-hidden="true">Faites glisser</p>
+    <div class="ateliers-defile" data-galerie tabindex="0" role="region" aria-label="Les ateliers, défilement horizontal"><ol class="ateliers-liste" data-ateliers data-textes="{&quot;aVenir&quot;:&quot;À venir&quot;,&quot;enCours&quot;:&quot;En cours&quot;,&quot;termine&quot;:&quot;Terminé&quot;,&quot;dans&quot;:&quot;dans {n} jours&quot;,&quot;demain&quot;:&quot;demain&quot;,&quot;aujourdhui&quot;:&quot;aujourd’hui&quot;,&quot;passee1&quot;:&quot;1 séance sur 4 passée&quot;,&quot;passees&quot;:&quot;{n} séances sur 4 passées&quot;}">
+  <li class="atelier" id="atelier-stress-sommeil-lundis" data-atelier="{&quot;id&quot;:&quot;stress-sommeil-lundis&quot;,&quot;theme&quot;:&quot;Stress et sommeil&quot;,&quot;jour&quot;:&quot;les lundis&quot;,&quot;debut&quot;:&quot;19:30&quot;,&quot;fin&quot;:&quot;21:00&quot;,&quot;seances&quot;:[&quot;2026-11-02&quot;,&quot;2026-11-09&quot;,&quot;2026-11-16&quot;,&quot;2026-11-23&quot;],&quot;texte&quot;:&quot;Des outils simples et concrets pour mieux gérer les moments de tension et favoriser le relâchement.&quot;}" data-etat="encours">
+    <p class="atelier-statut"><span class="atelier-etiquette" data-atelier-etiquette>En cours</span> <span class="atelier-relatif" data-atelier-relatif>1 séance sur 4 passée</span></p>
+    <h3 class="atelier-titre">Stress et sommeil</h3>
+    <p class="atelier-quand">Du 2 novembre au 23 novembre<br>les lundis, de 19 h 30 à 21 h</p>
+    <ol class="atelier-seances" aria-label="Stress et sommeil"><li class="atelier-seance passee" data-seance="2026-11-02"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">2 nov.</span></li><li class="atelier-seance" data-seance="2026-11-09"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">9 nov.</span></li><li class="atelier-seance" data-seance="2026-11-16"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">16 nov.</span></li><li class="atelier-seance" data-seance="2026-11-23"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">23 nov.</span></li></ol>
+    <p class="atelier-texte">Des outils simples et concrets pour mieux gérer les moments de tension et favoriser le relâchement.</p>
+    <p class="atelier-action" data-atelier-action><span class="atelier-ferme">Atelier commencé : inscriptions closes</span> <a href="/tarifs-et-rendez-vous?sujet=prochain#rappel" class="bouton bouton--petit bouton--contour" data-libelle="Tarifs et rendez-vous">Me prévenir du prochain atelier</a></p>
+  </li><li class="atelier" id="atelier-dialogue-interieur-samedis-matin" data-atelier="{&quot;id&quot;:&quot;dialogue-interieur-samedis-matin&quot;,&quot;theme&quot;:&quot;Dialogue intérieur&quot;,&quot;jour&quot;:&quot;les samedis matin&quot;,&quot;debut&quot;:&quot;10:30&quot;,&quot;fin&quot;:&quot;12:00&quot;,&quot;seances&quot;:[&quot;2026-11-07&quot;,&quot;2026-11-14&quot;,&quot;2026-11-21&quot;,&quot;2026-11-28&quot;],&quot;texte&quot;:&quot;Apprendre à formuler vos objectifs et à dialoguer avec votre inconscient pour faire émerger des solutions.&quot;}" data-etat="avenir">
+    <p class="atelier-statut"><span class="atelier-etiquette" data-atelier-etiquette>À venir</span> <span class="atelier-relatif" data-atelier-relatif>dans 4 jours</span></p>
+    <h3 class="atelier-titre">Dialogue intérieur</h3>
+    <p class="atelier-quand">Du 7 novembre au 28 novembre<br>les samedis matin, de 10 h 30 à 12 h</p>
+    <ol class="atelier-seances" aria-label="Dialogue intérieur"><li class="atelier-seance" data-seance="2026-11-07"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">7 nov.</span></li><li class="atelier-seance" data-seance="2026-11-14"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">14 nov.</span></li><li class="atelier-seance" data-seance="2026-11-21"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">21 nov.</span></li><li class="atelier-seance" data-seance="2026-11-28"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">28 nov.</span></li></ol>
+    <p class="atelier-texte">Apprendre à formuler vos objectifs et à dialoguer avec votre inconscient pour faire émerger des solutions.</p>
+    <p class="atelier-action" data-atelier-action><a href="/tarifs-et-rendez-vous?sujet=atelier&amp;atelier=dialogue-interieur-samedis-matin#rappel" class="bouton bouton--petit" data-libelle="Tarifs et rendez-vous">Demander une place</a></p>
+  </li><li class="atelier" id="atelier-confiance-en-soi-mardis" data-atelier="{&quot;id&quot;:&quot;confiance-en-soi-mardis&quot;,&quot;theme&quot;:&quot;Confiance en soi&quot;,&quot;jour&quot;:&quot;les mardis&quot;,&quot;debut&quot;:&quot;19:00&quot;,&quot;fin&quot;:&quot;20:30&quot;,&quot;seances&quot;:[&quot;2026-11-17&quot;,&quot;2026-11-24&quot;,&quot;2026-12-01&quot;,&quot;2026-12-08&quot;],&quot;texte&quot;:&quot;Des outils simples pour mieux mobiliser vos ressources et avancer avec davantage de sérénité.&quot;}" data-etat="avenir">
+    <p class="atelier-statut"><span class="atelier-etiquette" data-atelier-etiquette>À venir</span> <span class="atelier-relatif" data-atelier-relatif>dans 14 jours</span></p>
+    <h3 class="atelier-titre">Confiance en soi</h3>
+    <p class="atelier-quand">Du 17 novembre au 8 décembre<br>les mardis, de 19 h à 20 h 30</p>
+    <ol class="atelier-seances" aria-label="Confiance en soi"><li class="atelier-seance" data-seance="2026-11-17"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">17 nov.</span></li><li class="atelier-seance" data-seance="2026-11-24"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">24 nov.</span></li><li class="atelier-seance" data-seance="2026-12-01"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">1 déc.</span></li><li class="atelier-seance" data-seance="2026-12-08"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">8 déc.</span></li></ol>
+    <p class="atelier-texte">Des outils simples pour mieux mobiliser vos ressources et avancer avec davantage de sérénité.</p>
+    <p class="atelier-action" data-atelier-action><a href="/tarifs-et-rendez-vous?sujet=atelier&amp;atelier=confiance-en-soi-mardis#rappel" class="bouton bouton--petit" data-libelle="Tarifs et rendez-vous">Demander une place</a></p>
+  </li><li class="atelier" id="atelier-stress-sommeil-mercredis" data-atelier="{&quot;id&quot;:&quot;stress-sommeil-mercredis&quot;,&quot;theme&quot;:&quot;Stress et sommeil&quot;,&quot;jour&quot;:&quot;les mercredis&quot;,&quot;debut&quot;:&quot;19:00&quot;,&quot;fin&quot;:&quot;20:30&quot;,&quot;seances&quot;:[&quot;2026-11-18&quot;,&quot;2026-11-25&quot;,&quot;2026-12-02&quot;,&quot;2026-12-09&quot;],&quot;texte&quot;:&quot;Des outils simples et concrets pour mieux gérer les moments de tension et favoriser le relâchement.&quot;}" data-etat="avenir">
+    <p class="atelier-statut"><span class="atelier-etiquette" data-atelier-etiquette>À venir</span> <span class="atelier-relatif" data-atelier-relatif>dans 15 jours</span></p>
+    <h3 class="atelier-titre">Stress et sommeil</h3>
+    <p class="atelier-quand">Du 18 novembre au 9 décembre<br>les mercredis, de 19 h à 20 h 30</p>
+    <ol class="atelier-seances" aria-label="Stress et sommeil"><li class="atelier-seance" data-seance="2026-11-18"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">18 nov.</span></li><li class="atelier-seance" data-seance="2026-11-25"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">25 nov.</span></li><li class="atelier-seance" data-seance="2026-12-02"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">2 déc.</span></li><li class="atelier-seance" data-seance="2026-12-09"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">9 déc.</span></li></ol>
+    <p class="atelier-texte">Des outils simples et concrets pour mieux gérer les moments de tension et favoriser le relâchement.</p>
+    <p class="atelier-action" data-atelier-action><a href="/tarifs-et-rendez-vous?sujet=atelier&amp;atelier=stress-sommeil-mercredis#rappel" class="bouton bouton--petit" data-libelle="Tarifs et rendez-vous">Demander une place</a></p>
+  </li><li class="atelier" id="atelier-dialogue-interieur-samedis-apres-midi" data-atelier="{&quot;id&quot;:&quot;dialogue-interieur-samedis-apres-midi&quot;,&quot;theme&quot;:&quot;Dialogue intérieur&quot;,&quot;jour&quot;:&quot;les samedis après-midi&quot;,&quot;debut&quot;:&quot;13:00&quot;,&quot;fin&quot;:&quot;14:30&quot;,&quot;seances&quot;:[&quot;2026-11-21&quot;,&quot;2026-11-28&quot;,&quot;2026-12-05&quot;,&quot;2026-12-12&quot;],&quot;texte&quot;:&quot;Apprendre à formuler vos objectifs et à dialoguer avec votre inconscient pour faire émerger des solutions.&quot;}" data-etat="avenir">
+    <p class="atelier-statut"><span class="atelier-etiquette" data-atelier-etiquette>À venir</span> <span class="atelier-relatif" data-atelier-relatif>dans 18 jours</span></p>
+    <h3 class="atelier-titre">Dialogue intérieur</h3>
+    <p class="atelier-quand">Du 21 novembre au 12 décembre<br>les samedis après-midi, de 13 h à 14 h 30</p>
+    <ol class="atelier-seances" aria-label="Dialogue intérieur"><li class="atelier-seance" data-seance="2026-11-21"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">21 nov.</span></li><li class="atelier-seance" data-seance="2026-11-28"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">28 nov.</span></li><li class="atelier-seance" data-seance="2026-12-05"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">5 déc.</span></li><li class="atelier-seance" data-seance="2026-12-12"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">12 déc.</span></li></ol>
+    <p class="atelier-texte">Apprendre à formuler vos objectifs et à dialoguer avec votre inconscient pour faire émerger des solutions.</p>
+    <p class="atelier-action" data-atelier-action><a href="/tarifs-et-rendez-vous?sujet=atelier&amp;atelier=dialogue-interieur-samedis-apres-midi#rappel" class="bouton bouton--petit" data-libelle="Tarifs et rendez-vous">Demander une place</a></p>
+  </li>
+  <li class="atelier atelier--autre" data-atelier-autre>
+    <span class="atelier-autre-arche" aria-hidden="true"></span>
+    <h3 class="atelier-titre">Un autre thème, un autre horaire ?</h3>
+    <p class="atelier-texte">Les ateliers reviennent au fil des saisons. Laissez vos coordonnées : Laurence vous prévient de la prochaine session.</p>
+    <p class="atelier-action"><a href="/tarifs-et-rendez-vous?sujet=prochain#rappel" class="bouton bouton--petit bouton--clair" data-libelle="Tarifs et rendez-vous">Être prévenu</a></p>
+  </li>
+</ol></div>
+    <p class="ateliers-engagement">Engagement sur les 4 séances. Annulation remboursée si elle a lieu au moins 48 h avant la première séance ; moins de 48 h avant, report possible sur une autre prestation ; aucun remboursement après la première séance.</p>
+  </div>
+</section>
+<section class="avis" id="avis">
+  <figure class="media avis-fond" data-grok style="--cadrage:50% 50%">
+  <picture>
+    <img src="/assets/images/grok/avis-papier-1280.webp" srcset="/assets/images/grok/avis-papier-640.webp 640w, /assets/images/grok/avis-papier-1280.webp 1280w, /assets/images/grok/avis-papier-1568.webp 1568w" sizes="100vw" alt="" width="1280" height="960" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  <div class="conteneur avis-contenu">
+    <div class="avis-tete">
+      <h2 class="titre-section" data-anime>Ce qu’en disent les personnes accompagnées</h2>
+      <p class="avis-note" data-anime><span class="etoiles" role="img" aria-label="Note de 5 sur 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 16.9l-5.8 3.2 1.4-6.4L2.7 9.3l6.5-.7z" /></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 16.9l-5.8 3.2 1.4-6.4L2.7 9.3l6.5-.7z" /></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 16.9l-5.8 3.2 1.4-6.4L2.7 9.3l6.5-.7z" /></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 16.9l-5.8 3.2 1.4-6.4L2.7 9.3l6.5-.7z" /></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 16.9l-5.8 3.2 1.4-6.4L2.7 9.3l6.5-.7z" /></svg></span> <strong>5,0 sur 5</strong> <span class="avis-nombre">· 4 avis publiés sur Résalib</span></p>
+    </div>
+    <ul class="avis-liste">
+      <li class="avis-carte" data-anime><blockquote><p>« Son écoute active, sa bienveillance et les techniques mises en oeuvre »</p></blockquote><p class="avis-nom">Raphaelle B.</p></li><li class="avis-carte" data-anime><blockquote><p>« Ma fille se sent beaucoup mieux. »</p></blockquote><p class="avis-nom">Eva M.</p></li><li class="avis-carte" data-anime><blockquote><p>« je me sens extrêmement bien »</p></blockquote><p class="avis-nom">Anne Laure M.</p></li><li class="avis-carte" data-anime><blockquote><p>« Merveilleuse »</p></blockquote><p class="avis-nom">Caroline E.</p></li>
+    </ul>
+    <p class="avis-source" data-anime>Extraits d’avis publiés sur Résalib. <a class="lien-trace" href="https://www.resalib.fr/praticien/106137-laurence-katchavenda-ei-elkahypnose-praticien-en-hypnose-bard-les-epoisses" target="_blank" rel="noopener">Voir les avis sur Résalib<span class="visuellement-cache"> (nouvel onglet)</span></a></p>
+  </div>
+</section>
+<section class="carnet conteneur" id="carnet">
+  <h2 class="titre-section" data-anime>Le carnet</h2>
+  <p data-anime>Les derniers articles de Laurence.</p>
+  <ul class="carnet-liste">
+    <li class="article-carte" data-anime>
+      <figure class="media article-media" data-grok style="--cadrage:50% 50%">
+  <picture>
+    <img src="/assets/images/grok/carnet-responsable-1280.webp" srcset="/assets/images/grok/carnet-responsable-640.webp 640w, /assets/images/grok/carnet-responsable-1280.webp 1280w, /assets/images/grok/carnet-responsable-1920.webp 1920w" sizes="(max-width: 760px) 92vw, 46vw" alt="Personne assise dans une pièce baignée de lumière orangée" width="1280" height="714" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+      <p class="article-meta"><span>7 septembre 2026</span> · <span>5 min de lecture</span></p>
+      <h3>Responsable mais pas coupable</h3>
+      <p>Certaines personnes s’excusent même sans avoir rien fait. L’article distingue la culpabilité, qui ramène sans cesse en arrière, de la responsabilité, qui remet en mouvement, et montre comment l’hypnose aide à ne plus seulement comprendre, mais à expérimenter autrement.</p>
+      <p class="article-bientot">Article complet : page à construire</p>
+    </li><li class="article-carte" data-anime>
+      <figure class="media article-media" data-grok style="--cadrage:50% 50%">
+  <picture>
+    <img src="/assets/images/grok/carnet-commandes-1280.webp" srcset="/assets/images/grok/carnet-commandes-640.webp 640w, /assets/images/grok/carnet-commandes-1280.webp 1280w, /assets/images/grok/carnet-commandes-1920.webp 1920w" sizes="(max-width: 760px) 92vw, 46vw" alt="Personne à la barre d’un voilier face au soleil couchant" width="1280" height="714" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+      <p class="article-meta"><span>5 septembre 2026</span> · <span>3 min de lecture</span></p>
+      <h3>Changer consiste à reprendre les commandes</h3>
+      <p>Nos réactions automatiques ont souvent eu, un jour, une raison d’être. Changer, ce n’est ni se réparer ni devenir quelqu’un d’autre : c’est retrouver la liberté de répondre différemment.</p>
+      <p class="article-bientot">Article complet : page à construire</p>
+    </li>
+  </ul>
+</section>
+<section class="venir conteneur" id="venir">
+  <div class="venir-tete">
+    <h2 class="titre-section" data-anime>Venir au cabinet</h2>
+    <p data-anime>Au cœur de l’Auxois, à Bard-lès-Époisses. Le cabinet reçoit sur rendez-vous ; les séances en visio se font depuis chez vous.</p>
+  </div>
+  <div class="venir-gauche">
+    <figure class="carte" data-carte data-visuel>
+  <div class="carte-plan" style="--ratio:600 / 359">
+  <svg viewBox="0 0 600 359" aria-hidden="true" preserveAspectRatio="none">
+    <g class="carte-relief"><path d="M0 65 C 120 39, 270 95, 420 55 S 600 79, 620 65" /><path d="M0 122 C 120 102, 270 152, 420 112 S 600 136, 620 122" /><path d="M0 180 C 120 166, 270 210, 420 170 S 600 194, 620 180" /><path d="M0 237 C 120 229, 270 267, 420 227 S 600 251, 620 237" /><path d="M0 294 C 120 292, 270 324, 420 284 S 600 308, 620 294" /></g>
+    <g class="carte-traits"><path data-trait d="M342.1 240.1 L377.2 210.2" /><path data-trait d="M473.9 260.2 L377.2 210.2" /><path data-trait d="M477.4 98.1 L377.2 210.2" /><path data-trait d="M122.6 260.9 L377.2 210.2" /></g>
+    <g class="carte-villes"><circle cx="342.1" cy="240.1" r="5" /><circle cx="473.9" cy="260.2" r="5" /><circle cx="477.4" cy="98.1" r="5" /><circle cx="122.6" cy="260.9" r="5" /></g>
+    <g class="carte-cabinet"><circle class="carte-onde" cx="377.2" cy="210.2" r="10" /><circle cx="377.2" cy="210.2" r="8" /></g>
+  </svg>
+  <ul class="carte-etiquettes">
+    <li class="carte-etiquette carte-etiquette--cabinet carte-etiquette--haut" style="--x:62.86%;--y:58.54%" data-repere><strong>Venir au cabinet</strong><span>Bard-lès-Époisses</span></li>
+    <li class="carte-etiquette carte-etiquette--gauche" style="--x:57.02%;--y:66.87%" data-repere><strong>Époisses</strong><span class="chiffres">4 km</span></li><li class="carte-etiquette carte-etiquette--bas" style="--x:78.99%;--y:72.47%" data-repere><strong>Semur-en-Auxois</strong><span class="chiffres">10 km</span></li><li class="carte-etiquette carte-etiquette--gauche" style="--x:79.57%;--y:27.32%" data-repere><strong>Montbard</strong><span class="chiffres">14 km</span></li><li class="carte-etiquette carte-etiquette--haut" style="--x:20.43%;--y:72.68%" data-repere><strong>Avallon</strong><span class="chiffres">24 km</span></li>
+  </ul>
+  </div>
+  <figcaption class="carte-note">Distances à vol d’oiseau, calculées d’après les coordonnées des communes.</figcaption>
+</figure>
+    <h3 data-anime>Horaires du cabinet</h3>
+    <p class="statut" data-statut data-horaires-json="{&quot;fuseau&quot;:&quot;Europe/Paris&quot;,&quot;jours&quot;:[{&quot;j&quot;:1,&quot;nom&quot;:&quot;Lundi&quot;,&quot;plages&quot;:[[&quot;09:00&quot;,&quot;12:00&quot;],[&quot;13:30&quot;,&quot;19:00&quot;]]},{&quot;j&quot;:2,&quot;nom&quot;:&quot;Mardi&quot;,&quot;plages&quot;:[[&quot;09:00&quot;,&quot;12:00&quot;],[&quot;13:30&quot;,&quot;19:00&quot;]]},{&quot;j&quot;:3,&quot;nom&quot;:&quot;Mercredi&quot;,&quot;plages&quot;:[[&quot;09:00&quot;,&quot;12:00&quot;],[&quot;13:30&quot;,&quot;19:00&quot;]]},{&quot;j&quot;:4,&quot;nom&quot;:&quot;Jeudi&quot;,&quot;plages&quot;:[[&quot;09:00&quot;,&quot;12:00&quot;],[&quot;13:30&quot;,&quot;19:00&quot;]]},{&quot;j&quot;:5,&quot;nom&quot;:&quot;Vendredi&quot;,&quot;plages&quot;:[[&quot;09:00&quot;,&quot;12:00&quot;],[&quot;13:30&quot;,&quot;19:00&quot;]]},{&quot;j&quot;:6,&quot;nom&quot;:&quot;Samedi&quot;,&quot;plages&quot;:[[&quot;09:00&quot;,&quot;12:00&quot;]]},{&quot;j&quot;:0,&quot;nom&quot;:&quot;Dimanche&quot;,&quot;plages&quot;:[]}],&quot;fermetures&quot;:[]}" data-textes="{&quot;ouvert&quot;:&quot;Joignable maintenant&quot;,&quot;ferme&quot;:&quot;Fermé en ce moment&quot;,&quot;rouvre&quot;:&quot;réouverture {quand}&quot;,&quot;aujourdhui&quot;:&quot;aujourd’hui à {h}&quot;,&quot;demain&quot;:&quot;demain à {h}&quot;,&quot;jour&quot;:&quot;{jour} à {h}&quot;,&quot;ferie&quot;:&quot;Jour férié : horaires à confirmer&quot;,&quot;fermeture&quot;:&quot;Fermeture exceptionnelle&quot;}">
+  <span class="statut-point" aria-hidden="true"></span><span class="statut-texte" data-statut-texte>Lundi au vendredi 9 h – 12 h et 13 h 30 – 19 h, samedi 9 h – 12 h</span>
+  <a class="statut-tel" href="tel:+33953725114">09 53 72 51 14</a>
+</p>
+    <table class="horaires" data-horaires data-aujourdhui="Aujourd’hui">
+  <caption class="visuellement-cache">Horaires</caption>
+  <tbody><tr data-jour="1"><th scope="row">Lundi</th><td>9 h – 12 h · 13 h 30 – 19 h</td></tr><tr data-jour="2"><th scope="row">Mardi</th><td>9 h – 12 h · 13 h 30 – 19 h</td></tr><tr data-jour="3"><th scope="row">Mercredi</th><td>9 h – 12 h · 13 h 30 – 19 h</td></tr><tr data-jour="4"><th scope="row">Jeudi</th><td>9 h – 12 h · 13 h 30 – 19 h</td></tr><tr data-jour="5"><th scope="row">Vendredi</th><td>9 h – 12 h · 13 h 30 – 19 h</td></tr><tr data-jour="6"><th scope="row">Samedi</th><td>9 h – 12 h</td></tr><tr data-jour="0"><th scope="row">Dimanche</th><td>Fermé</td></tr></tbody>
+</table>
+    <p class="petite-note">Si vous ne trouvez pas l’horaire qui vous convient, n’hésitez pas à appeler.</p>
+  </div>
+  <div class="venir-infos">
+    <figure class="media venir-media" style="--cadrage:45% 60%">
+  <picture>
+    <img src="/assets/images/cabinet-salle-1280.webp" srcset="/assets/images/cabinet-salle-640.webp 640w, /assets/images/cabinet-salle-1280.webp 1280w, /assets/images/cabinet-salle-1920.webp 1920w" sizes="(max-width: 760px) 92vw, 40vw" alt="Le cabinet : murs vert d’eau, bureau, deux fauteuils et un tapis rouge" width="1280" height="853" loading="lazy" decoding="async">
+  </picture>
+</figure>
+    <address class="venir-adresse" data-anime>6, rue Victor de Lanneau<br><span class="insecable">21460 Bard-lès-Époisses</span><br><span class="venir-stationnement">Stationnement facile sur la place du village, à 50 m de l&#39;église.</span></address>
+    <p class="venir-actions"><a href="/tarifs-et-rendez-vous#rendez-vous" class="bouton" data-libelle="Tarifs et rendez-vous" data-magnetique>Prendre rendez-vous</a> <a class="bouton bouton--contour" href="tel:+33953725114">Appeler</a></p>
+  </div>
+</section>
+</main>
+<footer class="pied" id="pied">
+  <div class="conteneur pied-grille">
+    <div class="pied-marque">
+      <img src="/assets/images/logo-pastille.svg" alt="" width="88" height="88" loading="lazy">
+      <p>Hypnothérapie au cabinet ou en visio, ateliers d’autohypnose en petits groupes.</p>
+    </div>
+    <div>
+      <p class="pied-titre">Contact</p>
+      <p>6, rue Victor de Lanneau<br><span class="insecable">21460 Bard-lès-Époisses</span></p>
+      <ul><li><a href="tel:+33953725114">09 53 72 51 14</a></li><li><a href="mailto:elkahypnose@free.fr">elkahypnose@free.fr</a></li><li><a href="https://www.resalib.fr/praticien/106137-laurence-katchavenda-ei-elkahypnose-praticien-en-hypnose-bard-les-epoisses" target="_blank" rel="noopener">Rendez-vous sur Résalib<span class="visuellement-cache"> (nouvel onglet)</span></a></li></ul>
+    </div>
+    <nav aria-label="Sommaire">
+      <p class="pied-titre">Sommaire</p>
+      <ul><li><a href="/" data-libelle="Accueil" aria-current="page">Accueil</a></li><li><a href="/hypnose-et-suivi" data-libelle="L’hypnose et le suivi">L’hypnose et le suivi</a></li><li><a href="/#ateliers" data-libelle="Accueil">Ateliers</a></li><li><a href="/#parcours" data-libelle="Accueil">Mon parcours</a></li><li><a href="/tarifs-et-rendez-vous" data-libelle="Tarifs et rendez-vous">Tarifs et rendez-vous</a></li></ul>
+    </nav>
+    <div>
+      <p class="pied-titre">Informations</p>
+      <ul><li><a href="/mentions-legales" data-libelle="Mentions légales">Mentions légales</a></li><li><a href="/confidentialite" data-libelle="Confidentialité">Confidentialité</a></li><li><a href="/conditions-generales-de-vente" data-libelle="Conditions générales de vente">Conditions générales de vente</a></li></ul>
+      <p class="pied-titre pied-titre--suite">Suivre Elka Hypnose</p>
+      <ul><li><a href="https://www.facebook.com/profile.php?id=61572601529462" target="_blank" rel="noopener">Facebook<span class="visuellement-cache"> (nouvel onglet)</span></a></li><li><a href="https://instagram.com/elkahypnose/" target="_blank" rel="noopener">Instagram<span class="visuellement-cache"> (nouvel onglet)</span></a></li></ul>
+    </div>
+  </div>
+  <div class="conteneur pied-bas">
+    <p class="pied-avertissement">Je ne suis pas médecin : l’hypnothérapie ne remplace pas un suivi ou un traitement médical.</p>
+    <ul class="pied-confort">
+      <li><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></li>
+      <li><a href="#haut" data-sans-transition>Retour en haut</a></li>
+    </ul>
+    <p>Maquette : les informations marquées « à compléter » seront fournies par Laurence Katchavenda.</p>
+    <p>© Elka Hypnose</p>
+  </div>
+</footer>
+<div data-barre-fixe>
+  <a class="bouton bouton--contour" href="tel:+33953725114">Appeler</a>
+  <a class="bouton" href="/tarifs-et-rendez-vous#rendez-vous" data-libelle="Tarifs et rendez-vous">Rendez-vous</a>
+</div>
+</body>
+</html>

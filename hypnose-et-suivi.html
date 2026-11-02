@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="fr" data-v="1" data-gabarit="suivi" data-curseur>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>L’hypnose et le suivi : Elka Hypnose</title>
+<meta name="description" content="Comment se passe un suivi en hypnose avec Laurence Katchavenda : premier rendez-vous, séances, cabinet ou visio, enfants, cadre, charte d’engagement et questions fréquentes.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://elka-maquette.vercel.app/hypnose-et-suivi">
+<style>:root{--fond:#F1ECE2;--texte:#2F3A2C;--voile-fond:#2F3A2C;--ouverture-fond:#F1ECE2;--menu-fond:#2F3A2C}:root { --entete-h: 72px; --barres-h: 0px; } html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; } body { margin: 0; background: var(--fond); } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; } [data-voile] { position: fixed; inset: 0; z-index: 900; background: var(--voile-fond); transform: translateY(100%); visibility: hidden; pointer-events: none; } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] { transform: none; visibility: visible; } html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; } .ouverture-panneau { position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center; background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; } html.defilement-bloque, html.defilement-bloque body, html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie), html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body, html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours), html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }</style>
+<script>(function () {
+var d = document.documentElement, ss = null, ls = null;
+try { ss = window.sessionStorage; ls = window.localStorage; } catch (e) {}
+d.classList.add('js');
+var calme = false;
+try { calme = !!ls && ls.getItem('socle:calme') === 'oui'; } catch (e) {}
+if (!calme && window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) calme = true;
+if (calme) d.classList.add('calme');
+var nav = performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+var type = nav ? nav.type : 'navigate';
+var depart = null;
+try { depart = JSON.parse(ss.getItem('socle:depart') || 'null'); ss.removeItem('socle:depart'); } catch (e) {}
+if (depart && !(Date.now() - depart.t < 15000)) depart = null;
+var retourSection = false;
+try { retourSection = !!ss.getItem('socle:calme-retour'); } catch (e) {}
+var mode = type === 'back_forward' || retourSection ? 'retour' : type === 'reload' ? 'intro' : depart ? 'voile' : 'intro';
+d.setAttribute('data-arrivee', mode);
+if (mode === 'voile' && depart.couleur) d.style.setProperty('--voile-fond', depart.couleur);
+if (type === 'reload' && 'scrollRestoration' in history) {
+if (!retourSection) history.scrollRestoration = 'manual';
+}
+try {
+var choisie = ls && ls.getItem('socle:langue');
+var langue = (d.lang || '').slice(0, 2);
+if (choisie && choisie !== langue && type === 'navigate' && !depart) {
+var alt = document.querySelector('link[rel="alternate"][hreflang="' + choisie + '"]');
+if (alt) location.replace(new URL(alt.href).pathname + location.search + location.hash);
+}
+} catch (e) {}
+setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('secours'); }, 2000);
+})();</script>
+<link rel="preload" href="/assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/socle.css?v=1">
+<link rel="stylesheet" href="/assets/css/site.css?v=1">
+<link rel="modulepreload" href="/assets/js/site.js?v=1">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=1">
+<script src="/assets/vendor/gsap.min.js" defer></script>
+<script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/assets/vendor/SplitText.min.js" defer></script>
+<script type="module" src="/assets/js/site.js?v=1"></script>
+<meta name="theme-color" content="#F1ECE2">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Elka Hypnose">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="L’hypnose et le suivi : Elka Hypnose">
+<meta property="og:description" content="Comment se passe un suivi en hypnose avec Laurence Katchavenda : premier rendez-vous, séances, cabinet ou visio, enfants, cadre, charte d’engagement et questions fréquentes.">
+<meta property="og:url" content="https://elka-maquette.vercel.app/hypnose-et-suivi">
+<meta property="og:image" content="https://elka-maquette.vercel.app/assets/partage/suivi-fr.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Arche de pierre et porte entrouverte sur un pré dans la brume">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Elka Hypnose","description":"Séances d’hypnothérapie individuelles et personnalisées sur rendez-vous, au cabinet de Bard-lès-Époisses ou en visio, et ateliers d’initiation à l’autohypnose en petits groupes, en visio.","url":"https://elka-maquette.vercel.app/","image":"https://elka-maquette.vercel.app/assets/partage/accueil-fr.jpg","logo":"https://elka-maquette.vercel.app/assets/images/logo-pastille.svg","telephone":"+33953725114","email":"elkahypnose@free.fr","address":{"@type":"PostalAddress","streetAddress":"6, rue Victor de Lanneau","postalCode":"21460","addressLocality":"Bard-lès-Époisses","addressCountry":"FR"},"geo":{"@type":"GeoCoordinates","latitude":47.5322,"longitude":4.2167},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"12:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"13:30","closes":"19:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"12:00"}],"founder":{"@type":"Person","name":"Laurence Katchavenda","jobTitle":"Hypnothérapeute"},"sameAs":["https://www.resalib.fr/praticien/106137-laurence-katchavenda-ei-elkahypnose-praticien-en-hypnose-bard-les-epoisses","https://www.facebook.com/profile.php?id=61572601529462","https://instagram.com/elkahypnose/"]}</script>
+</head>
+<body id="haut" class="page-suivi">
+<div data-voile aria-hidden="true"><div class="voile-contenu">
+  <svg class="voile-arche" viewBox="0 0 120 170" aria-hidden="true"><path d="M2 170 V60 A58 58 0 0 1 118 60 V170" /></svg>
+  <img src="/assets/images/logo-clair.svg" alt="" width="108" height="60">
+  <span data-voile-libelle>L’hypnose et le suivi</span>
+</div></div>
+<div class="ouverture-panneau" data-ouverture aria-hidden="true">
+  <div class="seuil-arche" data-seuil-arche>
+    <div class="seuil-vue" data-seuil-vue>
+      <figure class="media seuil-media" data-grok style="--cadrage:69% 55%;--cadrage-mobile:50% 52%">
+  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/grok/suivi-ouverture-mobile-640.webp 640w, /assets/images/grok/suivi-ouverture-mobile-941.webp 941w" sizes="(max-width: 760px) 92vw, 600px">
+    <img src="/assets/images/grok/suivi-ouverture-1280.webp" srcset="/assets/images/grok/suivi-ouverture-640.webp 640w, /assets/images/grok/suivi-ouverture-1280.webp 1280w, /assets/images/grok/suivi-ouverture-1672.webp 1672w" sizes="(max-width: 760px) 92vw, 600px" alt="" width="1280" height="720" fetchpriority="high" loading="eager" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+      <div class="seuil-brume" data-seuil-brume></div>
+    </div>
+    <div class="seuil-battants" data-seuil-battants><span class="seuil-battant seuil-battant--g"></span><span class="seuil-battant seuil-battant--d"></span><span class="seuil-lueur" data-seuil-lueur></span></div>
+    <svg class="seuil-cadre" data-seuil-cadre><path /></svg>
+  </div>
+  <p class="ouverture-ligne">Hypnose · Bard-lès-Époisses</p>
+</div>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header data-entete>
+  <div class="entete-rangee">
+    <a class="entete-logo" href="/" aria-label="Elka Hypn’ose, retour à l’accueil" data-libelle="Accueil">
+      <img src="/assets/images/logo.svg" alt="" width="90" height="50">
+    </a>
+    <nav data-nav aria-label="Navigation principale">
+      <ul><li><a href="/hypnose-et-suivi" class="lien-trace" data-libelle="L’hypnose et le suivi" aria-current="page">L’hypnose et le suivi</a></li><li><a href="/#ateliers" class="lien-trace" data-libelle="Accueil">Ateliers</a></li><li><a href="/#parcours" class="lien-trace" data-libelle="Accueil">Mon parcours</a></li><li><a href="/tarifs-et-rendez-vous" class="lien-trace" data-libelle="Tarifs et rendez-vous">Tarifs et rendez-vous</a></li></ul>
+    </nav>
+    <div class="entete-actions">
+      <a class="bouton bouton--entete" href="/tarifs-et-rendez-vous#rendez-vous" data-libelle="Tarifs et rendez-vous" data-magnetique>Prendre rendez-vous</a>
+      <button type="button" data-menu-bouton aria-controls="menu" aria-expanded="false" data-libelle-ouvrir="Menu" data-libelle-fermer="Fermer"><span class="menu-icone" aria-hidden="true"></span><span data-libelle-bouton>Menu</span></button>
+    </div>
+  </div>
+</header>
+<div id="menu" data-menu role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="menu-grille">
+    <ul class="menu-liens"><li style="--i:0"><a href="/" class="menu-lien" data-libelle="Accueil">Accueil</a></li><li style="--i:1"><a href="/hypnose-et-suivi" class="menu-lien" data-libelle="L’hypnose et le suivi" aria-current="page">L’hypnose et le suivi</a></li><li style="--i:2"><a href="/#ateliers" class="menu-lien" data-libelle="Accueil">Ateliers</a></li><li style="--i:3"><a href="/#parcours" class="menu-lien" data-libelle="Accueil">Mon parcours</a></li><li style="--i:4"><a href="/tarifs-et-rendez-vous" class="menu-lien" data-libelle="Tarifs et rendez-vous">Tarifs et rendez-vous</a></li></ul>
+    <div class="menu-contact">
+      <p class="menu-titre">Contact</p>
+      <p><a class="bouton bouton--clair" href="tel:+33953725114">Appeler le 09 53 72 51 14</a></p>
+      <p><a class="bouton bouton--contour-clair" href="/tarifs-et-rendez-vous#rendez-vous" data-libelle="Tarifs et rendez-vous">Prendre rendez-vous</a></p>
+      <p class="menu-adresse">6, rue Victor de Lanneau<br><span class="insecable">21460 Bard-lès-Époisses</span></p>
+      <p><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></p>
+    </div>
+  </div>
+</div>
+<main id="contenu" tabindex="-1">
+<section class="seuil ecran" id="debut">
+  <div class="seuil-texte">
+    <p class="surtitre" data-anime="gsap">L’hypnose et le suivi</p>
+    <h1 class="seuil-titre seuil-titre--page" data-superpose><span class="mot-masque"><span class="mot" data-anime="gsap">Comment</span></span> <span class="mot-masque"><span class="mot" data-anime="gsap">se</span></span> <span class="mot-masque"><span class="mot" data-anime="gsap">passe</span></span> <span class="mot-masque"><span class="mot" data-anime="gsap">un</span></span> <span class="mot-masque"><span class="mot" data-anime="gsap">suivi</span></span> </h1>
+    <p class="seuil-intro" data-anime="gsap">Un accompagnement bienveillant, dans un cadre de totale confidentialité, au cabinet ou en visio.</p>
+    <p class="seuil-actions" data-anime="gsap">
+      <a href="/tarifs-et-rendez-vous#rendez-vous" class="bouton" data-libelle="Tarifs et rendez-vous" data-action-principale data-magnetique>Prendre rendez-vous</a>
+    </p>
+    <p class="seuil-info" data-info-cle data-anime="gsap">Premier rendez-vous d’environ 1 h 30, puis 1 à 10 séances</p>
+  </div>
+  <div class="arche seuil-arche-page" data-arche>
+  <figure class="media arche-media" data-grok style="--cadrage:69% 55%;--cadrage-mobile:50% 52%">
+  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/grok/suivi-ouverture-mobile-640.webp 640w, /assets/images/grok/suivi-ouverture-mobile-941.webp 941w" sizes="(max-width: 760px) 92vw, 600px">
+    <img src="/assets/images/grok/suivi-ouverture-1280.webp" srcset="/assets/images/grok/suivi-ouverture-640.webp 640w, /assets/images/grok/suivi-ouverture-1280.webp 1280w, /assets/images/grok/suivi-ouverture-1672.webp 1672w" sizes="(max-width: 760px) 92vw, 600px" alt="Arche de pierre couverte de lierre, porte de bois entrouverte sur un pré dans la brume au lever du soleil" width="1280" height="720" fetchpriority="high" loading="eager" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  <canvas class="arche-brume" data-brume aria-hidden="true" data-audit-ignorer></canvas>
+  <div class="arche-brume-css" aria-hidden="true"></div>
+  <svg class="arche-cadre" aria-hidden="true" data-audit-ignorer><path data-cadre /></svg>
+</div>
+</section>
+<section class="etapes conteneur" id="etapes" data-etapes>
+  <div class="etapes-tete">
+    <h2 class="titre-section" data-anime>Trois étapes</h2>
+    <p data-anime>Le suivi avance pas à pas, à votre rythme.</p>
+  </div>
+  <div class="etapes-grille">
+    <div class="etapes-images" aria-hidden="true">
+      <div class="etapes-image active" data-etape-image="0"><figure class="media etapes-media" style="--cadrage:64% 45%">
+  <picture>
+    <img src="/assets/images/seance-entretien-1280.webp" srcset="/assets/images/seance-entretien-640.webp 640w, /assets/images/seance-entretien-1280.webp 1280w, /assets/images/seance-entretien-1920.webp 1920w" sizes="(max-width: 760px) 92vw, 44vw" alt="" width="1280" height="853" loading="lazy" decoding="async">
+  </picture>
+</figure></div><div class="etapes-image" data-etape-image="1"><figure class="media etapes-media" style="--cadrage:40% 45%">
+  <picture>
+    <img src="/assets/images/seance-allongee-1280.webp" srcset="/assets/images/seance-allongee-640.webp 640w, /assets/images/seance-allongee-1280.webp 1280w" sizes="(max-width: 760px) 92vw, 44vw" alt="" width="1280" height="1337" loading="lazy" decoding="async">
+  </picture>
+</figure></div><div class="etapes-image" data-etape-image="2"><figure class="media etapes-media" data-grok style="--cadrage:48% 62%">
+  <picture>
+    <img src="/assets/images/grok/suivi-etape-3-pousse-1122.webp" srcset="/assets/images/grok/suivi-etape-3-pousse-640.webp 640w, /assets/images/grok/suivi-etape-3-pousse-1122.webp 1122w" sizes="(max-width: 760px) 92vw, 44vw" alt="" width="1122" height="1402" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure></div>
+    </div>
+    <div class="chemin-zone chemin-zone--vertical" data-chemin>
+      <svg class="chemin-trace" aria-hidden="true" data-audit-ignorer preserveAspectRatio="none"><path class="chemin-fond" /><path class="chemin-ligne" data-chemin-ligne /></svg>
+      <ol class="chemin-etapes chemin-etapes--detail">
+        <li class="chemin-etape" id="etape-rencontre" data-etape="0">
+          <span class="graine" aria-hidden="true"><svg viewBox="0 0 48 48"><circle class="graine-sol" cx="24" cy="40" r="5" /><path class="graine-tige" d="M24 40 V22" /><path class="graine-feuille" d="M24 27 C18 26 14 22 14 16 C20 16.5 23.4 20.4 24 25" /><path class="graine-feuille graine-feuille--d" d="M24 25 C25 18.5 29 14.5 35 14 C35 20 31 24.4 24 25.6" /></svg></span>
+          <p class="chemin-numero">1</p>
+          <h3>Une première rencontre</h3>
+          <p class="chemin-duree">environ 1 h 30</p>
+          <p>Faire connaissance, établir vos objectifs et découvrir l’hypnose. Avant ce premier rendez-vous, Laurence vous appelle pour parler de ce qui vous amène.</p>
+          <figure class="media etape-media-mobile" style="--cadrage:64% 45%">
+  <picture>
+    <img src="/assets/images/seance-entretien-1280.webp" srcset="/assets/images/seance-entretien-640.webp 640w, /assets/images/seance-entretien-1280.webp 1280w, /assets/images/seance-entretien-1920.webp 1920w" sizes="92vw" alt="Laurence en entretien avec une personne accompagnée, de dos, dans le cabinet aux murs verts" width="1280" height="853" loading="lazy" decoding="async">
+  </picture>
+</figure>
+        </li><li class="chemin-etape" id="etape-seances" data-etape="1">
+          <span class="graine" aria-hidden="true"><svg viewBox="0 0 48 48"><circle class="graine-sol" cx="24" cy="40" r="5" /><path class="graine-tige" d="M24 40 V22" /><path class="graine-feuille" d="M24 27 C18 26 14 22 14 16 C20 16.5 23.4 20.4 24 25" /><path class="graine-feuille graine-feuille--d" d="M24 25 C25 18.5 29 14.5 35 14 C35 20 31 24.4 24 25.6" /></svg></span>
+          <p class="chemin-numero">2</p>
+          <h3>Une période de travail à votre rythme</h3>
+          <p class="chemin-duree">1 à 10 séances de 1 h à 1 h 15</p>
+          <p>Le nombre de séances dépend de la problématique abordée et se décide ensemble après la première. Entre les séances, des outils respiratoires et de régulation émotionnelle peuvent vous être proposés.</p>
+          <figure class="media etape-media-mobile" style="--cadrage:40% 45%">
+  <picture>
+    <img src="/assets/images/seance-allongee-1280.webp" srcset="/assets/images/seance-allongee-640.webp 640w, /assets/images/seance-allongee-1280.webp 1280w" sizes="92vw" alt="Séance d’hypnose au cabinet : Laurence prend des notes, la personne accompagnée est allongée dans un fauteuil, visage hors cadre" width="1280" height="1337" loading="lazy" decoding="async">
+  </picture>
+</figure>
+        </li><li class="chemin-etape" id="etape-graines" data-etape="2">
+          <span class="graine" aria-hidden="true"><svg viewBox="0 0 48 48"><circle class="graine-sol" cx="24" cy="40" r="5" /><path class="graine-tige" d="M24 40 V22" /><path class="graine-feuille" d="M24 27 C18 26 14 22 14 16 C20 16.5 23.4 20.4 24 25" /><path class="graine-feuille graine-feuille--d" d="M24 25 C25 18.5 29 14.5 35 14 C35 20 31 24.4 24 25.6" /></svg></span>
+          <p class="chemin-numero">3</p>
+          <h3>Les graines du changement</h3>
+          <p class="chemin-duree">pas à pas</p>
+          <p>Pas à pas, de nouvelles façons de réagir peuvent prendre racine, à votre rythme. L’accompagnement vise votre autonomie.</p>
+          <figure class="media etape-media-mobile" data-grok style="--cadrage:48% 62%">
+  <picture>
+    <img src="/assets/images/grok/suivi-etape-3-pousse-1122.webp" srcset="/assets/images/grok/suivi-etape-3-pousse-640.webp 640w, /assets/images/grok/suivi-etape-3-pousse-1122.webp 1122w" sizes="92vw" alt="Jeune pousse à deux feuilles couverte de rosée, dans la lumière du matin" width="1122" height="1402" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+<section class="lieux conteneur" id="cabinet-ou-visio">
+  <h2 class="titre-section" data-anime>Au cabinet ou en visio</h2>
+  <div class="lieux-grille" data-battants>
+    <article class="lieu" data-anime>
+      <figure class="media lieu-media" style="--cadrage:50% 55%">
+  <picture>
+    <img src="/assets/images/cabinet-fauteuil-1280.webp" srcset="/assets/images/cabinet-fauteuil-640.webp 640w, /assets/images/cabinet-fauteuil-1280.webp 1280w" sizes="(max-width: 760px) 92vw, 46vw" alt="Le fauteuil de cuir vert du cabinet devant un papier peint végétal" width="1280" height="1113" loading="lazy" decoding="async">
+  </picture>
+</figure>
+      <h3>Au cabinet</h3>
+      <p>À Bard-lès-Époisses, avec un stationnement facile sur la place du village. Les enfants sont reçus uniquement au cabinet.</p>
+    </article>
+    <article class="lieu" data-anime>
+      <figure class="media lieu-media" style="--cadrage:52% 38%">
+  <picture>
+    <img src="/assets/images/visio-laurence-1280.webp" srcset="/assets/images/visio-laurence-640.webp 640w, /assets/images/visio-laurence-1280.webp 1280w" sizes="(max-width: 760px) 92vw, 46vw" alt="Laurence en visioconférence, casque sur les oreilles, souriante" width="1280" height="701" loading="lazy" decoding="async">
+  </picture>
+</figure>
+      <h3>En visio</h3>
+      <p>Depuis chez vous, sur Zoom. Le lien vous est envoyé une fois la réservation confirmée, après paiement par virement.</p>
+    </article>
+  </div>
+</section>
+<section class="enfants conteneur" id="enfants">
+  <div class="enfants-texte">
+    <h2 class="titre-section" data-anime>Les enfants, dès 5 ans</h2>
+    <p data-anime>Laurence a été professeure des écoles pendant environ 25 ans. Pour un enfant, le suivi commence par une séance d’une heure avec le ou les parents, sans l’enfant, puis une séance d’une heure avec l’enfant seul.</p>
+    <p data-anime><span class="etiquette-lieu">Uniquement au cabinet.</span></p>
+  </div>
+  <figure class="media enfants-media" data-grok style="--cadrage:45% 55%">
+  <picture>
+    <img src="/assets/images/grok/suivi-enfants-1122.webp" srcset="/assets/images/grok/suivi-enfants-640.webp 640w, /assets/images/grok/suivi-enfants-1122.webp 1122w" sizes="(max-width: 760px) 92vw, 40vw" alt="Dessin d’enfant aux craies grasses : un soleil et trois fleurs, sur une table de bois" width="1122" height="1402" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+</section>
+<section class="cadre conteneur" id="cadre">
+  <figure class="media cadre-media" data-grok style="--cadrage:35% 55%">
+  <picture>
+    <img src="/assets/images/grok/suivi-limites-1270.webp" srcset="/assets/images/grok/suivi-limites-640.webp 640w, /assets/images/grok/suivi-limites-1270.webp 1270w" sizes="(max-width: 760px) 92vw, 40vw" alt="Mur de pierre sèche couvert de mousse et de fougères" width="1270" height="953" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  <div class="cadre-texte">
+    <h2 class="titre-section" data-anime>Le cadre et les limites</h2>
+    <ul class="cadre-liste"><li data-anime>Je ne suis pas médecin, je ne fais pas de diagnostic.</li><li data-anime>L’hypnothérapie ne se substitue en aucun cas aux suivis ou traitements médicaux.</li><li data-anime>Je recommande de consulter un professionnel de santé avant de prendre rendez-vous.</li><li data-anime>Une hypnothérapie de bien-être est contre-indiquée en cas de psychose ou de troubles dissociatifs de l’identité : signalez tout suivi psychiatrique lors de la prise de rendez-vous.</li></ul>
+    <aside class="urgence" data-anime>
+      <h3>En cas de détresse</h3>
+      <p>Si vous avez des idées suicidaires ou si vous êtes en grande détresse, appelez le 3114, numéro national de prévention du suicide, gratuit, 24 h/24. En cas d’urgence vitale : 15 ou 112.</p>
+    </aside>
+  </div>
+</section>
+<section class="charte" id="charte">
+  <figure class="media charte-fond" data-grok style="--cadrage:70% 50%">
+  <picture>
+    <img src="/assets/images/grok/suivi-charte-1280.webp" srcset="/assets/images/grok/suivi-charte-640.webp 640w, /assets/images/grok/suivi-charte-1280.webp 1280w, /assets/images/grok/suivi-charte-1672.webp 1672w" sizes="100vw" alt="Toile de lin naturel et brin d’herbe sauvage dans la lumière du matin" width="1280" height="720" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  <div class="conteneur charte-contenu">
+    <h2 class="titre-section" data-anime>Charte d’engagement</h2>
+    <p data-anime>Des engagements réciproques, posés dès le départ.</p>
+    <div class="charte-colonnes">
+      <div>
+        <h3 data-anime>La praticienne s’engage</h3>
+        <ol class="charte-liste"><li data-anime><strong>Confidentialité</strong> Les informations partagées restent confidentielles, sauf consentement explicite ou obligation légale ou de sécurité.</li><li data-anime><strong>Bienveillance</strong> Un cadre bienveillant et sans jugement.</li><li data-anime><strong>Compétence</strong> Uniquement des services qui relèvent de ses compétences, et une orientation vers d’autres professionnels si besoin.</li><li data-anime><strong>Consentement</strong> Un consentement éclairé avant chaque séance.</li><li data-anime><strong>Limites</strong> Des limites professionnelles claires.</li><li data-anime><strong>Intégrité</strong> Répondre aux demandes saines, qui ne nuisent pas à votre intégrité physique ou psychique ni à celle d’autrui.</li><li data-anime><strong>Objectifs précis</strong> Une attitude neutre et positive, des objectifs précis, sans prolonger la thérapie inutilement.</li><li data-anime><strong>Pas de substitution</strong> L’hypnose ne remplace pas un traitement médical ou psychiatrique.</li><li data-anime><strong>Autonomie</strong> Un accompagnement vers l’autonomie : vous restez acteur de votre changement.</li><li data-anime><strong>Transparence</strong> Les tarifs sont annoncés avant chaque consultation.</li></ol>
+      </div>
+      <div>
+        <h3 data-anime>La personne accompagnée s’engage</h3>
+        <ol class="charte-liste"><li data-anime><strong>Ponctualité</strong> Honorer les rendez-vous et prévenir en cas d’annulation. Une annulation le jour même reste due.</li><li data-anime><strong>Sincérité</strong> Être honnête et ouvert dans les échanges.</li><li data-anime><strong>Respect du cadre</strong> Respecter le champ de compétence de la praticienne.</li><li data-anime><strong>Participation</strong> Participer activement au processus.</li></ol>
+        <p class="note-demo" data-anime>Résumé de la charte d’engagement de Laurence : texte intégral à compléter.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="faq conteneur" id="questions">
+  <div class="faq-colonne">
+    <h2 class="titre-section" data-anime>Questions fréquentes</h2>
+    <details class="faq-item" id="question-nombre" data-anime><summary>Combien de séances faut-il prévoir ?</summary><div class="faq-reponse"><p>Entre 1 et 10 séances, selon la problématique abordée. Le suivi se décide ensemble après la première séance, sans le prolonger inutilement.</p></div></details><details class="faq-item" id="question-duree" data-anime><summary>Combien de temps dure une séance ?</summary><div class="faq-reponse"><p>La première dure environ 1 h 30. Les suivantes durent généralement de 1 h à 1 h 15.</p></div></details><details class="faq-item" id="question-visio" data-anime><summary>Comment se passe une séance en visio ?</summary><div class="faq-reponse"><p>La séance a lieu sur Zoom, depuis chez vous. Le lien vous est envoyé une fois la réservation confirmée. Les enfants sont reçus uniquement au cabinet.</p></div></details><details class="faq-item" id="question-enfants" data-anime><summary>Recevez-vous les enfants ?</summary><div class="faq-reponse"><p>Oui, dès 5 ans et uniquement au cabinet : une séance d’une heure avec le ou les parents, puis une séance d’une heure avec l’enfant seul.</p></div></details><details class="faq-item" id="question-contre-indications" data-anime><summary>Y a-t-il des contre-indications ?</summary><div class="faq-reponse"><p>Une hypnothérapie de bien-être est contre-indiquée en cas de psychose ou de troubles dissociatifs de l’identité. Signalez tout suivi psychiatrique lors de la prise de rendez-vous. En cas de grossesse ou de suivi médical, consultez votre médecin avant de réserver.</p></div></details><details class="faq-item" id="question-regler" data-anime><summary>Comment régler la séance ?</summary><div class="faq-reponse"><p>Au cabinet : par virement, chèque ou espèces, le jour de la séance. En visio : par virement, avant la séance. Par carte bancaire : lors de la réservation sur Résalib. Une facture vous est remise après paiement.</p></div></details><details class="faq-item" id="question-annuler" data-anime><summary>Et si je dois annuler ou si je suis en retard ?</summary><div class="faq-reponse"><p>Merci de prévenir au moins 48 h à l’avance. Une annulation le jour même ou une absence reste due. Au-delà de 20 minutes de retard, la séance peut ne pas avoir lieu.</p></div></details>
+  </div>
+  <figure class="media faq-media" data-grok style="--cadrage:35% 40%">
+  <picture>
+    <img src="/assets/images/grok/suivi-faq-1280.webp" srcset="/assets/images/grok/suivi-faq-640.webp 640w, /assets/images/grok/suivi-faq-1280.webp 1280w, /assets/images/grok/suivi-faq-1536.webp 1536w" sizes="(max-width: 760px) 92vw, 36vw" alt="Feuilles de chêne couvertes de rosée, pré dans la brume en arrière-plan" width="1280" height="853" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+</section>
+<section class="fin conteneur" id="premier-pas">
+  <figure class="media fin-media" style="--cadrage:45% 60%">
+  <picture>
+    <img src="/assets/images/cabinet-salle-1280.webp" srcset="/assets/images/cabinet-salle-640.webp 640w, /assets/images/cabinet-salle-1280.webp 1280w, /assets/images/cabinet-salle-1920.webp 1920w" sizes="(max-width: 760px) 92vw, 44vw" alt="Le cabinet : murs vert d’eau, bureau, deux fauteuils et un tapis rouge" width="1280" height="853" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  <div>
+    <h2 class="titre-section" data-anime>Faire le premier pas</h2>
+    <p data-anime>Un premier échange vaut souvent mieux qu’un formulaire : Laurence vous rappelle dès votre premier contact.</p>
+    <p class="fin-actions" data-anime>
+      <a href="/tarifs-et-rendez-vous#rendez-vous" class="bouton" data-libelle="Tarifs et rendez-vous" data-magnetique>Prendre rendez-vous</a>
+      <a href="/tarifs-et-rendez-vous#tarifs" class="bouton bouton--contour" data-libelle="Tarifs et rendez-vous">Voir les tarifs</a>
+    </p>
+  </div>
+</section>
+</main>
+<footer class="pied" id="pied">
+  <div class="conteneur pied-grille">
+    <div class="pied-marque">
+      <img src="/assets/images/logo-pastille.svg" alt="" width="88" height="88" loading="lazy">
+      <p>Hypnothérapie au cabinet ou en visio, ateliers d’autohypnose en petits groupes.</p>
+    </div>
+    <div>
+      <p class="pied-titre">Contact</p>
+      <p>6, rue Victor de Lanneau<br><span class="insecable">21460 Bard-lès-Époisses</span></p>
+      <ul><li><a href="tel:+33953725114">09 53 72 51 14</a></li><li><a href="mailto:elkahypnose@free.fr">elkahypnose@free.fr</a></li><li><a href="https://www.resalib.fr/praticien/106137-laurence-katchavenda-ei-elkahypnose-praticien-en-hypnose-bard-les-epoisses" target="_blank" rel="noopener">Rendez-vous sur Résalib<span class="visuellement-cache"> (nouvel onglet)</span></a></li></ul>
+    </div>
+    <nav aria-label="Sommaire">
+      <p class="pied-titre">Sommaire</p>
+      <ul><li><a href="/" data-libelle="Accueil">Accueil</a></li><li><a href="/hypnose-et-suivi" data-libelle="L’hypnose et le suivi" aria-current="page">L’hypnose et le suivi</a></li><li><a href="/#ateliers" data-libelle="Accueil">Ateliers</a></li><li><a href="/#parcours" data-libelle="Accueil">Mon parcours</a></li><li><a href="/tarifs-et-rendez-vous" data-libelle="Tarifs et rendez-vous">Tarifs et rendez-vous</a></li></ul>
+    </nav>
+    <div>
+      <p class="pied-titre">Informations</p>
+      <ul><li><a href="/mentions-legales" data-libelle="Mentions légales">Mentions légales</a></li><li><a href="/confidentialite" data-libelle="Confidentialité">Confidentialité</a></li><li><a href="/conditions-generales-de-vente" data-libelle="Conditions générales de vente">Conditions générales de vente</a></li></ul>
+      <p class="pied-titre pied-titre--suite">Suivre Elka Hypnose</p>
+      <ul><li><a href="https://www.facebook.com/profile.php?id=61572601529462" target="_blank" rel="noopener">Facebook<span class="visuellement-cache"> (nouvel onglet)</span></a></li><li><a href="https://instagram.com/elkahypnose/" target="_blank" rel="noopener">Instagram<span class="visuellement-cache"> (nouvel onglet)</span></a></li></ul>
+    </div>
+  </div>
+  <div class="conteneur pied-bas">
+    <p class="pied-avertissement">Je ne suis pas médecin : l’hypnothérapie ne remplace pas un suivi ou un traitement médical.</p>
+    <ul class="pied-confort">
+      <li><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></li>
+      <li><a href="#haut" data-sans-transition>Retour en haut</a></li>
+    </ul>
+    <p>Maquette : les informations marquées « à compléter » seront fournies par Laurence Katchavenda.</p>
+    <p>© Elka Hypnose</p>
+  </div>
+</footer>
+<div data-barre-fixe>
+  <a class="bouton bouton--contour" href="tel:+33953725114">Appeler</a>
+  <a class="bouton" href="/tarifs-et-rendez-vous#rendez-vous" data-libelle="Tarifs et rendez-vous">Rendez-vous</a>
+</div>
+</body>
+</html>
