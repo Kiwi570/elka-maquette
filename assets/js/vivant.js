@@ -3,7 +3,7 @@
    images des étapes, frise du parcours, carte de l'Auxois, révélation et parallaxe des images,
    boutons magnétiques, images inclinées au survol, FAQ animée, filet de l'en-tête.
    Aucune lecture de mise en page pendant le défilement : tout est mesuré au chargement et au redimensionnement. */
-import { etat, quand, rafraichir } from './socle/index.js?v=1';
+import { etat, quand, rafraichir } from './socle/index.js?v=2';
 
 const gsap = window.gsap;
 const ST = window.ScrollTrigger;
@@ -182,7 +182,7 @@ function cartes() {
 }
 
 /* ---------- Images : révélées à l'arrivée, légère parallaxe ---------- */
-export const IMAGES_REVELEES = '.rencontre-portrait, .chemin-media, .parcours-media, .ateliers-media, .article-media, .venir-media, .lieu-media, .enfants-media, .cadre-media, .faq-media, .fin-media, .tarifs-media, .conditions-media, .horaires-media, .acces-media, .rappel-media, .carte-accompagnement-media';
+export const IMAGES_REVELEES = '.rencontre-portrait, .chemin-media, .parcours-media, .ateliers-media, .article-media, .venir-media, .lieu-media, .enfants-media, .cadre-media, .faq-media, .fin-media, .tarifs-media, .conditions-media, .horaires-media, .acces-media, .rappel-media, .carte-accompagnement-media, .seance-media, .visio-media, .savoir-media, .formations-media, .approche-media';
 function images() {
   const figures = [...document.querySelectorAll(IMAGES_REVELEES)];
   if (!figures.length || !gsap) return;

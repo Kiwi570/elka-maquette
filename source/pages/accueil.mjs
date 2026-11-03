@@ -3,9 +3,9 @@
    sans que les lettres se chevauchent (vérifié sur les captures) : data-superpose.
    dans l'ordre où le visiteur cherche : qui, pour quoi, comment, combien et où.
    Premier écran « Le seuil » : titre à gauche, arche à droite (sous le titre sur téléphone). */
-import { html } from '../../outils/gabarit.mjs';
+import { html, typo } from '../../outils/gabarit.mjs';
 import { arche } from '../gabarits/commun.mjs';
-import { statut, cartesAteliers, carte, tableHoraires } from '../gabarits/elements.mjs';
+import { statut, carte, tableHoraires, avis, ordreAteliers, date } from '../gabarits/elements.mjs';
 
 export const page = {
   cle: 'accueil', fichier: 'index', imagePartage: 'grok/accueil-ouverture-1280.webp',
@@ -17,6 +17,7 @@ const mots = (texte, classe = '') => texte.split(' ').map((m) => html`<span clas
 export default (c) => {
   const o = page.ouverture;
   const etapes = c.donnees.etapes;
+  const prochain = ordreAteliers(c.donnees.ateliers).find(({ s }) => s.etat === 'avenir');
   return html`
 <section class="seuil ecran" id="debut">
   <div class="seuil-texte">
@@ -113,14 +114,9 @@ export default (c) => {
     <h2 class="titre-section" data-anime>${c.t('accueil.parcours.titre')}</h2>
     <p data-anime>${c.t('accueil.parcours.texte')}</p>
     <p class="parcours-snh" data-anime><img src="/assets/images/logo-snh.png" alt="${c.s('accueil.parcours.snhAlt')}" width="240" height="72" loading="lazy"><span>${c.t('accueil.parcours.snh')}</span></p>
+    <p data-anime>${c.lien('parcours', { classe: 'bouton bouton--contour', texte: c.t('accueil.parcours.lien') })}</p>
   </div>
-  ${c.media({ nom: 'seance-entretien', alt: c.s('accueil.parcours.alt'), cadrage: '72% 30%', classe: 'parcours-media', sizes: '(max-width: 760px) 92vw, 45vw' })}
-  <div class="frise-zone" data-frise>
-  <span class="frise-trace" aria-hidden="true"><span class="frise-ligne" data-frise-ligne></span></span>
-  <ol class="frise">
-    ${c.donnees.parcours.map((p) => html`<li class="frise-etape" data-anime><p class="frise-quand">${p.quand}</p><p class="frise-quoi">${p.quoi}</p></li>`)}
-  </ol>
-  </div>
+  ${c.media({ nom: 'grok/parcours-ouverture', alt: c.s('accueil.parcours.alt'), cadrage: '57% 62%', classe: 'parcours-media', sizes: '(max-width: 760px) 92vw, 45vw' })}
 </section>
 
 <section class="ateliers" id="ateliers">
@@ -134,29 +130,18 @@ export default (c) => {
         <li>${c.t('accueil.ateliers.places')}</li>
         <li>${c.t('accueil.ateliers.zoom')}</li>
       </ul>
+      <div class="ateliers-apercu">
+        <p class="ateliers-apercu-titre" data-anime>${c.t('accueil.ateliers.themesTitre')}</p>
+        <ul class="ateliers-themes" data-anime>${c.donnees.themes.map((t) => html`<li>${c.lien('ateliers', { ancre: `theme-${t.id}`, classe: `theme-pastille theme-pastille--${t.id}`, texte: html`<span class="cal-point" aria-hidden="true"></span>${t.nom}` })}</li>`)}</ul>
+        ${prochain ? html`<p class="ateliers-prochain" data-anime data-prochain data-textes="${JSON.stringify({ prochain: typo(c.s('ateliers.tete.prochain')), aucun: typo(c.s('ateliers.tete.aucun')) })}" data-ateliers-json="${JSON.stringify(c.donnees.ateliers.map((a) => ({ theme: a.theme, debut: a.debut, d0: a.seances[0], date: date(a.seances[0]) })))}">${c.t('ateliers.tete.prochain', { theme: prochain.a.theme, date: date(prochain.a.seances[0]) })}</p>` : ''}
+        <p class="ateliers-apercu-actions" data-anime>${c.lien('ateliers', { classe: 'bouton bouton--clair', texte: c.t('accueil.ateliers.voir'), attrs: 'data-magnetique' })} ${c.lien('tarifs-rendez-vous', { ancre: 'rappel', params: 'sujet=atelier', classe: 'bouton bouton--contour-clair', texte: c.t('accueil.ateliers.inscrire') })}</p>
+      </div>
     </div>
     ${c.media({ nom: 'grok/ateliers-visio', alt: c.s('accueil.ateliers.alt'), cadrage: '50% 55%', classe: 'ateliers-media', sizes: '(max-width: 760px) 92vw, 44vw' })}
   </div>
-  <div class="conteneur">
-    <p class="indication-glisser" aria-hidden="true">${c.t('commun.glisser')}</p>
-    ${cartesAteliers(c)}
-    <p class="ateliers-engagement">${c.t('accueil.ateliers.engagement')}</p>
-  </div>
 </section>
 
-<section class="avis" id="avis">
-  ${c.media({ nom: 'grok/avis-papier', alt: '', classe: 'avis-fond', sizes: '100vw' })}
-  <div class="conteneur avis-contenu">
-    <div class="avis-tete">
-      <h2 class="titre-section" data-anime>${c.t('accueil.avis.titre')}</h2>
-      <p class="avis-note" data-anime><span class="etoiles" role="img" aria-label="${c.s('accueil.avis.etoiles')}">${[1, 2, 3, 4, 5].map(() => html`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 16.9l-5.8 3.2 1.4-6.4L2.7 9.3l6.5-.7z" /></svg>`)}</span> <strong>${c.t('accueil.avis.note')}</strong> <span class="avis-nombre">${c.t('accueil.avis.nombre')}</span></p>
-    </div>
-    <ul class="avis-liste">
-      ${c.donnees.avis.map((a) => html`<li class="avis-carte" data-anime><blockquote><p>«\u00a0${a.texte}\u00a0»</p></blockquote><p class="avis-nom">${a.nom}</p></li>`)}
-    </ul>
-    <p class="avis-source" data-anime>${c.t('accueil.avis.source')} <a class="lien-trace" href="${c.site.liens.resalib}" target="_blank" rel="noopener">${c.t('accueil.avis.voir')}<span class="visuellement-cache"> ${c.t('commun.nouvelOnglet')}</span></a></p>
-  </div>
-</section>
+${avis(c)}
 
 <section class="carnet conteneur" id="carnet">
   <h2 class="titre-section" data-anime>${c.t('accueil.carnet.titre')}</h2>

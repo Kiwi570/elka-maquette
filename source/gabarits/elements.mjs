@@ -5,7 +5,7 @@ import { html } from '../../outils/gabarit.mjs';
 
 const MOIS_COURTS = ['janv.', 'févr.', 'mars', 'avr.', 'mai', 'juin', 'juil.', 'août', 'sept.', 'oct.', 'nov.', 'déc.'];
 /* « 2026-11-02 » → « 2 nov. » (pastilles des séances). */
-export const dateCourte = (iso) => { const [, m, j] = iso.split('-').map(Number); return `${j}\u00a0${MOIS_COURTS[m - 1]}`; };
+export const dateCourte = (iso) => { const [, m, j] = iso.split('-').map(Number); return `${j === 1 ? '1er' : j}\u00a0${MOIS_COURTS[m - 1]}`; };
 const MOIS = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
 
 /* « 19:30 » → « 19 h 30 », « 09:00 » → « 9 h ». */
@@ -128,4 +128,21 @@ export function carte(c) {
   </div>
   <figcaption class="carte-note">${c.t('accueil.venir.carteNote')}</figcaption>
 </figure>`;
+}
+
+/* Avis Résalib (accueil et Mon parcours). */
+export function avis(c) {
+  return html`<section class="avis" id="avis">
+  ${c.media({ nom: 'grok/avis-papier', alt: '', classe: 'avis-fond', sizes: '100vw' })}
+  <div class="conteneur avis-contenu">
+    <div class="avis-tete">
+      <h2 class="titre-section" data-anime>${c.t('accueil.avis.titre')}</h2>
+      <p class="avis-note" data-anime><span class="etoiles" role="img" aria-label="${c.s('accueil.avis.etoiles')}">${[1, 2, 3, 4, 5].map(() => html`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 16.9l-5.8 3.2 1.4-6.4L2.7 9.3l6.5-.7z" /></svg>`)}</span> <strong>${c.t('accueil.avis.note')}</strong> <span class="avis-nombre">${c.t('accueil.avis.nombre')}</span></p>
+    </div>
+    <ul class="avis-liste">
+      ${c.donnees.avis.map((a) => html`<li class="avis-carte" data-anime><blockquote><p>« ${a.texte} »</p></blockquote><p class="avis-nom">${a.nom}</p></li>`)}
+    </ul>
+    <p class="avis-source" data-anime>${c.t('accueil.avis.source')} <a class="lien-trace" href="${c.site.liens.resalib}" target="_blank" rel="noopener">${c.t('accueil.avis.voir')}<span class="visuellement-cache"> ${c.t('commun.nouvelOnglet')}</span></a></p>
+  </div>
+</section>`;
 }

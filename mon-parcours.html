@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="fr" data-v="2" data-gabarit="parcours" data-curseur>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mon parcours : Laurence Katchavenda, Elka Hypnose</title>
+<meta name="description" content="Le parcours de Laurence Katchavenda : environ 25 ans professeure des écoles, puis formée à l’hypnose ericksonienne et humaniste à l’IFHE, membre affiliée au SNH. Son approche et son cabinet à Bard-lès-Époisses.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://elka-maquette.vercel.app/mon-parcours">
+<style>:root{--fond:#F1ECE2;--texte:#2F3A2C;--voile-fond:#2F3A2C;--ouverture-fond:#F1ECE2;--menu-fond:#2F3A2C}:root { --entete-h: 72px; --barres-h: 0px; } html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; } body { margin: 0; background: var(--fond); } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; } [data-voile] { position: fixed; inset: 0; z-index: 900; background: var(--voile-fond); transform: translateY(100%); visibility: hidden; pointer-events: none; } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] { transform: none; visibility: visible; } html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; } .ouverture-panneau { position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center; background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; } html.defilement-bloque, html.defilement-bloque body, html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie), html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body, html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours), html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }</style>
+<script>(function () {
+var d = document.documentElement, ss = null, ls = null;
+try { ss = window.sessionStorage; ls = window.localStorage; } catch (e) {}
+d.classList.add('js');
+var calme = false;
+try { calme = !!ls && ls.getItem('socle:calme') === 'oui'; } catch (e) {}
+if (!calme && window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) calme = true;
+if (calme) d.classList.add('calme');
+var nav = performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+var type = nav ? nav.type : 'navigate';
+var depart = null;
+try { depart = JSON.parse(ss.getItem('socle:depart') || 'null'); ss.removeItem('socle:depart'); } catch (e) {}
+if (depart && !(Date.now() - depart.t < 15000)) depart = null;
+var retourSection = false;
+try { retourSection = !!ss.getItem('socle:calme-retour'); } catch (e) {}
+var mode = type === 'back_forward' || retourSection ? 'retour' : type === 'reload' ? 'intro' : depart ? 'voile' : 'intro';
+d.setAttribute('data-arrivee', mode);
+if (mode === 'voile' && depart.couleur) d.style.setProperty('--voile-fond', depart.couleur);
+if (type === 'reload' && 'scrollRestoration' in history) {
+if (!retourSection) history.scrollRestoration = 'manual';
+}
+try {
+var choisie = ls && ls.getItem('socle:langue');
+var langue = (d.lang || '').slice(0, 2);
+if (choisie && choisie !== langue && type === 'navigate' && !depart) {
+var alt = document.querySelector('link[rel="alternate"][hreflang="' + choisie + '"]');
+if (alt) location.replace(new URL(alt.href).pathname + location.search + location.hash);
+}
+} catch (e) {}
+setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('secours'); }, 2000);
+})();</script>
+<link rel="preload" href="/assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/socle.css?v=2">
+<link rel="stylesheet" href="/assets/css/site.css?v=2">
+<link rel="modulepreload" href="/assets/js/site.js?v=2">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=2">
+<script src="/assets/vendor/gsap.min.js" defer></script>
+<script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/assets/vendor/SplitText.min.js" defer></script>
+<script type="module" src="/assets/js/site.js?v=2"></script>
+<meta name="theme-color" content="#F1ECE2">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Elka Hypnose">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Mon parcours : Laurence Katchavenda, Elka Hypnose">
+<meta property="og:description" content="Le parcours de Laurence Katchavenda : environ 25 ans professeure des écoles, puis formée à l’hypnose ericksonienne et humaniste à l’IFHE, membre affiliée au SNH. Son approche et son cabinet à Bard-lès-Époisses.">
+<meta property="og:url" content="https://elka-maquette.vercel.app/mon-parcours">
+<meta property="og:image" content="https://elka-maquette.vercel.app/assets/partage/parcours-fr.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Pupitre d’écolier dans un pré au petit matin, vu à travers une arche">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Elka Hypnose","description":"Séances d’hypnothérapie individuelles et personnalisées sur rendez-vous, au cabinet de Bard-lès-Époisses ou en visio, et ateliers d’initiation à l’autohypnose en petits groupes, en visio.","url":"https://elka-maquette.vercel.app/","image":"https://elka-maquette.vercel.app/assets/partage/accueil-fr.jpg","logo":"https://elka-maquette.vercel.app/assets/images/logo-pastille.svg","telephone":"+33953725114","email":"elkahypnose@free.fr","address":{"@type":"PostalAddress","streetAddress":"6, rue Victor de Lanneau","postalCode":"21460","addressLocality":"Bard-lès-Époisses","addressCountry":"FR"},"geo":{"@type":"GeoCoordinates","latitude":47.5322,"longitude":4.2167},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"12:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"13:30","closes":"19:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"12:00"}],"founder":{"@type":"Person","name":"Laurence Katchavenda","jobTitle":"Hypnothérapeute"},"sameAs":["https://www.resalib.fr/praticien/106137-laurence-katchavenda-ei-elkahypnose-praticien-en-hypnose-bard-les-epoisses","https://www.facebook.com/profile.php?id=61572601529462","https://instagram.com/elkahypnose/"]}</script>
+</head>
+<body id="haut" class="page-parcours">
+<div data-voile aria-hidden="true"><div class="voile-contenu">
+  <svg class="voile-arche" viewBox="0 0 120 170" aria-hidden="true"><path d="M2 170 V60 A58 58 0 0 1 118 60 V170" /></svg>
+  <img src="/assets/images/logo-clair.svg" alt="" width="108" height="60">
+  <span data-voile-libelle>Mon parcours</span>
+</div></div>
+<div class="ouverture-panneau" data-ouverture aria-hidden="true">
+  <div class="seuil-arche" data-seuil-arche>
+    <div class="seuil-vue" data-seuil-vue>
+      <figure class="media seuil-media" data-grok style="--cadrage:57% 62%;--cadrage-mobile:50% 60%">
+  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/grok/parcours-ouverture-mobile-640.webp 640w, /assets/images/grok/parcours-ouverture-mobile-941.webp 941w" sizes="(max-width: 760px) 92vw, 600px">
+    <img src="/assets/images/grok/parcours-ouverture-1280.webp" srcset="/assets/images/grok/parcours-ouverture-640.webp 640w, /assets/images/grok/parcours-ouverture-1280.webp 1280w, /assets/images/grok/parcours-ouverture-1672.webp 1672w" sizes="(max-width: 760px) 92vw, 600px" alt="" width="1280" height="720" fetchpriority="high" loading="eager" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+      <div class="seuil-brume" data-seuil-brume></div>
+    </div>
+    <div class="seuil-battants" data-seuil-battants><span class="seuil-battant seuil-battant--g"></span><span class="seuil-battant seuil-battant--d"></span><span class="seuil-lueur" data-seuil-lueur></span></div>
+    <svg class="seuil-cadre" data-seuil-cadre><path /></svg>
+  </div>
+  <p class="ouverture-ligne">Hypnose · Bard-lès-Époisses</p>
+</div>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header data-entete>
+  <div class="entete-rangee">
+    <a class="entete-logo" href="/" aria-label="Elka Hypn’ose, retour à l’accueil" data-libelle="Accueil">
+      <img src="/assets/images/logo.svg" alt="" width="90" height="50">
+    </a>
+    <nav data-nav aria-label="Navigation principale">
+      <ul><li><a href="/hypnose-et-suivi" class="lien-trace" data-libelle="L’hypnose et le suivi">L’hypnose et le suivi</a></li><li><a href="/ateliers" class="lien-trace" data-libelle="Ateliers">Ateliers</a></li><li><a href="/mon-parcours" class="lien-trace" data-libelle="Mon parcours" aria-current="page">Mon parcours</a></li><li><a href="/tarifs-et-rendez-vous" class="lien-trace" data-libelle="Tarifs et rendez-vous">Tarifs et rendez-vous</a></li></ul>
+    </nav>
+    <div class="entete-actions">
+      <a class="bouton bouton--entete" href="/tarifs-et-rendez-vous#rendez-vous" data-libelle="Tarifs et rendez-vous" data-magnetique>Prendre rendez-vous</a>
+      <button type="button" data-menu-bouton aria-controls="menu" aria-expanded="false" data-libelle-ouvrir="Menu" data-libelle-fermer="Fermer"><span class="menu-icone" aria-hidden="true"></span><span data-libelle-bouton>Menu</span></button>
+    </div>
+  </div>
+</header>
+<div id="menu" data-menu role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="menu-grille">
+    <ul class="menu-liens"><li style="--i:0"><a href="/" class="menu-lien" data-libelle="Accueil">Accueil</a></li><li style="--i:1"><a href="/hypnose-et-suivi" class="menu-lien" data-libelle="L’hypnose et le suivi">L’hypnose et le suivi</a></li><li style="--i:2"><a href="/ateliers" class="menu-lien" data-libelle="Ateliers">Ateliers</a></li><li style="--i:3"><a href="/mon-parcours" class="menu-lien" data-libelle="Mon parcours" aria-current="page">Mon parcours</a></li><li style="--i:4"><a href="/tarifs-et-rendez-vous" class="menu-lien" data-libelle="Tarifs et rendez-vous">Tarifs et rendez-vous</a></li></ul>
+    <div class="menu-contact">
+      <p class="menu-titre">Contact</p>
+      <p><a class="bouton bouton--clair" href="tel:+33953725114">Appeler le 09 53 72 51 14</a></p>
+      <p><a class="bouton bouton--contour-clair" href="/tarifs-et-rendez-vous#rendez-vous" data-libelle="Tarifs et rendez-vous">Prendre rendez-vous</a></p>
+      <p class="menu-adresse">6, rue Victor de Lanneau<br><span class="insecable">21460 Bard-lès-Époisses</span></p>
+      <p><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></p>
+    </div>
+  </div>
+</div>
+<main id="contenu" tabindex="-1">
+<section class="seuil ecran" id="debut">
+  <div class="seuil-texte">
+    <p class="surtitre" data-anime="gsap">Laurence Katchavenda, hypnothérapeute</p>
+    <h1 class="seuil-titre seuil-titre--page" data-superpose><span class="mot-masque"><span class="mot" data-anime="gsap">De</span></span> <span class="mot-masque"><span class="mot" data-anime="gsap">l’école</span></span> <span class="mot-masque mot-masque--cle"><em class="mot mot--cle" data-anime="gsap">au cabinet</em></span></h1>
+    <p class="seuil-intro" data-anime="gsap">Une ancienne professeure des écoles, devenue hypnothérapeute à Bard-lès-Époisses : voici le chemin qui m’a menée jusqu’au cabinet.</p>
+    <p class="seuil-actions" data-anime="gsap">
+      <a href="/tarifs-et-rendez-vous#rendez-vous" class="bouton" data-libelle="Tarifs et rendez-vous" data-action-principale data-magnetique>Prendre rendez-vous</a>
+    </p>
+    <p class="seuil-info" data-info-cle data-anime="gsap">Maître praticienne en hypnose ericksonienne · IFHE · membre affiliée au SNH</p>
+  </div>
+  <div class="arche seuil-arche-page" data-arche>
+  <figure class="media arche-media" data-grok style="--cadrage:57% 62%;--cadrage-mobile:50% 60%">
+  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/grok/parcours-ouverture-mobile-640.webp 640w, /assets/images/grok/parcours-ouverture-mobile-941.webp 941w" sizes="(max-width: 760px) 92vw, 600px">
+    <img src="/assets/images/grok/parcours-ouverture-1280.webp" srcset="/assets/images/grok/parcours-ouverture-640.webp 640w, /assets/images/grok/parcours-ouverture-1280.webp 1280w, /assets/images/grok/parcours-ouverture-1672.webp 1672w" sizes="(max-width: 760px) 92vw, 600px" alt="Vieux pupitre d’écolier et sa chaise dans un pré au lever du soleil, un cahier ouvert dessus" width="1280" height="720" fetchpriority="high" loading="eager" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  <canvas class="arche-brume" data-brume aria-hidden="true" data-audit-ignorer></canvas>
+  <div class="arche-brume-css" aria-hidden="true"></div>
+  <svg class="arche-cadre" aria-hidden="true" data-audit-ignorer><path data-cadre /></svg>
+</div>
+</section>
+<section class="rencontre rencontre--parcours conteneur" id="rencontre">
+  <figure class="media rencontre-portrait" style="--cadrage:50% 30%">
+  <picture>
+    <img src="/assets/images/laurence-portrait-623.webp" srcset="/assets/images/laurence-portrait-623.webp 623w" sizes="(max-width: 760px) 80vw, 420px" alt="Portrait de Laurence Katchavenda, souriante" width="623" height="661" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  <div class="rencontre-texte">
+    <h2 class="titre-section" data-anime>Enseigner, puis accompagner</h2>
+    <p class="texte-fort" data-anime>Pendant environ 25 ans, j’ai enseigné à des enfants de 4 à 11 ans.</p>
+    <p data-anime>En 2023, j’ai amorcé ma reconversion vers l’hypnose. Aujourd’hui, j’accompagne les enfants dès 5 ans, les adolescents et les adultes, au cabinet ou en visio.</p>
+    <blockquote class="citation" data-citation><p>Le mieux-être ne se limite pas au temps passé en séance.</p></blockquote>
+  </div>
+</section>
+<section class="sentier" id="chemin" data-sentier>
+  <div class="sentier-fond-zone" data-audit-ignorer><figure class="media sentier-fond" data-grok style="--cadrage:50% 70%">
+  <picture>
+    <img src="/assets/images/grok/parcours-sentier-1280.webp" srcset="/assets/images/grok/parcours-sentier-640.webp 640w, /assets/images/grok/parcours-sentier-1280.webp 1280w, /assets/images/grok/parcours-sentier-1672.webp 1672w" sizes="100vw" alt="" width="1280" height="720" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure></div>
+  <div class="conteneur sentier-tete">
+    <h2 class="titre-section" data-anime>Le chemin parcouru</h2>
+    <p data-anime>De la classe au cabinet, sept étapes : à chacune, la graine pousse un peu plus.</p>
+  </div>
+  <div class="conteneur"><p class="indication-glisser indication-glisser--sentier" aria-hidden="true">Faites glisser</p></div>
+  <div class="sentier-piste" data-sentier-piste data-galerie tabindex="0" role="region" aria-label="Le chemin parcouru, défilement horizontal">
+    <ol class="sentier-etapes" data-sentier-liste>
+      <li class="sentier-etape sentier-etape--image" data-sentier-etape style="--i:0">
+        <div class="sentier-carte">
+          <figure class="media sentier-media" data-grok style="--cadrage:50% 45%">
+  <picture>
+    <img src="/assets/images/grok/parcours-ecole-1122.webp" srcset="/assets/images/grok/parcours-ecole-640.webp 640w, /assets/images/grok/parcours-ecole-1122.webp 1122w" sizes="(max-width: 760px) 80vw, 340px" alt="Dessins d’enfants à la craie sur une vieille ardoise : soleils, maisons et fleurs" width="1122" height="1402" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure><p class="sentier-quand">Environ 25 ans</p>
+          <p class="sentier-quoi">Professeure des écoles auprès d’enfants de 4 à 11 ans</p>
+        </div>
+        <span class="plante plante--0" data-plante><svg viewBox="0 0 80 80" aria-hidden="true"><ellipse class="plante-sol" cx="40" cy="73" rx="12" ry="2.6" /><ellipse class="plante-graine plante-part" style="--d:0" cx="40" cy="69.5" rx="4.2" ry="3.2" /></svg></span>
+      </li><li class="sentier-etape" data-sentier-etape style="--i:1">
+        <div class="sentier-carte">
+          <p class="sentier-quand sentier-quand--grand">2023</p>
+          <p class="sentier-quoi">Début de la reconversion vers l’hypnose</p>
+        </div>
+        <span class="plante plante--1" data-plante><svg viewBox="0 0 80 80" aria-hidden="true"><ellipse class="plante-sol" cx="40" cy="73" rx="14" ry="2.6" /><path class="plante-tige plante-part" style="--d:0;stroke-width:2" d="M40 72 V63" /><path class="plante-feuille plante-part" style="--d:1" d="M40 67 C33 66 30 61 30 58 C37 59 40 62 40 67" /><path class="plante-feuille plante-part" style="--d:1" d="M40 65 C47 64 50 59 50 56 C43 57 40 60 40 65" /></svg></span>
+      </li><li class="sentier-etape" data-sentier-etape style="--i:2">
+        <div class="sentier-carte">
+          <p class="sentier-quand sentier-quand--grand">2024</p>
+          <p class="sentier-quoi">Maître praticienne en hypnose ericksonienne, nouvelle hypnose et PNL, à l’IFHE</p>
+        </div>
+        <span class="plante plante--2" data-plante><svg viewBox="0 0 80 80" aria-hidden="true"><ellipse class="plante-sol" cx="40" cy="73" rx="16" ry="2.6" /><path class="plante-tige plante-part" style="--d:0;stroke-width:2" d="M40 72 V56" /><path class="plante-feuille plante-part" style="--d:1" d="M40 60 C33 59 30 54 30 51 C37 52 40 55 40 60" /><path class="plante-feuille plante-part" style="--d:1" d="M40 58 C47 57 50 52 50 49 C43 50 40 53 40 58" /><path class="plante-feuille plante-part" style="--d:2" d="M40 66 C34 65 31 60 31 57 C37 58 40 61 40 66" /><path class="plante-feuille plante-part" style="--d:2" d="M40 64 C46 63 49 58 49 55 C43 56 40 59 40 64" /></svg></span>
+      </li><li class="sentier-etape" data-sentier-etape style="--i:3">
+        <div class="sentier-carte">
+          <p class="sentier-quand sentier-quand--grand">2024</p>
+          <p class="sentier-quoi">Praticienne en hypnothérapie de l’enfance</p>
+        </div>
+        <span class="plante plante--3" data-plante><svg viewBox="0 0 80 80" aria-hidden="true"><ellipse class="plante-sol" cx="40" cy="73" rx="18" ry="2.6" /><path class="plante-tige plante-part" style="--d:0;stroke-width:2" d="M40 72 V49" /><path class="plante-feuille plante-part" style="--d:1" d="M40 53 C33 52 30 47 30 44 C37 45 40 48 40 53" /><path class="plante-feuille plante-part" style="--d:1" d="M40 51 C47 50 50 45 50 42 C43 43 40 46 40 51" /><path class="plante-feuille plante-part" style="--d:2" d="M40 59 C34 58 31 53 31 50 C37 51 40 54 40 59" /><path class="plante-feuille plante-part" style="--d:2" d="M40 57 C46 56 49 51 49 48 C43 49 40 52 40 57" /><path class="plante-feuille plante-part" style="--d:3" d="M40 65 C35 64 32 59 32 56 C37 57 40 60 40 65" /><path class="plante-feuille plante-part" style="--d:3" d="M40 63 C45 62 48 57 48 54 C43 55 40 58 40 63" /></svg></span>
+      </li><li class="sentier-etape" data-sentier-etape style="--i:4">
+        <div class="sentier-carte">
+          <p class="sentier-quand sentier-quand--grand">2024 – 2025</p>
+          <p class="sentier-quoi">Spécialisations : stress, anxiété et dépression ; traumatismes ; addictions</p>
+        </div>
+        <span class="plante plante--4" data-plante><svg viewBox="0 0 80 80" aria-hidden="true"><ellipse class="plante-sol" cx="40" cy="73" rx="20" ry="2.6" /><path class="plante-tige plante-part" style="--d:0;stroke-width:2.4" d="M40 72 V42" /><circle class="plante-houppier plante-part" style="--d:2" cx="40" cy="42" r="9" /></svg></span>
+      </li><li class="sentier-etape" data-sentier-etape style="--i:5">
+        <div class="sentier-carte">
+          <p class="sentier-quand sentier-quand--grand">2025</p>
+          <p class="sentier-quoi">Praticienne en hypnose humaniste et thérapie symbolique avancée, à l’IFHE</p>
+        </div>
+        <span class="plante plante--5" data-plante><svg viewBox="0 0 80 80" aria-hidden="true"><ellipse class="plante-sol" cx="40" cy="73" rx="22" ry="2.6" /><path class="plante-tige plante-part" style="--d:0;stroke-width:3.5" d="M40 72 V36" /><circle class="plante-houppier plante-part" style="--d:2" cx="34" cy="39" r="8" /><circle class="plante-houppier plante-part" style="--d:3" cx="46" cy="39" r="8" /><circle class="plante-houppier plante-part" style="--d:4" cx="40" cy="33" r="9" /></svg></span>
+      </li><li class="sentier-etape sentier-etape--image" data-sentier-etape style="--i:6">
+        <div class="sentier-carte">
+          <figure class="media sentier-media" style="--cadrage:40% 60%">
+  <picture>
+    <img src="/assets/images/cabinet-salle-1280.webp" srcset="/assets/images/cabinet-salle-640.webp 640w, /assets/images/cabinet-salle-1280.webp 1280w, /assets/images/cabinet-salle-1920.webp 1920w" sizes="(max-width: 760px) 80vw, 340px" alt="Le cabinet : murs vert d’eau, bureau, deux fauteuils et un tapis rouge" width="1280" height="853" loading="lazy" decoding="async">
+  </picture>
+</figure><p class="sentier-quand">Aujourd’hui</p>
+          <p class="sentier-quoi">Le cabinet de Bard-lès-Époisses, et les séances en visio</p>
+        </div>
+        <span class="plante plante--6" data-plante><svg viewBox="0 0 80 80" aria-hidden="true"><ellipse class="plante-sol" cx="40" cy="73" rx="24" ry="2.6" /><path class="plante-tige plante-part" style="--d:0;stroke-width:4.6" d="M40 72 V32" /><path class="plante-tige plante-part" style="--d:1;stroke-width:2.2" d="M40 44 L31 37 M40 41 L50 35" /><circle class="plante-houppier plante-part" style="--d:2" cx="30" cy="37" r="9" /><circle class="plante-houppier plante-part" style="--d:3" cx="50" cy="37" r="9" /><circle class="plante-houppier plante-part" style="--d:4" cx="36" cy="29" r="10" /><circle class="plante-houppier plante-part" style="--d:5" cx="46" cy="28" r="10" /><circle class="plante-houppier plante-part" style="--d:6" cx="40" cy="23" r="9" /></svg></span>
+      </li>
+    </ol>
+  </div>
+  <div class="conteneur sentier-bas" aria-hidden="true"><span class="sentier-progres"><span data-sentier-progres></span></span></div>
+</section>
+<section class="formations conteneur" id="formations">
+  <div class="formations-texte">
+    <h2 class="titre-section" data-anime>Mes formations</h2>
+    <p data-anime>Pour l’essentiel à l’IFHE, l’Institut français d’hypnose humaniste et ericksonienne, présenté comme une école de référence, fondé par Olivier Lockert et Patricia d’Angeli.</p>
+    <ol class="formations-liste"><li data-anime><span class="annee-cachet" aria-hidden="true">2024</span><span class="visuellement-cache">2024 : </span>Maître praticienne en hypnose ericksonienne, nouvelle hypnose et PNL, à l’IFHE</li><li data-anime><span class="annee-cachet" aria-hidden="true">2024</span><span class="visuellement-cache">2024 : </span>Praticienne en hypnothérapie de l’enfance</li><li data-anime><span class="annee-cachet" aria-hidden="true">2025</span><span class="visuellement-cache">2025 : </span>Praticienne en hypnose humaniste et thérapie symbolique avancée, à l’IFHE</li></ol>
+    <p class="porte-sous" data-anime>Spécialisations</p>
+    <ul class="etiquettes" data-anime><li>Stress, anxiété et dépression</li><li>Traumatismes</li><li>Addictions</li><li>Accompagnement des enfants</li></ul>
+    <p class="parcours-snh" data-anime><img src="/assets/images/logo-snh.png" alt="Syndicat national des hypnothérapeutes" width="240" height="72" loading="lazy"><span>Membre affiliée au Syndicat national des hypnothérapeutes</span></p>
+  </div>
+  <div class="formations-visuel">
+    <figure class="media formations-media" data-grok style="--cadrage:40% 55%">
+  <picture>
+    <img src="/assets/images/grok/parcours-livres-1122.webp" srcset="/assets/images/grok/parcours-livres-640.webp 640w, /assets/images/grok/parcours-livres-1122.webp 1122w" sizes="(max-width: 760px) 92vw, 40vw" alt="Trois vieux livres reliés, carnet ouvert et crayon sur une nappe de lin, près d’une fenêtre" width="1122" height="1402" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  </div>
+</section>
+<section class="approche conteneur" id="approche">
+  <figure class="media approche-media" data-grok style="--cadrage:30% 60%">
+  <picture>
+    <img src="/assets/images/grok/parcours-approche-1280.webp" srcset="/assets/images/grok/parcours-approche-640.webp 640w, /assets/images/grok/parcours-approche-1280.webp 1280w, /assets/images/grok/parcours-approche-1536.webp 1536w" sizes="(max-width: 760px) 92vw, 44vw" alt="Banc de bois sous un grand chêne, au-dessus d’un village dans la brume" width="1280" height="853" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  <div class="approche-texte">
+    <h2 class="titre-section" data-anime>Ma façon d’accompagner</h2>
+    <ol class="approche-liste"><li data-anime>
+      <svg class="approche-arche" viewBox="0 0 30 38" aria-hidden="true"><path d="M2 38 V15 A13 13 0 0 1 28 15 V38" /></svg>
+      <div><h3>Ericksonienne et humaniste</h3><p>L’hypnose ericksonienne et l’hypnose humaniste, une approche consciente du changement : deux méthodes complémentaires.</p></div>
+    </li><li data-anime>
+      <svg class="approche-arche" viewBox="0 0 30 38" aria-hidden="true"><path d="M2 38 V15 A13 13 0 0 1 28 15 V38" /></svg>
+      <div><h3>À votre rythme</h3><p>L’objectif : vous aider à retrouver vos propres ressources, en douceur.</p></div>
+    </li><li data-anime>
+      <svg class="approche-arche" viewBox="0 0 30 38" aria-hidden="true"><path d="M2 38 V15 A13 13 0 0 1 28 15 V38" /></svg>
+      <div><h3>Entre les séances aussi</h3><p>Quand c’est utile, je vous propose des outils respiratoires et de régulation émotionnelle à utiliser chez vous.</p></div>
+    </li><li data-anime>
+      <svg class="approche-arche" viewBox="0 0 30 38" aria-hidden="true"><path d="M2 38 V15 A13 13 0 0 1 28 15 V38" /></svg>
+      <div><h3>Un cadre clair</h3><p>Je ne suis pas médecin et je ne pose pas de diagnostic : l’hypnothérapie ne remplace pas un suivi médical.</p></div>
+    </li></ol>
+    <p data-anime><a href="/hypnose-et-suivi#charte" class="lien-trace lien-seul" data-libelle="L’hypnose et le suivi">Lire la charte d’engagement</a></p>
+  </div>
+</section>
+<section class="cabinet conteneur" id="cabinet" data-pile>
+  <div class="cabinet-tete">
+    <h2 class="titre-section" data-anime>Le cabinet</h2>
+    <p data-anime>Un lieu calme à Bard-lès-Époisses, entre murs vert d’eau et papier peint végétal. Choisissez une photo pour l’agrandir.</p>
+  </div>
+  <ul class="pile" data-pile-liste data-superpose>
+    <li class="pile-photo" data-pile-photo style="--i:0">
+      <a class="pile-lien" href="/assets/images/cabinet-salle-1280.webp" data-visionneuse-index="0" aria-label="Agrandir la photo : Le cabinet : murs vert d’eau, bureau, deux fauteuils et un tapis rouge">
+        <figure class="media pile-media" style="--cadrage:45% 60%">
+  <picture>
+    <img src="/assets/images/cabinet-salle-1280.webp" srcset="/assets/images/cabinet-salle-640.webp 640w, /assets/images/cabinet-salle-1280.webp 1280w, /assets/images/cabinet-salle-1920.webp 1920w" sizes="(max-width: 760px) 46vw, 300px" alt="" width="1280" height="853" loading="lazy" decoding="async">
+  </picture>
+</figure>
+      </a>
+    </li><li class="pile-photo" data-pile-photo style="--i:1">
+      <a class="pile-lien" href="/assets/images/cabinet-fauteuil-1280.webp" data-visionneuse-index="1" aria-label="Agrandir la photo : Le fauteuil de cuir vert du cabinet devant un papier peint végétal">
+        <figure class="media pile-media" style="--cadrage:50% 55%">
+  <picture>
+    <img src="/assets/images/cabinet-fauteuil-1280.webp" srcset="/assets/images/cabinet-fauteuil-640.webp 640w, /assets/images/cabinet-fauteuil-1280.webp 1280w" sizes="(max-width: 760px) 46vw, 300px" alt="" width="1280" height="1113" loading="lazy" decoding="async">
+  </picture>
+</figure>
+      </a>
+    </li><li class="pile-photo" data-pile-photo style="--i:2">
+      <a class="pile-lien" href="/assets/images/visio-laurence-1280.webp" data-visionneuse-index="2" aria-label="Agrandir la photo : Laurence en visio depuis le cabinet, casque sur les oreilles, souriante">
+        <figure class="media pile-media" style="--cadrage:52% 38%">
+  <picture>
+    <img src="/assets/images/visio-laurence-1280.webp" srcset="/assets/images/visio-laurence-640.webp 640w, /assets/images/visio-laurence-1280.webp 1280w" sizes="(max-width: 760px) 46vw, 300px" alt="" width="1280" height="701" loading="lazy" decoding="async">
+  </picture>
+</figure>
+      </a>
+    </li>
+  </ul>
+  <dialog class="visionneuse" data-visionneuse data-recouvrement aria-label="Photos du cabinet" data-photos="[{&quot;src&quot;:&quot;/assets/images/cabinet-salle-1280.webp&quot;,&quot;alt&quot;:&quot;Le cabinet : murs vert d’eau, bureau, deux fauteuils et un tapis rouge&quot;},{&quot;src&quot;:&quot;/assets/images/cabinet-fauteuil-1280.webp&quot;,&quot;alt&quot;:&quot;Le fauteuil de cuir vert du cabinet devant un papier peint végétal&quot;},{&quot;src&quot;:&quot;/assets/images/visio-laurence-1280.webp&quot;,&quot;alt&quot;:&quot;Laurence en visio depuis le cabinet, casque sur les oreilles, souriante&quot;}]" data-texte-compteur="{n} sur {total}">
+    <figure class="visionneuse-cadre"><img data-visionneuse-image src="/assets/images/cabinet-salle-1280.webp" alt="Le cabinet : murs vert d’eau, bureau, deux fauteuils et un tapis rouge" width="1280" height="960"><figcaption data-visionneuse-legende>Le cabinet : murs vert d’eau, bureau, deux fauteuils et un tapis rouge</figcaption></figure>
+    <p class="visionneuse-compteur chiffres" data-visionneuse-compteur aria-live="polite">1 sur 3</p>
+    <button type="button" class="visionneuse-bouton visionneuse-bouton--prec" data-visionneuse-prec aria-label="Photo précédente"><span aria-hidden="true">←</span></button>
+    <button type="button" class="visionneuse-bouton visionneuse-bouton--suiv" data-visionneuse-suiv aria-label="Photo suivante"><span aria-hidden="true">→</span></button>
+    <button type="button" class="visionneuse-fermer" data-visionneuse-fermer>Fermer</button>
+  </dialog>
+</section>
+<section class="avis" id="avis">
+  <figure class="media avis-fond" data-grok style="--cadrage:50% 50%">
+  <picture>
+    <img src="/assets/images/grok/avis-papier-1280.webp" srcset="/assets/images/grok/avis-papier-640.webp 640w, /assets/images/grok/avis-papier-1280.webp 1280w, /assets/images/grok/avis-papier-1568.webp 1568w" sizes="100vw" alt="" width="1280" height="960" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  <div class="conteneur avis-contenu">
+    <div class="avis-tete">
+      <h2 class="titre-section" data-anime>Ce qu’en disent les personnes accompagnées</h2>
+      <p class="avis-note" data-anime><span class="etoiles" role="img" aria-label="Note de 5 sur 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 16.9l-5.8 3.2 1.4-6.4L2.7 9.3l6.5-.7z" /></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 16.9l-5.8 3.2 1.4-6.4L2.7 9.3l6.5-.7z" /></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 16.9l-5.8 3.2 1.4-6.4L2.7 9.3l6.5-.7z" /></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 16.9l-5.8 3.2 1.4-6.4L2.7 9.3l6.5-.7z" /></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 16.9l-5.8 3.2 1.4-6.4L2.7 9.3l6.5-.7z" /></svg></span> <strong>5,0 sur 5</strong> <span class="avis-nombre">(4 avis publiés sur Résalib)</span></p>
+    </div>
+    <ul class="avis-liste">
+      <li class="avis-carte" data-anime><blockquote><p>« Son écoute active, sa bienveillance et les techniques mises en œuvre »</p></blockquote><p class="avis-nom">Raphaelle B.</p></li><li class="avis-carte" data-anime><blockquote><p>« Ma fille se sent beaucoup mieux. »</p></blockquote><p class="avis-nom">Eva M.</p></li><li class="avis-carte" data-anime><blockquote><p>« […] je me sens extrêmement bien »</p></blockquote><p class="avis-nom">Anne Laure M.</p></li><li class="avis-carte" data-anime><blockquote><p>« Merveilleuse »</p></blockquote><p class="avis-nom">Caroline E.</p></li>
+    </ul>
+    <p class="avis-source" data-anime>Extraits d’avis publiés sur Résalib. <a class="lien-trace" href="https://www.resalib.fr/praticien/106137-laurence-katchavenda-ei-elkahypnose-praticien-en-hypnose-bard-les-epoisses" target="_blank" rel="noopener">Voir les avis sur Résalib<span class="visuellement-cache"> (nouvel onglet)</span></a></p>
+  </div>
+</section>
+<section class="fin conteneur" id="premier-pas">
+  <figure class="media fin-media fin-media--paysage" data-grok style="--cadrage:60% 60%">
+  <picture>
+    <img src="/assets/images/grok/tarifs-acces-1280.webp" srcset="/assets/images/grok/tarifs-acces-640.webp 640w, /assets/images/grok/tarifs-acces-1280.webp 1280w, /assets/images/grok/tarifs-acces-1536.webp 1536w" sizes="(max-width: 760px) 92vw, 44vw" alt="Petite route de campagne bordée d’arbres dans les collines de l’Auxois, au matin" width="1280" height="853" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  <div>
+    <h2 class="titre-section" data-anime>Faisons connaissance</h2>
+    <p data-anime>Le premier rendez-vous dure environ 1 h 30 : le temps de faire connaissance et de définir ensemble vos objectifs.</p>
+    <p class="fin-actions" data-anime>
+      <a href="/tarifs-et-rendez-vous#rendez-vous" class="bouton" data-libelle="Tarifs et rendez-vous" data-magnetique>Prendre rendez-vous</a>
+      <a href="/hypnose-et-suivi" class="bouton bouton--contour" data-libelle="L’hypnose et le suivi">Comment se passe un suivi</a>
+    </p>
+  </div>
+</section>
+</main>
+<footer class="pied" id="pied">
+  <div class="conteneur pied-grille">
+    <div class="pied-marque">
+      <img src="/assets/images/logo-pastille.svg" alt="" width="88" height="88" loading="lazy">
+      <p>Hypnothérapie au cabinet ou en visio, ateliers d’autohypnose en petits groupes.</p>
+    </div>
+    <div>
+      <p class="pied-titre">Contact</p>
+      <p>6, rue Victor de Lanneau<br><span class="insecable">21460 Bard-lès-Époisses</span></p>
+      <ul><li><a href="tel:+33953725114">09 53 72 51 14</a></li><li><a href="mailto:elkahypnose@free.fr">elkahypnose@free.fr</a></li><li><a href="https://www.resalib.fr/praticien/106137-laurence-katchavenda-ei-elkahypnose-praticien-en-hypnose-bard-les-epoisses" target="_blank" rel="noopener">Rendez-vous sur Résalib<span class="visuellement-cache"> (nouvel onglet)</span></a></li></ul>
+    </div>
+    <nav aria-label="Sommaire">
+      <p class="pied-titre">Sommaire</p>
+      <ul><li><a href="/" data-libelle="Accueil">Accueil</a></li><li><a href="/hypnose-et-suivi" data-libelle="L’hypnose et le suivi">L’hypnose et le suivi</a></li><li><a href="/ateliers" data-libelle="Ateliers">Ateliers</a></li><li><a href="/mon-parcours" data-libelle="Mon parcours" aria-current="page">Mon parcours</a></li><li><a href="/tarifs-et-rendez-vous" data-libelle="Tarifs et rendez-vous">Tarifs et rendez-vous</a></li></ul>
+    </nav>
+    <div>
+      <p class="pied-titre">Informations</p>
+      <ul><li><a href="/mentions-legales" data-libelle="Mentions légales">Mentions légales</a></li><li><a href="/confidentialite" data-libelle="Confidentialité">Confidentialité</a></li><li><a href="/conditions-generales-de-vente" data-libelle="Conditions générales de vente">Conditions générales de vente</a></li></ul>
+      <p class="pied-titre pied-titre--suite">Suivre Elka Hypnose</p>
+      <ul><li><a href="https://www.facebook.com/profile.php?id=61572601529462" target="_blank" rel="noopener">Facebook<span class="visuellement-cache"> (nouvel onglet)</span></a></li><li><a href="https://instagram.com/elkahypnose/" target="_blank" rel="noopener">Instagram<span class="visuellement-cache"> (nouvel onglet)</span></a></li></ul>
+    </div>
+  </div>
+  <div class="conteneur pied-bas">
+    <p class="pied-avertissement">Je ne suis pas médecin : l’hypnothérapie ne remplace pas un suivi ou un traitement médical.</p>
+    <ul class="pied-confort">
+      <li><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></li>
+      <li><a href="#haut" data-sans-transition>Retour en haut</a></li>
+    </ul>
+    <p>Maquette : les informations marquées « à compléter » seront fournies par Laurence Katchavenda.</p>
+    <p>© Elka Hypnose</p>
+  </div>
+</footer>
+<div data-barre-fixe>
+  <a class="bouton bouton--contour" href="tel:+33953725114">Appeler</a>
+  <a class="bouton" href="/tarifs-et-rendez-vous#rendez-vous" data-libelle="Tarifs et rendez-vous">Rendez-vous</a>
+</div>
+</body>
+</html>

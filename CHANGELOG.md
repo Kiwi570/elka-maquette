@@ -2,6 +2,44 @@
 
 Chaque version ajoute sa partie en tête de ce fichier, construite en comparant l'archive précédente et la nouvelle, jamais de mémoire.
 
+## v2 : une page par onglet
+
+**Nouvelles pages**
+- **Ateliers** (`ateliers.html`) :
+  - premier écran avec 4 tasses de tisane, une par place, et le prochain atelier ouvert ;
+  - trois thèmes derrière des portes qui s'ouvrent ;
+  - calendrier de novembre et décembre 2026 : une graine par séance, un filtre par thème gardé dans l'adresse (`?theme=…`), et la fiche de la séance choisie avec son atelier, son statut et le bouton « Demander une place » déjà rempli. Sur téléphone, le calendrier devient un agenda et la fiche s'ouvre sous le jour choisi ;
+  - une séance de 1 h 30 en 4 temps, avec un sablier qui se vide pendant la lecture ;
+  - la visio, avec 4 tasses qui se remplissent ;
+  - les 5 ateliers avec leur statut en direct, puis « Bon à savoir », les questions et l'appel final.
+- **Mon parcours** (`mon-parcours.html`) :
+  - la phrase de Laurence qui s'écrit lettre à lettre ;
+  - le chemin parcouru en 7 étapes : une galerie horizontale qui reste fixe pendant le défilement sur ordinateur et se glisse au doigt sur téléphone, avec une plante qui pousse sous chaque étape jusqu'au chêne ;
+  - les formations, avec les années qui s'impriment comme des cachets ;
+  - la façon d'accompagner ;
+  - le cabinet en photos empilées qui s'étalent, avec une visionneuse (flèches, glissement au doigt, Échap) ;
+  - les avis et le premier pas.
+- 12 nouvelles illustrations Grok (ouvertures ordinateur et téléphone, thèmes, séance, école, livres, sentier, banc) et 2 images de partage.
+
+**Accueil et menu**
+- Le menu, le pied de page et le menu plein écran mènent maintenant aux pages Ateliers et Mon parcours, au lieu des sections de l'accueil.
+- Accueil :
+  - la section Mon parcours devient un aperçu avec un lien, et l'image de séance est remplacée par le pupitre dans le pré ;
+  - la section Ateliers devient un aperçu avec les trois thèmes, le prochain atelier et un lien vers la page.
+- Tarifs : la ligne de l'atelier renvoie vers les thèmes et les dates.
+
+**Textes et données**
+- Nouveau fichier `donnees/themes.json` : les trois thèmes, avec leurs objectifs tirés des fiches de réservation.
+- `donnees/ateliers.json` : chaque atelier indique son thème (`themeId`).
+- `donnees/parcours.json` : septième étape « Aujourd'hui », et image de l'école pour la première.
+- Avis : « œuvre » écrit avec son e dans l'o, et « […] » devant un extrait qui commence en cours de phrase.
+- Le parcours de l'accueil dit maintenant « reconversion amorcée en 2023 » (les formations datent de 2024 et 2025).
+- Dates courtes : « 1er déc. » au lieu de « 1 déc. ».
+
+**Réglages communs**
+- Sur téléphone, les sections sont plus resserrées et il reste moins de vide sous le premier écran.
+- Audit : 3 nouveaux parcours du projet (calendrier, visionneuse, chemin), et le contrôle des statuts d'ateliers porte maintenant sur la page Ateliers.
+
 ## v1 — la base
 
 **Pages**

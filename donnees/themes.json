@@ -1,0 +1,43 @@
+[
+  {
+    "id": "stress",
+    "nom": "Stress et sommeil",
+    "accroche": "Retrouver le calme et le sommeil",
+    "image": "grok/atelier-theme-stress",
+    "cadrage": "62% 50%",
+    "alt": "Chambre en pierre au crépuscule : lit de lin, bouquet de lilas, fenêtre ouverte sur une vallée dans la brume",
+    "objectifs": [
+      "Apaiser le stress et retrouver un sommeil de meilleure qualité",
+      "Apprendre à ralentir et à relâcher les tensions",
+      "Des exercices de respiration et de détente, à refaire chez soi"
+    ],
+    "pourQui": "Pour un rythme soutenu, une charge mentale lourde, du mal à déconnecter ou un sommeil perturbé."
+  },
+  {
+    "id": "dialogue",
+    "nom": "Dialogue intérieur",
+    "accroche": "S’échapper de son quotidien",
+    "image": "grok/atelier-theme-dialogue",
+    "cadrage": "50% 62%",
+    "alt": "Deux vieilles chaises de bois dans un pré, au-dessus d’une vallée dans la brume du matin",
+    "objectifs": [
+      "Formuler ses objectifs et dialoguer avec son inconscient",
+      "Découvrir l’état modifié de conscience : relaxation profonde, meilleure concentration",
+      "Démystifier l’hypnose, avec des jeux hypnotiques ludiques"
+    ],
+    "pourQui": "Pour les esprits créatifs, ceux qui cherchent des solutions, ou les simples curieux de l’hypnose."
+  },
+  {
+    "id": "confiance",
+    "nom": "Confiance en soi",
+    "accroche": "Mobiliser ses ressources",
+    "image": "grok/atelier-theme-confiance",
+    "cadrage": "50% 42%",
+    "alt": "Jeune chêne seul dans un pré fleuri, au lever du soleil",
+    "objectifs": [
+      "Renforcer la confiance en soi",
+      "Suivre son évolution d’une séance à l’autre, grâce aux questionnaires"
+    ],
+    "pourQui": "Pour avancer avec davantage de sérénité."
+  }
+]

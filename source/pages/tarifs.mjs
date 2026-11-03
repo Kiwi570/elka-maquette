@@ -37,7 +37,7 @@ export default (c) => {
     <h2 class="titre-section" data-anime>${c.t('tarifs.grille.titre')}</h2>
     <ul class="tarifs-liste">
       ${lignes.map((l) => html`<li class="tarif tarif--${l}" data-anime>
-        <div><h3>${c.t(`tarifs.grille.${l}Nom`)}</h3><p>${c.t(`tarifs.grille.${l}Detail`)}</p></div>
+        <div><h3>${c.t(`tarifs.grille.${l}Nom`)}</h3><p>${c.t(`tarifs.grille.${l}Detail`)}${l === 'atelier' ? html` ${c.lien('ateliers', { ancre: 'calendrier', classe: 'lien-trace', texte: c.t('tarifs.grille.atelierLien') })}` : ''}</p></div>
         <p class="tarif-prix"><strong class="chiffres" data-prix>${c.t(`tarifs.grille.${l}Prix`)}</strong><span>${c.t(`tarifs.grille.${l}Unite`)}</span></p>
       </li>`)}
     </ul>

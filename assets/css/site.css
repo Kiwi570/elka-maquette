@@ -335,7 +335,8 @@ html.calme .frise-ligne, html:not(.js) .frise-ligne, html.secours .frise-ligne, 
 .ateliers-media { aspect-ratio: 3 / 2; }
 .ateliers-contenu { opacity: .92; }
 .ateliers-infos { list-style: none; padding: 0; margin: 1.4em 0 0; display: flex; flex-wrap: wrap; gap: 10px; }
-.ateliers-infos li { border: 1.5px solid color-mix(in srgb, var(--calcaire) 40%, transparent); border-radius: 999px; padding: .4em 1em; font-weight: 600; }
+.ateliers-infos { align-items: center; }
+.ateliers-infos li { display: inline-flex; align-items: center; gap: .3em; min-height: 44px; border: 1.5px solid color-mix(in srgb, var(--calcaire) 40%, transparent); border-radius: 999px; padding: 0 1em; font-weight: 600; line-height: 1; }
 .ateliers-infos strong { font-family: var(--police-titres); font-size: 1.3em; font-weight: 500; color: var(--terre-clair); }
 .ateliers-defile { outline-offset: 6px; }
 .ateliers-liste { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
@@ -489,6 +490,7 @@ html.calme .etapes-image, html:not(.js) .etapes-image { transition: none; }
 .faq-reponse { overflow: hidden; }
 .faq-reponse p { margin: 0 0 20px; }
 .fin-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.fin-media.fin-media--paysage { aspect-ratio: 3 / 2; }
 @media (max-width: 760px) {
   .enfants, .cadre, .faq, .fin, .conditions, .horaires-section, .grille-tarifs, .acces { grid-template-columns: 1fr; }
   .enfants-media, .cadre-media, .conditions-media, .horaires-media, .fin-media { aspect-ratio: 4 / 3; position: relative; top: auto; }
@@ -666,3 +668,336 @@ html.calme .ruban-pause, html:not(.js) .ruban-pause { display: none; }
 /* Carte étroite (téléphone, colonne de tablette) : l'étiquette du cabinet garde seulement le nom du village. */
 .carte-plan { container-type: inline-size; }
 @container (max-width: 460px) { .carte-etiquette--cabinet strong { display: none; } }
+
+/* =====================================================================
+   Version 2 : pages Ateliers et Mon parcours, aperçus de l'accueil
+   ===================================================================== */
+:root { --t-stress: #6E5A8A; --t-dialogue: #8A4B31; --t-confiance: #566249; }
+.porte--stress, .cal-filtre--stress, .graine-seance--stress, .cal-fiche--stress, .theme-pastille--stress { --teinte: var(--t-stress); }
+.porte--dialogue, .cal-filtre--dialogue, .graine-seance--dialogue, .cal-fiche--dialogue, .theme-pastille--dialogue { --teinte: var(--t-dialogue); }
+.porte--confiance, .cal-filtre--confiance, .graine-seance--confiance, .cal-fiche--confiance, .theme-pastille--confiance { --teinte: var(--t-confiance); }
+.cal-point { flex: none; display: inline-block; width: 11px; height: 11px; border-radius: 50%; background: var(--teinte, var(--terre)); }
+.porte-sous { font-size: .8rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--sauge-texte); margin: 1.2em 0 .5em; }
+
+/* ---------- Accueil : aperçus ---------- */
+.parcours { align-items: center; }
+.parcours-media { grid-column: 2; grid-row: 1; }
+@media (max-width: 760px) { .parcours-media { grid-column: 1; grid-row: auto; } }
+.ateliers-apercu { display: grid; gap: 14px; justify-items: start; margin-top: 30px; }
+@media (min-width: 761px) { .ateliers:not(.ateliers--page) .ateliers-tete { align-items: stretch; margin-bottom: 0; } .ateliers:not(.ateliers--page) .ateliers-media { aspect-ratio: auto; height: 100%; min-height: 340px; } }
+.ateliers-apercu-titre { margin: 0; font-size: .82rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--terre-clair); }
+.ateliers-themes { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.theme-pastille { display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 20px; border-radius: 999px; box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--calcaire) 45%, transparent); color: var(--calcaire); text-decoration: none; font-family: var(--police-titres); font-style: italic; font-size: 1.2rem; transition: background-color .3s ease, color .3s ease; }
+.theme-pastille:hover { background: var(--calcaire); color: var(--mousse); }
+.theme-pastille .cal-point { box-shadow: 0 0 0 2px var(--calcaire); }
+.ateliers-prochain { margin: 0; font-weight: 600; }
+.ateliers-apercu-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 6px 0 0; }
+
+/* ---------- Ateliers : premier écran, quatre tasses (une par place) ---------- */
+.places-tasses { display: flex; align-items: center; gap: 14px; color: var(--mousse); font-weight: 500; }
+.places-tasses p { margin: 0; line-height: 1.45; }
+.places-tasses strong { color: var(--sauge-texte); }
+.tasses { display: inline-flex; gap: 4px; flex: none; }
+.tasses svg { width: 30px; height: 33px; overflow: visible; }
+.tasse-corps { fill: var(--terre); }
+.tasse-anse { fill: none; stroke: var(--terre); stroke-width: 2.4; }
+.tasse-soucoupe { fill: none; stroke: var(--mousse); stroke-width: 2; stroke-linecap: round; }
+.tasse-vapeur { fill: none; stroke: var(--sauge); stroke-width: 1.8; stroke-linecap: round; opacity: .75; }
+/* La vapeur monte trois fois, puis reste : rien ne tourne en boucle. */
+@keyframes vapeur { 0% { stroke-dasharray: 14; stroke-dashoffset: 14; transform: translateY(3px); opacity: 0; } 40% { opacity: .85; } 100% { stroke-dasharray: 14; stroke-dashoffset: 0; transform: translateY(0); opacity: .75; } }
+html.js:not(.calme) .tasses .tasse-vapeur { animation: vapeur 2.2s ease-in-out 3 both; }
+html.js:not(.calme) .tasses svg:nth-child(2) .tasse-vapeur { animation-delay: .3s; }
+html.js:not(.calme) .tasses svg:nth-child(3) .tasse-vapeur { animation-delay: .6s; }
+html.js:not(.calme) .tasses svg:nth-child(4) .tasse-vapeur { animation-delay: .9s; }
+html.js:not(.calme) .tasse-vapeur--2 { animation-duration: 2.6s !important; }
+.tasses--final { display: flex; justify-content: center; gap: 10px; margin-bottom: 14px; }
+.tasses--final svg { width: 38px; height: 42px; }
+
+/* ---------- Ateliers : trois portes ---------- */
+.portes { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2.4vw, 32px); }
+.porte { display: flex; flex-direction: column; background: var(--calcaire-2); border-radius: 999px 999px var(--rayon) var(--rayon); padding: 12px 12px 22px; }
+.porte-arche { position: relative; aspect-ratio: 4 / 4.6; border-radius: 999px 999px 10px 10px; overflow: hidden; perspective: 1100px; isolation: isolate; }
+.porte-media { position: absolute; inset: 0; border-radius: inherit; }
+.porte-media img { transition: transform 1.2s var(--courbe); }
+.porte:hover .porte-media img { transform: scale(1.04); }
+.porte-battants { position: absolute; inset: 0; z-index: 2; display: none; pointer-events: none; transform-style: preserve-3d; }
+html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) .porte-battants { display: flex; }
+.porte-battant { position: relative; flex: 1; background: repeating-linear-gradient(90deg, #39462f 0 2px, var(--mousse) 2px 22px); box-shadow: inset 0 0 0 12px rgba(241, 236, 226, .05), inset 0 0 0 13px rgba(0, 0, 0, .28), inset 0 0 0 26px rgba(241, 236, 226, .03), inset 0 0 0 27px rgba(0, 0, 0, .2); transform-origin: 0 50%; backface-visibility: hidden; transition: transform 1.5s cubic-bezier(.6, .05, .25, 1); }
+.porte-battant--d { transform-origin: 100% 50%; }
+.porte-battant::after { content: ''; position: absolute; top: 58%; width: 7px; height: 7px; border-radius: 50%; background: var(--terre-clair); }
+.porte-battant--g::after { right: 12px; } .porte-battant--d::after { left: 12px; }
+.porte.ouverte .porte-battant--g { transform: rotateY(-108deg); }
+.porte.ouverte .porte-battant--d { transform: rotateY(108deg); }
+.porte-cadre { position: absolute; inset: 8px; width: calc(100% - 16px); height: calc(100% - 8px); z-index: 3; fill: none; stroke: rgba(241, 236, 226, .75); stroke-width: 1.2; vector-effect: non-scaling-stroke; pointer-events: none; max-width: none; }
+.porte .mention-ia { z-index: 4; }
+.porte-texte { padding: 18px 10px 0; display: flex; flex-direction: column; flex: 1; }
+.porte-accroche { margin: 0 0 .3em; font-weight: 700; color: var(--teinte); }
+.porte-titre { font-size: clamp(1.5rem, 1.2rem + .9vw, 2rem); margin-bottom: .4em; }
+.porte-objectifs { margin: 0; padding-left: 1.1em; display: grid; gap: .4em; font-size: .97rem; line-height: 1.45; }
+.porte-objectifs li::marker { color: var(--teinte); }
+.porte-pourqui { margin: .9em 0 0; font-style: italic; color: var(--texte-doux); font-size: .95rem; }
+.porte-sessions { list-style: none; padding: 0; margin: 0 0 18px; display: grid; gap: 8px; font-size: .93rem; flex: 1; align-content: start; }
+.porte-sessions li { display: grid; padding-left: 14px; border-left: 3px solid var(--teinte); line-height: 1.35; }
+.porte-session-quand { font-weight: 650; }
+.porte-session-periode { color: var(--texte-doux); }
+.porte-action { margin: 0; }
+@media (max-width: 1100px) { .portes { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 680px) { .portes { grid-template-columns: 1fr; } .porte-arche { aspect-ratio: 4 / 3.6; } }
+
+/* ---------- Ateliers : calendrier ---------- */
+.calendrier { background: var(--calcaire-2); }
+.calendrier-tete p { max-width: 46em; }
+.cal-filtres { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 28px; }
+@media (max-width: 600px) { .cal-filtres { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } .cal-filtre { justify-content: center; padding: 0 10px; font-size: .92rem; } }
+.cal-filtre { display: inline-flex; align-items: center; gap: 9px; min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1.5px solid color-mix(in srgb, var(--mousse) 28%, var(--calcaire)); background: var(--calcaire); color: var(--mousse); font-weight: 650; cursor: pointer; transition: background-color .25s ease, color .25s ease, border-color .25s ease; }
+.cal-filtre:hover { border-color: var(--mousse); }
+.cal-filtre[aria-pressed="true"] { background: var(--mousse); border-color: var(--mousse); color: var(--calcaire); }
+.cal-filtre[aria-pressed="true"] .cal-point { box-shadow: 0 0 0 2px var(--calcaire); }
+.cal-grille { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, 300px); gap: clamp(20px, 3vw, 36px); align-items: start; }
+.cal-mois-liste { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+.mois-titre { font-size: 1.35rem; margin-bottom: .5em; }
+.mois-titre::first-letter { text-transform: uppercase; }
+.mois-entete { list-style: none; padding: 0; margin: 0 0 6px; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; font-size: .78rem; font-weight: 700; color: var(--texte-doux); text-align: center; }
+.mois-jours { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; }
+.jour { grid-column-start: var(--col); min-height: 58px; min-width: 0; background: var(--calcaire); border-radius: 8px; padding: 4px; display: flex; flex-direction: column; gap: 3px; }
+.jour--passe { background: transparent; box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--mousse) 10%, transparent); }
+.jour--aujourdhui { box-shadow: inset 0 0 0 2px var(--terre-texte); }
+.jour--aujourdhui .jour-num { color: var(--terre-texte); font-weight: 800; }
+.jour-tete { margin: 0; padding-left: 2px; font-size: .8rem; font-weight: 650; color: var(--texte-doux); line-height: 1.2; }
+.jour-nom { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.jour-seances { list-style: none; padding: 0; margin: 0; display: grid; gap: 3px; }
+.graine-seance { position: relative; display: grid; justify-items: center; align-content: center; gap: 1px; width: 100%; min-height: 44px; padding: 3px 2px; border: 0; border-radius: 7px; background: color-mix(in srgb, var(--teinte) 20%, var(--calcaire)); color: var(--mousse); font: inherit; font-size: .78rem; font-weight: 700; line-height: 1.1; cursor: pointer; transition: background-color .25s ease, color .25s ease, box-shadow .25s ease, transform .3s var(--courbe); }
+.graine-seance svg { width: 21px; height: 21px; overflow: visible; transition: transform .4s var(--courbe); }
+.graine-coque { fill: var(--teinte); stroke: var(--teinte); stroke-width: 1.4; }
+.graine-ligne { fill: none; stroke: var(--calcaire); stroke-width: 1.4; stroke-linecap: round; }
+.graine-seance.passee .graine-coque { fill: none; }
+.graine-seance.passee .graine-ligne { stroke: var(--teinte); }
+.graine-seance:hover svg { transform: scale(1.25) rotate(-8deg); }
+.graine-seance.liee { box-shadow: inset 0 0 0 1.5px var(--teinte); }
+.graine-seance[aria-pressed="true"] { background: var(--teinte); color: var(--calcaire); }
+.graine-seance[aria-pressed="true"] .graine-coque { fill: var(--calcaire); stroke: var(--calcaire); }
+.graine-seance[aria-pressed="true"] .graine-ligne { stroke: var(--teinte); }
+.graine-heure { white-space: nowrap; }
+.graine-theme { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.calendrier[data-filtre="stress"] .graine-seance:not([data-theme="stress"]),
+.calendrier[data-filtre="dialogue"] .graine-seance:not([data-theme="dialogue"]),
+.calendrier[data-filtre="confiance"] .graine-seance:not([data-theme="confiance"]) { display: none; }
+@keyframes germer { from { transform: scale(.4); opacity: 0; } to { transform: none; opacity: 1; } }
+.calendrier.filtre-change .graine-seance { animation: germer .5s var(--courbe) both; }
+html.calme .calendrier.filtre-change .graine-seance { animation: none; }
+
+.cal-fiche { position: sticky; top: calc(var(--entete-h) + 24px); background: var(--calcaire); border-radius: var(--rayon); padding: 20px 22px 22px; border-top: 5px solid var(--teinte, var(--terre)); }
+.cal-fiche-titre { margin: 0 0 10px; font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--sauge-texte); }
+.cal-fiche-theme { display: flex; align-items: center; gap: 10px; margin: 0 0 .3em; font-family: var(--police-titres); font-size: 1.55rem; line-height: 1.1; }
+.cal-fiche-seance { margin: 0; font-weight: 700; color: var(--teinte); }
+.cal-fiche-date { margin: 0; font-weight: 650; }
+.cal-fiche-date::first-letter { text-transform: uppercase; }
+.cal-fiche-heure { margin: 0 0 12px; }
+.cal-fiche-graines { list-style: none; padding: 0; margin: 0 0 12px; display: flex; gap: 8px; }
+.cal-fiche-graines li { width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--teinte); }
+.cal-fiche-graines li.passee { background: var(--teinte); }
+.cal-fiche-graines li.ici { box-shadow: 0 0 0 3px color-mix(in srgb, var(--teinte) 30%, transparent); }
+.cal-fiche-periode { margin: 0 0 12px; font-size: .93rem; color: var(--texte-doux); }
+.cal-fiche-statut { margin: 0 0 14px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: .92rem; font-weight: 600; }
+.cal-fiche-statut .atelier-etiquette { background: var(--calcaire-2); }
+.cal-fiche-action { margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.cal-fiche-action .atelier-ferme { width: 100%; }
+@media (max-width: 1279px) { .cal-mois-liste { grid-template-columns: 1fr; } }
+@media (max-width: 900px) {
+  .cal-grille { grid-template-columns: minmax(0, 1fr); }
+  .jour .cal-fiche { position: static; grid-column: 1 / -1; margin-top: 8px; }
+}
+/* Téléphone : le calendrier devient un agenda, seuls les jours avec séance restent. */
+@media (max-width: 600px) {
+  .mois-entete { display: none; }
+  .mois-jours { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .jour { display: none; grid-column-start: auto; }
+  .jour--seance:not(.jour--vide) { display: grid; grid-template-columns: 62px minmax(0, 1fr); align-items: start; gap: 6px 12px; padding: 10px 12px; min-height: 0; }
+  .jour-tete { display: grid; row-gap: 4px; font-size: .95rem; padding-top: 4px; }
+  .jour-nom { position: static; width: auto; height: auto; overflow: visible; clip: auto; font-weight: 600; }
+  .jour-nom { line-height: 1.25; }
+  .jour-num { font-family: var(--police-titres); font-size: 1.6rem; color: var(--mousse); line-height: 1.15; }
+  .graine-seance { display: flex; justify-content: flex-start; gap: 10px; padding: 6px 12px; font-size: .95rem; text-align: left; }
+  .graine-theme { position: static; width: auto; height: auto; overflow: visible; clip: auto; font-weight: 600; white-space: normal; }
+}
+
+/* ---------- Ateliers : une séance de 1 h 30 (sablier) ---------- */
+.seance-tete { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .9fr); gap: clamp(32px, 6vw, 96px); align-items: center; margin-bottom: clamp(32px, 5vw, 64px); }
+.seance-media { aspect-ratio: 3 / 2; }
+.seance-grille { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 96px); }
+.sablier { position: sticky; top: calc(var(--entete-h) + 28px); margin: 0; display: grid; justify-items: center; gap: 8px; }
+.sablier svg { width: min(100%, 280px); height: auto; max-height: calc(100svh - var(--entete-h) - 150px); overflow: visible; max-width: none; }
+.sablier-arche { fill: var(--calcaire-2); stroke: var(--terre); stroke-width: 1.5; }
+.sablier-verre { fill: color-mix(in srgb, #ffffff 30%, transparent); stroke: var(--mousse); stroke-width: 2; stroke-linejoin: round; }
+.sablier-bois { stroke: #7a5236; stroke-width: 7; stroke-linecap: round; }
+.sablier-sable { fill: var(--terre-clair); }
+.sablier-filet { stroke: var(--terre-clair); stroke-width: 2.4; stroke-dasharray: 3 4; }
+.sablier-total { font-family: var(--police-titres); font-size: clamp(1.6rem, 1.2rem + 1.2vw, 2.4rem); color: var(--terre-titre); }
+.moments { list-style: none; padding: 4vh 0; margin: 0; display: grid; gap: clamp(48px, 14vh, 150px); }
+.moment { position: relative; padding-left: 68px; }
+.moment h3 { font-size: clamp(1.35rem, 1.1rem + .9vw, 1.9rem); }
+.moment p { max-width: 34em; }
+.moment-num { position: absolute; left: 0; top: -4px; width: 46px; height: 56px; border: 1.5px solid var(--terre); border-bottom: 0; border-radius: 999px 999px 0 0; display: grid; place-items: center; padding-top: 6px; font-family: var(--police-titres); font-style: italic; font-size: 1.35rem; color: var(--terre-titre); transition: background-color .5s ease, color .5s ease, border-color .5s ease; }
+.moment.actif .moment-num { background: var(--terre-texte); border-color: var(--terre-texte); color: var(--calcaire); }
+.moment-duree { display: inline-block; margin: 0; padding: .3em .9em; border-radius: 999px; background: var(--lumiere); color: var(--terre-texte); font-weight: 700; }
+@media (max-width: 760px) {
+  .seance-tete, .seance-grille { grid-template-columns: minmax(0, 1fr); }
+  .sablier { position: relative; top: auto; }
+  .sablier svg { width: 170px; }
+  .moments { padding: 0; gap: 40px; }
+}
+
+/* ---------- Ateliers : visio et quatre places ---------- */
+.visio { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 96px); align-items: center; }
+.visio-media { aspect-ratio: 4 / 3; width: 100%; max-width: 540px; justify-self: center; border: 10px solid var(--mousse); border-radius: 18px; box-shadow: 0 18px 40px -24px rgba(47, 58, 44, .7); }
+.visio-anime { margin: 18px 0 0; font-size: .95rem; color: var(--texte-doux); max-width: 38em; }
+.themes-commun { margin: 26px 0 0; font-weight: 650; color: var(--sauge-texte); }
+.grand-final-lien { margin: 10px 0 0; }
+.visio-liste { list-style: none; padding: 0; margin: 0 0 24px; display: grid; gap: 14px; }
+.visio-liste li { position: relative; padding-left: 34px; }
+.visio-liste li::before { content: ''; position: absolute; left: 0; top: .2em; width: 18px; height: 22px; border: 1.5px solid var(--terre); border-bottom: 0; border-radius: 999px 999px 0 0; }
+.places { display: flex; align-items: flex-end; gap: 16px; }
+.tasses--places svg { width: 40px; height: 44px; }
+.tasses--places .tasse-corps { stroke: var(--terre); stroke-width: 1.8; transition: fill .7s ease; }
+.tasses--places svg:nth-child(2) .tasse-corps { transition-delay: .3s; } .tasses--places svg:nth-child(3) .tasse-corps { transition-delay: .6s; } .tasses--places svg:nth-child(4) .tasse-corps { transition-delay: .9s; }
+html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) .places:not(.allumees) .tasse-corps { fill: transparent; }
+.places-legende { margin: 0; font-family: var(--police-titres); font-size: 1.5rem; line-height: 1; }
+@media (max-width: 760px) { .visio { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- Ateliers : sessions, bon à savoir, appel final ---------- */
+.ateliers--page .ateliers-tete { margin-bottom: clamp(28px, 4vw, 48px); }
+.savoir { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, .9fr); gap: clamp(32px, 6vw, 96px); align-items: start; }
+.savoir-media { aspect-ratio: 4 / 5; position: sticky; top: calc(var(--entete-h) + 28px); max-height: 640px; }
+.savoir-etapes { list-style: none; padding: 0; margin: 0 0 clamp(40px, 6vw, 72px); display: grid; gap: 22px; }
+.savoir-etapes li { display: grid; grid-template-columns: 50px minmax(0, 1fr); gap: 16px; }
+.savoir-etapes h3 { margin-bottom: .25em; }
+.savoir-etapes p { margin: 0; }
+.savoir-arche { width: 44px; height: 54px; border: 1.5px solid var(--terre); border-bottom: 0; border-radius: 999px 999px 0 0; display: grid; place-items: center; padding-top: 6px; font-family: var(--police-titres); font-style: italic; font-size: 1.3rem; color: var(--terre-titre); }
+@media (max-width: 760px) {
+  .savoir { grid-template-columns: minmax(0, 1fr); }
+  .savoir-media { position: relative; top: auto; aspect-ratio: 16 / 9; order: 2; }
+}
+.grand-final { position: relative; isolation: isolate; overflow: hidden; }
+.grand-final-fond { position: absolute; inset: 0; z-index: -1; border-radius: 0; }
+.grand-final-carte { max-width: 740px; margin-inline: auto; text-align: center; background: rgba(241, 236, 226, .94); border-radius: var(--rayon); padding: clamp(28px, 5vw, 56px); }
+.grand-final .titre-section { margin-inline: auto; }
+.grand-final .titre-section::after { left: calc(50% - 1.6em); }
+.grand-final .fin-actions { justify-content: center; }
+.grand-final .mention-ia { z-index: 1; }
+
+/* ---------- Mon parcours : rencontre et citation qui s'écrit ---------- */
+.rencontre--parcours .rencontre-texte { align-self: center; }
+.citation { margin: 1.6em 0 0; padding: 0; font-family: var(--police-titres); font-style: italic; font-weight: 400; font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.4rem); line-height: 1.2; color: var(--terre-titre); max-width: 22ch; }
+.citation p { margin: 0; }
+.citation .lettre { display: inline; }
+
+/* ---------- Mon parcours : le chemin (galerie horizontale) ---------- */
+.sentier { position: relative; isolation: isolate; overflow: hidden; background: var(--calcaire-2); }
+.sentier-fond-zone { position: absolute; inset: 0; z-index: -2; }
+.sentier-fond { position: absolute; inset: 0; border-radius: 0; }
+.sentier::before { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: linear-gradient(to bottom, rgba(241, 236, 226, .94), rgba(241, 236, 226, .78) 32%, rgba(241, 236, 226, .3) 72%, rgba(241, 236, 226, .55)); }
+.sentier .mention-ia { z-index: 2; top: auto; bottom: 8px; }
+.sentier-tete { margin-bottom: 18px; }
+.sentier-tete p { max-width: 40em; margin-bottom: 0; }
+.sentier-piste { overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scroll-padding-inline: max(var(--gouttiere), calc((100% - var(--largeur)) / 2)); scrollbar-width: thin; scrollbar-color: var(--terre) transparent; outline-offset: -4px; }
+.sentier-etapes { position: relative; list-style: none; margin: 0; padding: 4px max(var(--gouttiere), calc((100vw - var(--largeur)) / 2)) 10px; display: flex; gap: clamp(16px, 2vw, 28px); width: max-content; }
+.sentier-etapes::after { content: ''; position: absolute; left: 0; right: 0; bottom: 18px; height: 2px; z-index: -1; background: repeating-linear-gradient(90deg, var(--terre) 0 7px, transparent 7px 15px); }
+.sentier-etape { flex: 0 0 auto; width: clamp(250px, 26vw, 340px); height: min(64svh, 540px); display: flex; flex-direction: column; scroll-snap-align: center; }
+.sentier-carte { flex: 1; min-height: 0; display: flex; flex-direction: column; background: rgba(241, 236, 226, .96); border-radius: var(--rayon); padding: 12px 12px 18px; box-shadow: 0 10px 30px -18px rgba(47, 58, 44, .45); }
+.sentier-media { flex: 1; min-height: 0; border-radius: 999px 999px 10px 10px; margin-bottom: 12px; }
+.sentier-quand { margin: 0 4px .25em; font-family: var(--police-titres); font-style: italic; font-size: 1.3rem; line-height: 1.15; color: var(--terre-titre); }
+.sentier-quand--grand { flex: 1; min-height: 0; display: grid; place-items: center; margin: 4px 4px 14px; padding: 12px 14px 0; border: 1.5px solid var(--terre); border-bottom: 0; border-radius: 999px 999px 0 0; text-align: center; font-size: clamp(2.2rem, min(4.4vw, 8vh), 3.8rem); line-height: 1; text-wrap: balance; }
+.sentier-quoi { margin: 0 4px; min-height: 4.26em; font-size: .98rem; line-height: 1.42; }
+.plante { flex: none; display: block; width: 104px; height: 104px; margin: 0 auto -20px; }
+.sentier-etapes::before { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 54px; z-index: -1; background: linear-gradient(to bottom, rgba(241, 236, 226, 0), rgba(241, 236, 226, .78) 45%, rgba(241, 236, 226, .78)); }
+.plante svg { width: 100%; height: 100%; overflow: visible; max-width: none; }
+.plante-sol { fill: color-mix(in srgb, var(--terre) 38%, transparent); }
+.plante-graine { fill: var(--terre-texte); }
+.plante-tige { fill: none; stroke: #6b4f33; stroke-linecap: round; }
+.plante-feuille { fill: var(--sauge); stroke: var(--sauge-texte); stroke-width: .8; }
+.plante-houppier { fill: color-mix(in srgb, var(--sauge) 80%, var(--mousse)); stroke: var(--sauge-texte); stroke-width: .8; }
+.plante-part { transform-box: fill-box; transform-origin: 50% 100%; transition: transform .8s var(--courbe) calc(var(--d) * .14s), opacity .4s ease calc(var(--d) * .14s); }
+html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) .plante:not(.pousse) .plante-part { transform: scale(0); opacity: 0; }
+.sentier-bas { padding-top: 12px; }
+.sentier-progres { display: block; height: 3px; border-radius: 3px; background: color-mix(in srgb, var(--mousse) 14%, transparent); overflow: hidden; }
+.sentier-progres span { display: block; height: 100%; background: var(--terre); transform-origin: 0 50%; transform: scaleX(0); }
+html:not(.js) .sentier-bas, html.calme .sentier-bas { display: none; }
+.indication-glisser--sentier { margin-bottom: 8px; color: var(--terre-texte); }
+/* Ordinateur : la scène est épinglée, la piste défile à l'horizontale pendant la lecture. */
+.sentier.sentier--epingle { height: 100vh; height: 100svh; display: flex; flex-direction: column; padding: calc(var(--entete-h) + 14px) 0 calc(16px + var(--barres-h)); }
+.sentier--epingle .sentier-tete { flex: none; margin-bottom: 14px; }
+.sentier--epingle .titre-section { font-size: clamp(1.8rem, min(3.6vw, 6.6vh), 3.3rem); margin-bottom: .3em; }
+.sentier--epingle .sentier-piste { flex: 1; min-height: 0; max-height: 620px; overflow: visible; scroll-snap-type: none; }
+.sentier--epingle .sentier-etapes { height: 100%; will-change: transform; }
+.sentier--epingle .sentier-etape { height: 100%; }
+.sentier--epingle .sentier-bas { flex: none; }
+@media (max-height: 620px) { .sentier--epingle .sentier-tete p { display: none; } .sentier--epingle .sentier-quoi { font-size: .92rem; } }
+@media (max-width: 760px) { .sentier-etape { width: min(78vw, 320px); height: min(66svh, 500px); } }
+
+/* ---------- Mon parcours : formations et cachets ---------- */
+.formations { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(32px, 6vw, 96px); align-items: start; }
+.formations-liste { list-style: none; padding: 0; margin: 1.2em 0 .6em; display: grid; gap: 10px; }
+.formations-liste { gap: 16px; }
+.formations-liste li { display: grid; grid-template-columns: 62px minmax(0, 1fr); align-items: center; gap: 14px; font-weight: 600; }
+.annee-cachet { display: grid; place-items: center; width: 58px; height: 58px; border-radius: 50%; border: 2px solid var(--terre-texte); box-shadow: inset 0 0 0 3px var(--calcaire), inset 0 0 0 4.5px var(--terre-texte); font-family: var(--police-titres); font-style: italic; font-weight: 600; font-size: 1rem; color: var(--terre-texte); transform: rotate(-9deg); transition: transform .45s cubic-bezier(.3, 1.6, .5, 1) .15s, opacity .25s ease .15s; }
+.formations-liste li:nth-child(even) .annee-cachet { transform: rotate(7deg); }
+html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) .formations-liste li:not(.vu) .annee-cachet { transform: scale(1.7) rotate(-22deg); opacity: 0; }
+.etiquettes { list-style: none; padding: 0; margin: 0 0 1.6em; display: flex; flex-wrap: wrap; gap: 8px; }
+.etiquettes li { padding: .35em .95em; border-radius: 999px; background: var(--calcaire-2); color: var(--sauge-texte); font-weight: 650; font-size: .95rem; }
+.formations-visuel { position: sticky; top: calc(var(--entete-h) + 28px); display: grid; gap: 18px; justify-items: center; }
+.formations-media { width: 100%; aspect-ratio: 4 / 4.4; max-height: 520px; border-radius: 999px 999px var(--rayon) var(--rayon); }
+@media (max-width: 760px) {
+  .formations { grid-template-columns: minmax(0, 1fr); }
+  .formations-visuel { position: relative; top: auto; }
+  .formations-media { aspect-ratio: 4 / 3; }
+}
+
+/* ---------- Mon parcours : ma façon d'accompagner ---------- */
+.approche { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 96px); align-items: center; }
+.approche-media { aspect-ratio: 4 / 5; max-height: 660px; }
+.approche-liste { list-style: none; padding: 0; margin: 0 0 18px; display: grid; gap: 22px; }
+.approche-liste li { display: grid; grid-template-columns: 32px minmax(0, 1fr); gap: 16px; }
+.approche-liste h3 { margin-bottom: .2em; }
+.approche-liste p { margin: 0; }
+.approche-arche { width: 30px; height: 38px; overflow: visible; max-width: none; }
+.approche-arche path { fill: none; stroke: var(--terre); stroke-width: 1.8; stroke-dasharray: 80; stroke-dashoffset: 0; transition: stroke-dashoffset 1.3s var(--courbe) .2s; }
+html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) .approche-liste li:not(.vu) .approche-arche path { stroke-dashoffset: 80; }
+@media (max-width: 760px) { .approche { grid-template-columns: minmax(0, 1fr); } .approche-media { aspect-ratio: 4 / 3; } }
+
+/* ---------- Mon parcours : le cabinet (pile de photos, visionneuse) ---------- */
+.cabinet-tete { margin-bottom: clamp(24px, 4vw, 48px); }
+.cabinet-tete p { max-width: 44em; }
+.pile { position: relative; list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(12px, 2vw, 24px); }
+.pile-photo { position: relative; }
+.pile-lien { display: block; border-radius: var(--rayon); cursor: zoom-in; box-shadow: 0 14px 30px -20px rgba(47, 58, 44, .6); }
+.pile-lien:focus-visible { outline: 3px solid var(--terre-texte); outline-offset: 4px; }
+.pile-media { aspect-ratio: 4 / 5; border-radius: var(--rayon); }
+.pile-media img { transition: transform .9s var(--courbe); }
+.pile-lien:hover .pile-media img { transform: scale(1.05); }
+@media (max-width: 760px) { .pile { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } .pile-photo:last-child { grid-column: 1 / -1; } .pile-photo:last-child .pile-media { aspect-ratio: 16 / 10; } }
+.visionneuse { position: fixed; inset: 0; width: 100vw; height: 100vh; height: 100dvh; max-width: none; max-height: none; margin: 0; padding: 64px 76px; border: 0; background: rgba(30, 38, 28, .95); color: var(--calcaire); overflow: hidden; }
+.visionneuse[open] { display: grid; place-items: center; }
+.visionneuse::backdrop { background: transparent; }
+.visionneuse-cadre { margin: 0; display: grid; gap: 12px; justify-items: center; max-width: 100%; max-height: 100%; }
+.visionneuse-cadre img { display: block; max-width: min(100%, 1200px); max-height: calc(100dvh - 190px); width: auto; height: auto; border-radius: var(--rayon); object-fit: contain; }
+.visionneuse-cadre figcaption { max-width: 60ch; text-align: center; font-size: .97rem; }
+.visionneuse-compteur { position: absolute; top: 22px; left: 50%; transform: translateX(-50%); margin: 0; font-weight: 700; }
+.visionneuse-fermer { position: absolute; top: 12px; right: 12px; min-height: 44px; padding: 0 20px; border: 0; border-radius: 999px; background: var(--calcaire); color: var(--mousse); font-weight: 700; cursor: pointer; }
+.visionneuse-bouton { position: absolute; top: 50%; width: 52px; height: 52px; margin-top: -26px; border-radius: 50%; border: 1.5px solid var(--calcaire); background: rgba(47, 58, 44, .7); color: var(--calcaire); font-size: 1.4rem; cursor: pointer; }
+.visionneuse-bouton:hover, .visionneuse-fermer:hover { background: var(--lumiere); color: var(--mousse); }
+.visionneuse-bouton--prec { left: 12px; } .visionneuse-bouton--suiv { right: 12px; }
+@media (max-width: 760px) {
+  .visionneuse { padding: 64px 12px 88px; }
+  .visionneuse-cadre img { max-height: calc(100dvh - 230px); }
+  .visionneuse-bouton { top: auto; bottom: calc(18px + env(safe-area-inset-bottom)); margin-top: 0; }
+  .visionneuse-bouton--prec { left: calc(50% - 64px); } .visionneuse-bouton--suiv { right: calc(50% - 64px); }
+}
+
+/* Images révélées à leur arrivée (pages ajoutées). */
+html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) :is(.seance-media, .visio-media, .savoir-media, .formations-media, .approche-media) { clip-path: inset(0% 0% 100% 0%); }
+
+/* Téléphone : sections plus resserrées, moins de vide sous le premier écran. */
+@media (max-width: 760px) {
+  :root { --espace: 48px; }
+  .seuil { padding-bottom: calc(32px + var(--barres-h)); }
+}

@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="fr" data-v="2" data-gabarit="ateliers" data-curseur>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ateliers d’autohypnose en visio : Elka Hypnose</title>
+<meta name="description" content="Ateliers d’autohypnose en visio avec Laurence Katchavenda : 3 thèmes, 4 séances de 1 h 30, 4 places, 80 €. Calendrier de novembre et décembre 2026, déroulé d’une séance et conditions.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://elka-maquette.vercel.app/ateliers">
+<style>:root{--fond:#F1ECE2;--texte:#2F3A2C;--voile-fond:#2F3A2C;--ouverture-fond:#F1ECE2;--menu-fond:#2F3A2C}:root { --entete-h: 72px; --barres-h: 0px; } html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; } body { margin: 0; background: var(--fond); } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; } [data-voile] { position: fixed; inset: 0; z-index: 900; background: var(--voile-fond); transform: translateY(100%); visibility: hidden; pointer-events: none; } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] { transform: none; visibility: visible; } html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; } .ouverture-panneau { position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center; background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; } html.defilement-bloque, html.defilement-bloque body, html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie), html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body, html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours), html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }</style>
+<script>(function () {
+var d = document.documentElement, ss = null, ls = null;
+try { ss = window.sessionStorage; ls = window.localStorage; } catch (e) {}
+d.classList.add('js');
+var calme = false;
+try { calme = !!ls && ls.getItem('socle:calme') === 'oui'; } catch (e) {}
+if (!calme && window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) calme = true;
+if (calme) d.classList.add('calme');
+var nav = performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+var type = nav ? nav.type : 'navigate';
+var depart = null;
+try { depart = JSON.parse(ss.getItem('socle:depart') || 'null'); ss.removeItem('socle:depart'); } catch (e) {}
+if (depart && !(Date.now() - depart.t < 15000)) depart = null;
+var retourSection = false;
+try { retourSection = !!ss.getItem('socle:calme-retour'); } catch (e) {}
+var mode = type === 'back_forward' || retourSection ? 'retour' : type === 'reload' ? 'intro' : depart ? 'voile' : 'intro';
+d.setAttribute('data-arrivee', mode);
+if (mode === 'voile' && depart.couleur) d.style.setProperty('--voile-fond', depart.couleur);
+if (type === 'reload' && 'scrollRestoration' in history) {
+if (!retourSection) history.scrollRestoration = 'manual';
+}
+try {
+var choisie = ls && ls.getItem('socle:langue');
+var langue = (d.lang || '').slice(0, 2);
+if (choisie && choisie !== langue && type === 'navigate' && !depart) {
+var alt = document.querySelector('link[rel="alternate"][hreflang="' + choisie + '"]');
+if (alt) location.replace(new URL(alt.href).pathname + location.search + location.hash);
+}
+} catch (e) {}
+setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('secours'); }, 2000);
+})();</script>
+<link rel="preload" href="/assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/socle.css?v=2">
+<link rel="stylesheet" href="/assets/css/site.css?v=2">
+<link rel="modulepreload" href="/assets/js/site.js?v=2">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=2">
+<script src="/assets/vendor/gsap.min.js" defer></script>
+<script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/assets/vendor/SplitText.min.js" defer></script>
+<script type="module" src="/assets/js/site.js?v=2"></script>
+<meta name="theme-color" content="#F1ECE2">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Elka Hypnose">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Ateliers d’autohypnose en visio : Elka Hypnose">
+<meta property="og:description" content="Ateliers d’autohypnose en visio avec Laurence Katchavenda : 3 thèmes, 4 séances de 1 h 30, 4 places, 80 €. Calendrier de novembre et décembre 2026, déroulé d’une séance et conditions.">
+<meta property="og:url" content="https://elka-maquette.vercel.app/ateliers">
+<meta property="og:image" content="https://elka-maquette.vercel.app/assets/partage/ateliers-fr.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Quatre tasses de tisane sur une table de bois, vues à travers une arche">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Elka Hypnose","description":"Séances d’hypnothérapie individuelles et personnalisées sur rendez-vous, au cabinet de Bard-lès-Époisses ou en visio, et ateliers d’initiation à l’autohypnose en petits groupes, en visio.","url":"https://elka-maquette.vercel.app/","image":"https://elka-maquette.vercel.app/assets/partage/accueil-fr.jpg","logo":"https://elka-maquette.vercel.app/assets/images/logo-pastille.svg","telephone":"+33953725114","email":"elkahypnose@free.fr","address":{"@type":"PostalAddress","streetAddress":"6, rue Victor de Lanneau","postalCode":"21460","addressLocality":"Bard-lès-Époisses","addressCountry":"FR"},"geo":{"@type":"GeoCoordinates","latitude":47.5322,"longitude":4.2167},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"12:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"13:30","closes":"19:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"12:00"}],"founder":{"@type":"Person","name":"Laurence Katchavenda","jobTitle":"Hypnothérapeute"},"sameAs":["https://www.resalib.fr/praticien/106137-laurence-katchavenda-ei-elkahypnose-praticien-en-hypnose-bard-les-epoisses","https://www.facebook.com/profile.php?id=61572601529462","https://instagram.com/elkahypnose/"]}</script>
+</head>
+<body id="haut" class="page-ateliers">
+<div data-voile aria-hidden="true"><div class="voile-contenu">
+  <svg class="voile-arche" viewBox="0 0 120 170" aria-hidden="true"><path d="M2 170 V60 A58 58 0 0 1 118 60 V170" /></svg>
+  <img src="/assets/images/logo-clair.svg" alt="" width="108" height="60">
+  <span data-voile-libelle>Ateliers</span>
+</div></div>
+<div class="ouverture-panneau" data-ouverture aria-hidden="true">
+  <div class="seuil-arche" data-seuil-arche>
+    <div class="seuil-vue" data-seuil-vue>
+      <figure class="media seuil-media" data-grok style="--cadrage:50% 62%;--cadrage-mobile:50% 56%">
+  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/grok/ateliers-ouverture-mobile-640.webp 640w, /assets/images/grok/ateliers-ouverture-mobile-941.webp 941w" sizes="(max-width: 760px) 92vw, 600px">
+    <img src="/assets/images/grok/ateliers-ouverture-1280.webp" srcset="/assets/images/grok/ateliers-ouverture-640.webp 640w, /assets/images/grok/ateliers-ouverture-1280.webp 1280w, /assets/images/grok/ateliers-ouverture-1672.webp 1672w" sizes="(max-width: 760px) 92vw, 600px" alt="" width="1280" height="720" fetchpriority="high" loading="eager" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+      <div class="seuil-brume" data-seuil-brume></div>
+    </div>
+    <div class="seuil-battants" data-seuil-battants><span class="seuil-battant seuil-battant--g"></span><span class="seuil-battant seuil-battant--d"></span><span class="seuil-lueur" data-seuil-lueur></span></div>
+    <svg class="seuil-cadre" data-seuil-cadre><path /></svg>
+  </div>
+  <p class="ouverture-ligne">Hypnose · Bard-lès-Époisses</p>
+</div>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header data-entete>
+  <div class="entete-rangee">
+    <a class="entete-logo" href="/" aria-label="Elka Hypn’ose, retour à l’accueil" data-libelle="Accueil">
+      <img src="/assets/images/logo.svg" alt="" width="90" height="50">
+    </a>
+    <nav data-nav aria-label="Navigation principale">
+      <ul><li><a href="/hypnose-et-suivi" class="lien-trace" data-libelle="L’hypnose et le suivi">L’hypnose et le suivi</a></li><li><a href="/ateliers" class="lien-trace" data-libelle="Ateliers" aria-current="page">Ateliers</a></li><li><a href="/mon-parcours" class="lien-trace" data-libelle="Mon parcours">Mon parcours</a></li><li><a href="/tarifs-et-rendez-vous" class="lien-trace" data-libelle="Tarifs et rendez-vous">Tarifs et rendez-vous</a></li></ul>
+    </nav>
+    <div class="entete-actions">
+      <a class="bouton bouton--entete" href="/tarifs-et-rendez-vous#rendez-vous" data-libelle="Tarifs et rendez-vous" data-magnetique>Prendre rendez-vous</a>
+      <button type="button" data-menu-bouton aria-controls="menu" aria-expanded="false" data-libelle-ouvrir="Menu" data-libelle-fermer="Fermer"><span class="menu-icone" aria-hidden="true"></span><span data-libelle-bouton>Menu</span></button>
+    </div>
+  </div>
+</header>
+<div id="menu" data-menu role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="menu-grille">
+    <ul class="menu-liens"><li style="--i:0"><a href="/" class="menu-lien" data-libelle="Accueil">Accueil</a></li><li style="--i:1"><a href="/hypnose-et-suivi" class="menu-lien" data-libelle="L’hypnose et le suivi">L’hypnose et le suivi</a></li><li style="--i:2"><a href="/ateliers" class="menu-lien" data-libelle="Ateliers" aria-current="page">Ateliers</a></li><li style="--i:3"><a href="/mon-parcours" class="menu-lien" data-libelle="Mon parcours">Mon parcours</a></li><li style="--i:4"><a href="/tarifs-et-rendez-vous" class="menu-lien" data-libelle="Tarifs et rendez-vous">Tarifs et rendez-vous</a></li></ul>
+    <div class="menu-contact">
+      <p class="menu-titre">Contact</p>
+      <p><a class="bouton bouton--clair" href="tel:+33953725114">Appeler le 09 53 72 51 14</a></p>
+      <p><a class="bouton bouton--contour-clair" href="/tarifs-et-rendez-vous#rendez-vous" data-libelle="Tarifs et rendez-vous">Prendre rendez-vous</a></p>
+      <p class="menu-adresse">6, rue Victor de Lanneau<br><span class="insecable">21460 Bard-lès-Époisses</span></p>
+      <p><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></p>
+    </div>
+  </div>
+</div>
+<main id="contenu" tabindex="-1">
+<section class="seuil ecran" id="debut">
+  <div class="seuil-texte">
+    <p class="surtitre" data-anime="gsap">Ateliers d’autohypnose · en visio</p>
+    <h1 class="seuil-titre seuil-titre--page" data-superpose><span class="mot-masque"><span class="mot" data-anime="gsap">Apprendre</span></span> <span class="mot-masque mot-masque--cle"><em class="mot mot--cle" data-anime="gsap">l’autohypnose</em></span> <span class="mot-masque"><span class="mot" data-anime="gsap">en</span></span> <span class="mot-masque"><span class="mot" data-anime="gsap">petit</span></span> <span class="mot-masque"><span class="mot" data-anime="gsap">groupe</span></span> </h1>
+    <p class="seuil-prix" data-info-cle data-anime="gsap"><strong class="prix-appel" data-prix>80 €</strong> par personne, les 4 séances</p>
+    <p class="seuil-intro" data-anime="gsap">Quatre séances de 1 h 30 en visio, une par semaine, pour apprendre une méthode simple, à reproduire ensuite chez soi.</p>
+    <p class="seuil-actions" data-anime="gsap">
+      <a href="/tarifs-et-rendez-vous?sujet=atelier#rappel" class="bouton" data-libelle="Tarifs et rendez-vous" data-action-principale data-magnetique>Demander une place</a>
+      <a class="bouton bouton--contour" href="#calendrier">Voir le calendrier</a>
+    </p>
+    <div class="seuil-info places-tasses" data-anime="gsap">
+      <span class="tasses" aria-hidden="true"><svg viewBox="0 0 40 44" aria-hidden="true"><path class="tasse-vapeur" d="M15 15 C12 11 18 9 15 4" /><path class="tasse-vapeur tasse-vapeur--2" d="M23 15 C20 11 26 9 23 4" /><path class="tasse-corps" d="M7 19 H31 V26 C31 33 26 37 19 37 C12 37 7 33 7 26 Z" /><path class="tasse-anse" d="M31 22 C37 22 37 30 31 30" /><path class="tasse-soucoupe" d="M3 40 H35" /></svg><svg viewBox="0 0 40 44" aria-hidden="true"><path class="tasse-vapeur" d="M15 15 C12 11 18 9 15 4" /><path class="tasse-vapeur tasse-vapeur--2" d="M23 15 C20 11 26 9 23 4" /><path class="tasse-corps" d="M7 19 H31 V26 C31 33 26 37 19 37 C12 37 7 33 7 26 Z" /><path class="tasse-anse" d="M31 22 C37 22 37 30 31 30" /><path class="tasse-soucoupe" d="M3 40 H35" /></svg><svg viewBox="0 0 40 44" aria-hidden="true"><path class="tasse-vapeur" d="M15 15 C12 11 18 9 15 4" /><path class="tasse-vapeur tasse-vapeur--2" d="M23 15 C20 11 26 9 23 4" /><path class="tasse-corps" d="M7 19 H31 V26 C31 33 26 37 19 37 C12 37 7 33 7 26 Z" /><path class="tasse-anse" d="M31 22 C37 22 37 30 31 30" /><path class="tasse-soucoupe" d="M3 40 H35" /></svg><svg viewBox="0 0 40 44" aria-hidden="true"><path class="tasse-vapeur" d="M15 15 C12 11 18 9 15 4" /><path class="tasse-vapeur tasse-vapeur--2" d="M23 15 C20 11 26 9 23 4" /><path class="tasse-corps" d="M7 19 H31 V26 C31 33 26 37 19 37 C12 37 7 33 7 26 Z" /><path class="tasse-anse" d="M31 22 C37 22 37 30 31 30" /><path class="tasse-soucoupe" d="M3 40 H35" /></svg></span>
+      <p><strong>4 places par atelier</strong><br><span data-prochain data-textes="{&quot;prochain&quot;:&quot;Prochain atelier : {theme}, dès le {date}&quot;,&quot;aucun&quot;:&quot;Les prochaines dates arrivent bientôt.&quot;}" data-ateliers-json="[{&quot;theme&quot;:&quot;Stress et sommeil&quot;,&quot;debut&quot;:&quot;19:30&quot;,&quot;d0&quot;:&quot;2026-11-02&quot;,&quot;date&quot;:&quot;2 novembre&quot;},{&quot;theme&quot;:&quot;Dialogue intérieur&quot;,&quot;debut&quot;:&quot;10:30&quot;,&quot;d0&quot;:&quot;2026-11-07&quot;,&quot;date&quot;:&quot;7 novembre&quot;},{&quot;theme&quot;:&quot;Confiance en soi&quot;,&quot;debut&quot;:&quot;19:00&quot;,&quot;d0&quot;:&quot;2026-11-17&quot;,&quot;date&quot;:&quot;17 novembre&quot;},{&quot;theme&quot;:&quot;Stress et sommeil&quot;,&quot;debut&quot;:&quot;19:00&quot;,&quot;d0&quot;:&quot;2026-11-18&quot;,&quot;date&quot;:&quot;18 novembre&quot;},{&quot;theme&quot;:&quot;Dialogue intérieur&quot;,&quot;debut&quot;:&quot;13:00&quot;,&quot;d0&quot;:&quot;2026-11-21&quot;,&quot;date&quot;:&quot;21 novembre&quot;}]">Prochain atelier : Dialogue intérieur, dès le 7 novembre</span></p>
+    </div>
+  </div>
+  <div class="arche seuil-arche-page" data-arche>
+  <figure class="media arche-media" data-grok style="--cadrage:50% 62%;--cadrage-mobile:50% 56%">
+  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/grok/ateliers-ouverture-mobile-640.webp 640w, /assets/images/grok/ateliers-ouverture-mobile-941.webp 941w" sizes="(max-width: 760px) 92vw, 600px">
+    <img src="/assets/images/grok/ateliers-ouverture-1280.webp" srcset="/assets/images/grok/ateliers-ouverture-640.webp 640w, /assets/images/grok/ateliers-ouverture-1280.webp 1280w, /assets/images/grok/ateliers-ouverture-1672.webp 1672w" sizes="(max-width: 760px) 92vw, 600px" alt="Quatre tasses de tisane en céramique sur une table ronde en bois, près d’une fenêtre" width="1280" height="720" fetchpriority="high" loading="eager" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  <canvas class="arche-brume" data-brume aria-hidden="true" data-audit-ignorer></canvas>
+  <div class="arche-brume-css" aria-hidden="true"></div>
+  <svg class="arche-cadre" aria-hidden="true" data-audit-ignorer><path data-cadre /></svg>
+</div>
+</section>
+<section class="themes conteneur" id="themes">
+  <div class="entete-section">
+    <h2 class="titre-section" data-anime>Trois thèmes, trois portes</h2>
+    <p data-anime>Trois thèmes au choix, avec la même méthode : choisissez celui qui vous parle.</p>
+  </div>
+  <ul class="portes">
+    <li class="porte porte--stress" id="theme-stress" data-porte>
+      <div class="porte-arche">
+        <figure class="media porte-media" data-grok style="--cadrage:62% 50%">
+  <picture>
+    <img src="/assets/images/grok/atelier-theme-stress-1122.webp" srcset="/assets/images/grok/atelier-theme-stress-640.webp 640w, /assets/images/grok/atelier-theme-stress-1122.webp 1122w" sizes="(max-width: 760px) 92vw, (max-width: 1100px) 46vw, 380px" alt="Chambre en pierre au crépuscule : lit de lin, bouquet de lilas, fenêtre ouverte sur une vallée dans la brume" width="1122" height="1402" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+        <span class="porte-battants" aria-hidden="true"><span class="porte-battant porte-battant--g"></span><span class="porte-battant porte-battant--d"></span></span>
+        <svg class="porte-cadre" viewBox="0 0 100 125" preserveAspectRatio="none" aria-hidden="true"><path d="M1 125 V50 A49 49 0 0 1 99 50 V125" /></svg>
+      </div>
+      <div class="porte-texte">
+        <p class="porte-accroche">Retrouver le calme et le sommeil</p>
+        <h3 class="porte-titre">Stress et sommeil</h3>
+        <ul class="porte-objectifs"><li>Apaiser le stress et retrouver un sommeil de meilleure qualité</li><li>Apprendre à ralentir et à relâcher les tensions</li><li>Des exercices de respiration et de détente, à refaire chez soi</li></ul>
+        <p class="porte-pourqui">Pour un rythme soutenu, une charge mentale lourde, du mal à déconnecter ou un sommeil perturbé.</p>
+        <p class="porte-action"><a class="bouton bouton--petit bouton--contour" href="?theme=stress#calendrier" data-filtre-lien="stress" data-sans-transition>Voir ses dates</a></p>
+      </div>
+    </li><li class="porte porte--dialogue" id="theme-dialogue" data-porte>
+      <div class="porte-arche">
+        <figure class="media porte-media" data-grok style="--cadrage:50% 62%">
+  <picture>
+    <img src="/assets/images/grok/atelier-theme-dialogue-1122.webp" srcset="/assets/images/grok/atelier-theme-dialogue-640.webp 640w, /assets/images/grok/atelier-theme-dialogue-1122.webp 1122w" sizes="(max-width: 760px) 92vw, (max-width: 1100px) 46vw, 380px" alt="Deux vieilles chaises de bois dans un pré, au-dessus d’une vallée dans la brume du matin" width="1122" height="1402" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+        <span class="porte-battants" aria-hidden="true"><span class="porte-battant porte-battant--g"></span><span class="porte-battant porte-battant--d"></span></span>
+        <svg class="porte-cadre" viewBox="0 0 100 125" preserveAspectRatio="none" aria-hidden="true"><path d="M1 125 V50 A49 49 0 0 1 99 50 V125" /></svg>
+      </div>
+      <div class="porte-texte">
+        <p class="porte-accroche">S’échapper de son quotidien</p>
+        <h3 class="porte-titre">Dialogue intérieur</h3>
+        <ul class="porte-objectifs"><li>Formuler ses objectifs et dialoguer avec son inconscient</li><li>Découvrir l’état modifié de conscience : relaxation profonde, meilleure concentration</li><li>Démystifier l’hypnose, avec des jeux hypnotiques ludiques</li></ul>
+        <p class="porte-pourqui">Pour les esprits créatifs, ceux qui cherchent des solutions, ou les simples curieux de l’hypnose.</p>
+        <p class="porte-action"><a class="bouton bouton--petit bouton--contour" href="?theme=dialogue#calendrier" data-filtre-lien="dialogue" data-sans-transition>Voir ses dates</a></p>
+      </div>
+    </li><li class="porte porte--confiance" id="theme-confiance" data-porte>
+      <div class="porte-arche">
+        <figure class="media porte-media" data-grok style="--cadrage:50% 42%">
+  <picture>
+    <img src="/assets/images/grok/atelier-theme-confiance-1122.webp" srcset="/assets/images/grok/atelier-theme-confiance-640.webp 640w, /assets/images/grok/atelier-theme-confiance-1122.webp 1122w" sizes="(max-width: 760px) 92vw, (max-width: 1100px) 46vw, 380px" alt="Jeune chêne seul dans un pré fleuri, au lever du soleil" width="1122" height="1402" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+        <span class="porte-battants" aria-hidden="true"><span class="porte-battant porte-battant--g"></span><span class="porte-battant porte-battant--d"></span></span>
+        <svg class="porte-cadre" viewBox="0 0 100 125" preserveAspectRatio="none" aria-hidden="true"><path d="M1 125 V50 A49 49 0 0 1 99 50 V125" /></svg>
+      </div>
+      <div class="porte-texte">
+        <p class="porte-accroche">Mobiliser ses ressources</p>
+        <h3 class="porte-titre">Confiance en soi</h3>
+        <ul class="porte-objectifs"><li>Renforcer la confiance en soi</li><li>Suivre son évolution d’une séance à l’autre, grâce aux questionnaires</li></ul>
+        <p class="porte-pourqui">Pour avancer avec davantage de sérénité.</p>
+        <p class="porte-action"><a class="bouton bouton--petit bouton--contour" href="?theme=confiance#calendrier" data-filtre-lien="confiance" data-sans-transition>Voir ses dates</a></p>
+      </div>
+    </li>
+  </ul>
+  <p class="themes-commun" data-anime>Pour chaque thème : une méthode d’induction simple, à reproduire ensuite en autonomie.</p>
+</section>
+<section class="calendrier" id="calendrier" data-calendrier data-textes="{&quot;seance&quot;:&quot;Séance {n} sur 4&quot;,&quot;detailDate&quot;:&quot;{jour} {date}&quot;,&quot;detailHoraire&quot;:&quot;De {debut} à {fin}&quot;,&quot;detailPeriode&quot;:&quot;Les 4 séances : du {d1} au {d2}, {jour}&quot;,&quot;joursLongs&quot;:[&quot;lundi&quot;,&quot;mardi&quot;,&quot;mercredi&quot;,&quot;jeudi&quot;,&quot;vendredi&quot;,&quot;samedi&quot;,&quot;dimanche&quot;],&quot;aVenir&quot;:&quot;À venir&quot;,&quot;enCours&quot;:&quot;En cours&quot;,&quot;termine&quot;:&quot;Terminé&quot;,&quot;dans&quot;:&quot;dans {n} jours&quot;,&quot;demain&quot;:&quot;demain&quot;,&quot;aujourdhui&quot;:&quot;aujourd’hui&quot;,&quot;inscrire&quot;:&quot;Demander une place&quot;,&quot;ferme&quot;:&quot;Atelier commencé : inscriptions closes&quot;,&quot;prochain&quot;:&quot;Me prévenir du prochain atelier&quot;,&quot;lienInscrire&quot;:&quot;/tarifs-et-rendez-vous?sujet=atelier&amp;atelier={id}#rappel&quot;,&quot;lienProchain&quot;:&quot;/tarifs-et-rendez-vous?sujet=prochain#rappel&quot;,&quot;libelleRdv&quot;:&quot;Tarifs et rendez-vous&quot;}" data-ateliers-json="[{&quot;id&quot;:&quot;stress-sommeil-lundis&quot;,&quot;theme&quot;:&quot;Stress et sommeil&quot;,&quot;themeId&quot;:&quot;stress&quot;,&quot;jour&quot;:&quot;les lundis&quot;,&quot;debut&quot;:&quot;19:30&quot;,&quot;fin&quot;:&quot;21:00&quot;,&quot;seances&quot;:[&quot;2026-11-02&quot;,&quot;2026-11-09&quot;,&quot;2026-11-16&quot;,&quot;2026-11-23&quot;],&quot;debutTexte&quot;:&quot;19 h 30&quot;,&quot;finTexte&quot;:&quot;21 h&quot;,&quot;dates&quot;:[&quot;2 novembre&quot;,&quot;9 novembre&quot;,&quot;16 novembre&quot;,&quot;23 novembre&quot;]},{&quot;id&quot;:&quot;dialogue-interieur-samedis-matin&quot;,&quot;theme&quot;:&quot;Dialogue intérieur&quot;,&quot;themeId&quot;:&quot;dialogue&quot;,&quot;jour&quot;:&quot;les samedis matin&quot;,&quot;debut&quot;:&quot;10:30&quot;,&quot;fin&quot;:&quot;12:00&quot;,&quot;seances&quot;:[&quot;2026-11-07&quot;,&quot;2026-11-14&quot;,&quot;2026-11-21&quot;,&quot;2026-11-28&quot;],&quot;debutTexte&quot;:&quot;10 h 30&quot;,&quot;finTexte&quot;:&quot;12 h&quot;,&quot;dates&quot;:[&quot;7 novembre&quot;,&quot;14 novembre&quot;,&quot;21 novembre&quot;,&quot;28 novembre&quot;]},{&quot;id&quot;:&quot;confiance-en-soi-mardis&quot;,&quot;theme&quot;:&quot;Confiance en soi&quot;,&quot;themeId&quot;:&quot;confiance&quot;,&quot;jour&quot;:&quot;les mardis&quot;,&quot;debut&quot;:&quot;19:00&quot;,&quot;fin&quot;:&quot;20:30&quot;,&quot;seances&quot;:[&quot;2026-11-17&quot;,&quot;2026-11-24&quot;,&quot;2026-12-01&quot;,&quot;2026-12-08&quot;],&quot;debutTexte&quot;:&quot;19 h&quot;,&quot;finTexte&quot;:&quot;20 h 30&quot;,&quot;dates&quot;:[&quot;17 novembre&quot;,&quot;24 novembre&quot;,&quot;1er décembre&quot;,&quot;8 décembre&quot;]},{&quot;id&quot;:&quot;stress-sommeil-mercredis&quot;,&quot;theme&quot;:&quot;Stress et sommeil&quot;,&quot;themeId&quot;:&quot;stress&quot;,&quot;jour&quot;:&quot;les mercredis&quot;,&quot;debut&quot;:&quot;19:00&quot;,&quot;fin&quot;:&quot;20:30&quot;,&quot;seances&quot;:[&quot;2026-11-18&quot;,&quot;2026-11-25&quot;,&quot;2026-12-02&quot;,&quot;2026-12-09&quot;],&quot;debutTexte&quot;:&quot;19 h&quot;,&quot;finTexte&quot;:&quot;20 h 30&quot;,&quot;dates&quot;:[&quot;18 novembre&quot;,&quot;25 novembre&quot;,&quot;2 décembre&quot;,&quot;9 décembre&quot;]},{&quot;id&quot;:&quot;dialogue-interieur-samedis-apres-midi&quot;,&quot;theme&quot;:&quot;Dialogue intérieur&quot;,&quot;themeId&quot;:&quot;dialogue&quot;,&quot;jour&quot;:&quot;les samedis après-midi&quot;,&quot;debut&quot;:&quot;13:00&quot;,&quot;fin&quot;:&quot;14:30&quot;,&quot;seances&quot;:[&quot;2026-11-21&quot;,&quot;2026-11-28&quot;,&quot;2026-12-05&quot;,&quot;2026-12-12&quot;],&quot;debutTexte&quot;:&quot;13 h&quot;,&quot;finTexte&quot;:&quot;14 h 30&quot;,&quot;dates&quot;:[&quot;21 novembre&quot;,&quot;28 novembre&quot;,&quot;5 décembre&quot;,&quot;12 décembre&quot;]}]">
+  <div class="conteneur">
+    <div class="calendrier-tete">
+      <h2 class="titre-section" data-anime>Le calendrier des séances</h2>
+      <p data-anime>Novembre et décembre 2026 : chaque graine est une séance. Choisissez-en une pour voir son atelier.</p>
+    </div>
+    <div class="cal-filtres" role="group" aria-label="Afficher les séances" data-anime>
+      <button type="button" class="cal-filtre" data-filtre="tous" aria-pressed="true">Tous les thèmes</button>
+      <button type="button" class="cal-filtre cal-filtre--stress" data-filtre="stress" aria-pressed="false"><span class="cal-point" aria-hidden="true"></span>Stress et sommeil</button><button type="button" class="cal-filtre cal-filtre--dialogue" data-filtre="dialogue" aria-pressed="false"><span class="cal-point" aria-hidden="true"></span>Dialogue intérieur</button><button type="button" class="cal-filtre cal-filtre--confiance" data-filtre="confiance" aria-pressed="false"><span class="cal-point" aria-hidden="true"></span>Confiance en soi</button>
+    </div>
+    <div class="cal-grille">
+      <div class="cal-mois-liste" data-visuel>
+        <div class="mois">
+          <h3 class="mois-titre">novembre 2026</h3>
+          <ol class="mois-entete" aria-hidden="true"><li>lun.</li><li>mar.</li><li>mer.</li><li>jeu.</li><li>ven.</li><li>sam.</li><li>dim.</li></ol>
+          <ol class="mois-jours">
+            <li class="jour jour--passe" data-date="2026-11-01" style="--col:7">
+                <p class="jour-tete"><span class="jour-nom">dim.</span> <span class="jour-num">1</span></p>
+              </li><li class="jour jour--seance jour--passe" data-date="2026-11-02" style="--col:1">
+                <p class="jour-tete"><span class="jour-nom">lun.</span> <span class="jour-num">2</span></p>
+                <ul class="jour-seances"><li><button type="button" class="graine-seance graine-seance--stress" data-theme="stress" data-session="stress-sommeil-lundis" data-n="1" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="graine-coque" d="M12 4 C17 8 18 14 12 20 C6 14 7 8 12 4 Z" /><path class="graine-ligne" d="M12 7 V17" /></svg><span class="graine-heure">19 h 30</span> <span class="graine-theme">Stress et sommeil</span><span class="visuellement-cache">, séance 1 sur 4, lundi 2 novembre</span></button></li></ul>
+              </li><li class="jour jour--aujourdhui" data-date="2026-11-03" style="--col:2">
+                <p class="jour-tete"><span class="jour-nom">mar.</span> <span class="jour-num">3</span></p>
+              </li><li class="jour" data-date="2026-11-04" style="--col:3">
+                <p class="jour-tete"><span class="jour-nom">mer.</span> <span class="jour-num">4</span></p>
+              </li><li class="jour" data-date="2026-11-05" style="--col:4">
+                <p class="jour-tete"><span class="jour-nom">jeu.</span> <span class="jour-num">5</span></p>
+              </li><li class="jour" data-date="2026-11-06" style="--col:5">
+                <p class="jour-tete"><span class="jour-nom">ven.</span> <span class="jour-num">6</span></p>
+              </li><li class="jour jour--seance" data-date="2026-11-07" style="--col:6">
+                <p class="jour-tete"><span class="jour-nom">sam.</span> <span class="jour-num">7</span></p>
+                <ul class="jour-seances"><li><button type="button" class="graine-seance graine-seance--dialogue" data-theme="dialogue" data-session="dialogue-interieur-samedis-matin" data-n="1" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="graine-coque" d="M12 4 C17 8 18 14 12 20 C6 14 7 8 12 4 Z" /><path class="graine-ligne" d="M12 7 V17" /></svg><span class="graine-heure">10 h 30</span> <span class="graine-theme">Dialogue intérieur</span><span class="visuellement-cache">, séance 1 sur 4, samedi 7 novembre</span></button></li></ul>
+              </li><li class="jour" data-date="2026-11-08" style="--col:7">
+                <p class="jour-tete"><span class="jour-nom">dim.</span> <span class="jour-num">8</span></p>
+              </li><li class="jour jour--seance" data-date="2026-11-09" style="--col:1">
+                <p class="jour-tete"><span class="jour-nom">lun.</span> <span class="jour-num">9</span></p>
+                <ul class="jour-seances"><li><button type="button" class="graine-seance graine-seance--stress" data-theme="stress" data-session="stress-sommeil-lundis" data-n="2" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="graine-coque" d="M12 4 C17 8 18 14 12 20 C6 14 7 8 12 4 Z" /><path class="graine-ligne" d="M12 7 V17" /></svg><span class="graine-heure">19 h 30</span> <span class="graine-theme">Stress et sommeil</span><span class="visuellement-cache">, séance 2 sur 4, lundi 9 novembre</span></button></li></ul>
+              </li><li class="jour" data-date="2026-11-10" style="--col:2">
+                <p class="jour-tete"><span class="jour-nom">mar.</span> <span class="jour-num">10</span></p>
+              </li><li class="jour" data-date="2026-11-11" style="--col:3">
+                <p class="jour-tete"><span class="jour-nom">mer.</span> <span class="jour-num">11</span></p>
+              </li><li class="jour" data-date="2026-11-12" style="--col:4">
+                <p class="jour-tete"><span class="jour-nom">jeu.</span> <span class="jour-num">12</span></p>
+              </li><li class="jour" data-date="2026-11-13" style="--col:5">
+                <p class="jour-tete"><span class="jour-nom">ven.</span> <span class="jour-num">13</span></p>
+              </li><li class="jour jour--seance" data-date="2026-11-14" style="--col:6">
+                <p class="jour-tete"><span class="jour-nom">sam.</span> <span class="jour-num">14</span></p>
+                <ul class="jour-seances"><li><button type="button" class="graine-seance graine-seance--dialogue" data-theme="dialogue" data-session="dialogue-interieur-samedis-matin" data-n="2" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="graine-coque" d="M12 4 C17 8 18 14 12 20 C6 14 7 8 12 4 Z" /><path class="graine-ligne" d="M12 7 V17" /></svg><span class="graine-heure">10 h 30</span> <span class="graine-theme">Dialogue intérieur</span><span class="visuellement-cache">, séance 2 sur 4, samedi 14 novembre</span></button></li></ul>
+              </li><li class="jour" data-date="2026-11-15" style="--col:7">
+                <p class="jour-tete"><span class="jour-nom">dim.</span> <span class="jour-num">15</span></p>
+              </li><li class="jour jour--seance" data-date="2026-11-16" style="--col:1">
+                <p class="jour-tete"><span class="jour-nom">lun.</span> <span class="jour-num">16</span></p>
+                <ul class="jour-seances"><li><button type="button" class="graine-seance graine-seance--stress" data-theme="stress" data-session="stress-sommeil-lundis" data-n="3" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="graine-coque" d="M12 4 C17 8 18 14 12 20 C6 14 7 8 12 4 Z" /><path class="graine-ligne" d="M12 7 V17" /></svg><span class="graine-heure">19 h 30</span> <span class="graine-theme">Stress et sommeil</span><span class="visuellement-cache">, séance 3 sur 4, lundi 16 novembre</span></button></li></ul>
+              </li><li class="jour jour--seance" data-date="2026-11-17" style="--col:2">
+                <p class="jour-tete"><span class="jour-nom">mar.</span> <span class="jour-num">17</span></p>
+                <ul class="jour-seances"><li><button type="button" class="graine-seance graine-seance--confiance" data-theme="confiance" data-session="confiance-en-soi-mardis" data-n="1" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="graine-coque" d="M12 4 C17 8 18 14 12 20 C6 14 7 8 12 4 Z" /><path class="graine-ligne" d="M12 7 V17" /></svg><span class="graine-heure">19 h</span> <span class="graine-theme">Confiance en soi</span><span class="visuellement-cache">, séance 1 sur 4, mardi 17 novembre</span></button></li></ul>
+              </li><li class="jour jour--seance" data-date="2026-11-18" style="--col:3">
+                <p class="jour-tete"><span class="jour-nom">mer.</span> <span class="jour-num">18</span></p>
+                <ul class="jour-seances"><li><button type="button" class="graine-seance graine-seance--stress" data-theme="stress" data-session="stress-sommeil-mercredis" data-n="1" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="graine-coque" d="M12 4 C17 8 18 14 12 20 C6 14 7 8 12 4 Z" /><path class="graine-ligne" d="M12 7 V17" /></svg><span class="graine-heure">19 h</span> <span class="graine-theme">Stress et sommeil</span><span class="visuellement-cache">, séance 1 sur 4, mercredi 18 novembre</span></button></li></ul>
+              </li><li class="jour" data-date="2026-11-19" style="--col:4">
+                <p class="jour-tete"><span class="jour-nom">jeu.</span> <span class="jour-num">19</span></p>
+              </li><li class="jour" data-date="2026-11-20" style="--col:5">
+                <p class="jour-tete"><span class="jour-nom">ven.</span> <span class="jour-num">20</span></p>
+              </li><li class="jour jour--seance" data-date="2026-11-21" style="--col:6">
+                <p class="jour-tete"><span class="jour-nom">sam.</span> <span class="jour-num">21</span></p>
+                <ul class="jour-seances"><li><button type="button" class="graine-seance graine-seance--dialogue" data-theme="dialogue" data-session="dialogue-interieur-samedis-matin" data-n="3" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="graine-coque" d="M12 4 C17 8 18 14 12 20 C6 14 7 8 12 4 Z" /><path class="graine-ligne" d="M12 7 V17" /></svg><span class="graine-heure">10 h 30</span> <span class="graine-theme">Dialogue intérieur</span><span class="visuellement-cache">, séance 3 sur 4, samedi 21 novembre</span></button></li><li><button type="button" class="graine-seance graine-seance--dialogue" data-theme="dialogue" data-session="dialogue-interieur-samedis-apres-midi" data-n="1" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="graine-coque" d="M12 4 C17 8 18 14 12 20 C6 14 7 8 12 4 Z" /><path class="graine-ligne" d="M12 7 V17" /></svg><span class="graine-heure">13 h</span> <span class="graine-theme">Dialogue intérieur</span><span class="visuellement-cache">, séance 1 sur 4, samedi 21 novembre</span></button></li></ul>
+              </li><li class="jour" data-date="2026-11-22" style="--col:7">
+                <p class="jour-tete"><span class="jour-nom">dim.</span> <span class="jour-num">22</span></p>
+              </li><li class="jour jour--seance" data-date="2026-11-23" style="--col:1">
+                <p class="jour-tete"><span class="jour-nom">lun.</span> <span class="jour-num">23</span></p>
+                <ul class="jour-seances"><li><button type="button" class="graine-seance graine-seance--stress" data-theme="stress" data-session="stress-sommeil-lundis" data-n="4" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="graine-coque" d="M12 4 C17 8 18 14 12 20 C6 14 7 8 12 4 Z" /><path class="graine-ligne" d="M12 7 V17" /></svg><span class="graine-heure">19 h 30</span> <span class="graine-theme">Stress et sommeil</span><span class="visuellement-cache">, séance 4 sur 4, lundi 23 novembre</span></button></li></ul>
+              </li><li class="jour jour--seance" data-date="2026-11-24" style="--col:2">
+                <p class="jour-tete"><span class="jour-nom">mar.</span> <span class="jour-num">24</span></p>
+                <ul class="jour-seances"><li><button type="button" class="graine-seance graine-seance--confiance" data-theme="confiance" data-session="confiance-en-soi-mardis" data-n="2" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="graine-coque" d="M12 4 C17 8 18 14 12 20 C6 14 7 8 12 4 Z" /><path class="graine-ligne" d="M12 7 V17" /></svg><span class="graine-heure">19 h</span> <span class="graine-theme">Confiance en soi</span><span class="visuellement-cache">, séance 2 sur 4, mardi 24 novembre</span></button></li></ul>
+              </li><li class="jour jour--seance" data-date="2026-11-25" style="--col:3">
+                <p class="jour-tete"><span class="jour-nom">mer.</span> <span class="jour-num">25</span></p>
+                <ul class="jour-seances"><li><button type="button" class="graine-seance graine-seance--stress" data-theme="stress" data-session="stress-sommeil-mercredis" data-n="2" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="graine-coque" d="M12 4 C17 8 18 14 12 20 C6 14 7 8 12 4 Z" /><path class="graine-ligne" d="M12 7 V17" /></svg><span class="graine-heure">19 h</span> <span class="graine-theme">Stress et sommeil</span><span class="visuellement-cache">, séance 2 sur 4, mercredi 25 novembre</span></button></li></ul>
+              </li><li class="jour" data-date="2026-11-26" style="--col:4">
+                <p class="jour-tete"><span class="jour-nom">jeu.</span> <span class="jour-num">26</span></p>
+              </li><li class="jour" data-date="2026-11-27" style="--col:5">
+                <p class="jour-tete"><span class="jour-nom">ven.</span> <span class="jour-num">27</span></p>
+              </li><li class="jour jour--seance" data-date="2026-11-28" style="--col:6">
+                <p class="jour-tete"><span class="jour-nom">sam.</span> <span class="jour-num">28</span></p>
+                <ul class="jour-seances"><li><button type="button" class="graine-seance graine-seance--dialogue" data-theme="dialogue" data-session="dialogue-interieur-samedis-matin" data-n="4" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="graine-coque" d="M12 4 C17 8 18 14 12 20 C6 14 7 8 12 4 Z" /><path class="graine-ligne" d="M12 7 V17" /></svg><span class="graine-heure">10 h 30</span> <span class="graine-theme">Dialogue intérieur</span><span class="visuellement-cache">, séance 4 sur 4, samedi 28 novembre</span></button></li><li><button type="button" class="graine-seance graine-seance--dialogue" data-theme="dialogue" data-session="dialogue-interieur-samedis-apres-midi" data-n="2" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="graine-coque" d="M12 4 C17 8 18 14 12 20 C6 14 7 8 12 4 Z" /><path class="graine-ligne" d="M12 7 V17" /></svg><span class="graine-heure">13 h</span> <span class="graine-theme">Dialogue intérieur</span><span class="visuellement-cache">, séance 2 sur 4, samedi 28 novembre</span></button></li></ul>
+              </li><li class="jour" data-date="2026-11-29" style="--col:7">
+                <p class="jour-tete"><span class="jour-nom">dim.</span> <span class="jour-num">29</span></p>
+              </li><li class="jour" data-date="2026-11-30" style="--col:1">
+                <p class="jour-tete"><span class="jour-nom">lun.</span> <span class="jour-num">30</span></p>
+              </li>
+          </ol>
+        </div><div class="mois">
+          <h3 class="mois-titre">décembre 2026</h3>
+          <ol class="mois-entete" aria-hidden="true"><li>lun.</li><li>mar.</li><li>mer.</li><li>jeu.</li><li>ven.</li><li>sam.</li><li>dim.</li></ol>
+          <ol class="mois-jours">
+            <li class="jour jour--seance" data-date="2026-12-01" style="--col:2">
+                <p class="jour-tete"><span class="jour-nom">mar.</span> <span class="jour-num">1</span></p>
+                <ul class="jour-seances"><li><button type="button" class="graine-seance graine-seance--confiance" data-theme="confiance" data-session="confiance-en-soi-mardis" data-n="3" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="graine-coque" d="M12 4 C17 8 18 14 12 20 C6 14 7 8 12 4 Z" /><path class="graine-ligne" d="M12 7 V17" /></svg><span class="graine-heure">19 h</span> <span class="graine-theme">Confiance en soi</span><span class="visuellement-cache">, séance 3 sur 4, mardi 1er décembre</span></button></li></ul>
+              </li><li class="jour jour--seance" data-date="2026-12-02" style="--col:3">
+                <p class="jour-tete"><span class="jour-nom">mer.</span> <span class="jour-num">2</span></p>
+                <ul class="jour-seances"><li><button type="button" class="graine-seance graine-seance--stress" data-theme="stress" data-session="stress-sommeil-mercredis" data-n="3" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="graine-coque" d="M12 4 C17 8 18 14 12 20 C6 14 7 8 12 4 Z" /><path class="graine-ligne" d="M12 7 V17" /></svg><span class="graine-heure">19 h</span> <span class="graine-theme">Stress et sommeil</span><span class="visuellement-cache">, séance 3 sur 4, mercredi 2 décembre</span></button></li></ul>
+              </li><li class="jour" data-date="2026-12-03" style="--col:4">
+                <p class="jour-tete"><span class="jour-nom">jeu.</span> <span class="jour-num">3</span></p>
+              </li><li class="jour" data-date="2026-12-04" style="--col:5">
+                <p class="jour-tete"><span class="jour-nom">ven.</span> <span class="jour-num">4</span></p>
+              </li><li class="jour jour--seance" data-date="2026-12-05" style="--col:6">
+                <p class="jour-tete"><span class="jour-nom">sam.</span> <span class="jour-num">5</span></p>
+                <ul class="jour-seances"><li><button type="button" class="graine-seance graine-seance--dialogue" data-theme="dialogue" data-session="dialogue-interieur-samedis-apres-midi" data-n="3" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="graine-coque" d="M12 4 C17 8 18 14 12 20 C6 14 7 8 12 4 Z" /><path class="graine-ligne" d="M12 7 V17" /></svg><span class="graine-heure">13 h</span> <span class="graine-theme">Dialogue intérieur</span><span class="visuellement-cache">, séance 3 sur 4, samedi 5 décembre</span></button></li></ul>
+              </li><li class="jour" data-date="2026-12-06" style="--col:7">
+                <p class="jour-tete"><span class="jour-nom">dim.</span> <span class="jour-num">6</span></p>
+              </li><li class="jour" data-date="2026-12-07" style="--col:1">
+                <p class="jour-tete"><span class="jour-nom">lun.</span> <span class="jour-num">7</span></p>
+              </li><li class="jour jour--seance" data-date="2026-12-08" style="--col:2">
+                <p class="jour-tete"><span class="jour-nom">mar.</span> <span class="jour-num">8</span></p>
+                <ul class="jour-seances"><li><button type="button" class="graine-seance graine-seance--confiance" data-theme="confiance" data-session="confiance-en-soi-mardis" data-n="4" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="graine-coque" d="M12 4 C17 8 18 14 12 20 C6 14 7 8 12 4 Z" /><path class="graine-ligne" d="M12 7 V17" /></svg><span class="graine-heure">19 h</span> <span class="graine-theme">Confiance en soi</span><span class="visuellement-cache">, séance 4 sur 4, mardi 8 décembre</span></button></li></ul>
+              </li><li class="jour jour--seance" data-date="2026-12-09" style="--col:3">
+                <p class="jour-tete"><span class="jour-nom">mer.</span> <span class="jour-num">9</span></p>
+                <ul class="jour-seances"><li><button type="button" class="graine-seance graine-seance--stress" data-theme="stress" data-session="stress-sommeil-mercredis" data-n="4" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="graine-coque" d="M12 4 C17 8 18 14 12 20 C6 14 7 8 12 4 Z" /><path class="graine-ligne" d="M12 7 V17" /></svg><span class="graine-heure">19 h</span> <span class="graine-theme">Stress et sommeil</span><span class="visuellement-cache">, séance 4 sur 4, mercredi 9 décembre</span></button></li></ul>
+              </li><li class="jour" data-date="2026-12-10" style="--col:4">
+                <p class="jour-tete"><span class="jour-nom">jeu.</span> <span class="jour-num">10</span></p>
+              </li><li class="jour" data-date="2026-12-11" style="--col:5">
+                <p class="jour-tete"><span class="jour-nom">ven.</span> <span class="jour-num">11</span></p>
+              </li><li class="jour jour--seance" data-date="2026-12-12" style="--col:6">
+                <p class="jour-tete"><span class="jour-nom">sam.</span> <span class="jour-num">12</span></p>
+                <ul class="jour-seances"><li><button type="button" class="graine-seance graine-seance--dialogue" data-theme="dialogue" data-session="dialogue-interieur-samedis-apres-midi" data-n="4" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="graine-coque" d="M12 4 C17 8 18 14 12 20 C6 14 7 8 12 4 Z" /><path class="graine-ligne" d="M12 7 V17" /></svg><span class="graine-heure">13 h</span> <span class="graine-theme">Dialogue intérieur</span><span class="visuellement-cache">, séance 4 sur 4, samedi 12 décembre</span></button></li></ul>
+              </li><li class="jour" data-date="2026-12-13" style="--col:7">
+                <p class="jour-tete"><span class="jour-nom">dim.</span> <span class="jour-num">13</span></p>
+              </li><li class="jour" data-date="2026-12-14" style="--col:1">
+                <p class="jour-tete"><span class="jour-nom">lun.</span> <span class="jour-num">14</span></p>
+              </li><li class="jour" data-date="2026-12-15" style="--col:2">
+                <p class="jour-tete"><span class="jour-nom">mar.</span> <span class="jour-num">15</span></p>
+              </li><li class="jour" data-date="2026-12-16" style="--col:3">
+                <p class="jour-tete"><span class="jour-nom">mer.</span> <span class="jour-num">16</span></p>
+              </li><li class="jour" data-date="2026-12-17" style="--col:4">
+                <p class="jour-tete"><span class="jour-nom">jeu.</span> <span class="jour-num">17</span></p>
+              </li><li class="jour" data-date="2026-12-18" style="--col:5">
+                <p class="jour-tete"><span class="jour-nom">ven.</span> <span class="jour-num">18</span></p>
+              </li><li class="jour" data-date="2026-12-19" style="--col:6">
+                <p class="jour-tete"><span class="jour-nom">sam.</span> <span class="jour-num">19</span></p>
+              </li><li class="jour" data-date="2026-12-20" style="--col:7">
+                <p class="jour-tete"><span class="jour-nom">dim.</span> <span class="jour-num">20</span></p>
+              </li><li class="jour" data-date="2026-12-21" style="--col:1">
+                <p class="jour-tete"><span class="jour-nom">lun.</span> <span class="jour-num">21</span></p>
+              </li><li class="jour" data-date="2026-12-22" style="--col:2">
+                <p class="jour-tete"><span class="jour-nom">mar.</span> <span class="jour-num">22</span></p>
+              </li><li class="jour" data-date="2026-12-23" style="--col:3">
+                <p class="jour-tete"><span class="jour-nom">mer.</span> <span class="jour-num">23</span></p>
+              </li><li class="jour" data-date="2026-12-24" style="--col:4">
+                <p class="jour-tete"><span class="jour-nom">jeu.</span> <span class="jour-num">24</span></p>
+              </li><li class="jour" data-date="2026-12-25" style="--col:5">
+                <p class="jour-tete"><span class="jour-nom">ven.</span> <span class="jour-num">25</span></p>
+              </li><li class="jour" data-date="2026-12-26" style="--col:6">
+                <p class="jour-tete"><span class="jour-nom">sam.</span> <span class="jour-num">26</span></p>
+              </li><li class="jour" data-date="2026-12-27" style="--col:7">
+                <p class="jour-tete"><span class="jour-nom">dim.</span> <span class="jour-num">27</span></p>
+              </li><li class="jour" data-date="2026-12-28" style="--col:1">
+                <p class="jour-tete"><span class="jour-nom">lun.</span> <span class="jour-num">28</span></p>
+              </li><li class="jour" data-date="2026-12-29" style="--col:2">
+                <p class="jour-tete"><span class="jour-nom">mar.</span> <span class="jour-num">29</span></p>
+              </li><li class="jour" data-date="2026-12-30" style="--col:3">
+                <p class="jour-tete"><span class="jour-nom">mer.</span> <span class="jour-num">30</span></p>
+              </li><li class="jour" data-date="2026-12-31" style="--col:4">
+                <p class="jour-tete"><span class="jour-nom">jeu.</span> <span class="jour-num">31</span></p>
+              </li>
+          </ol>
+        </div>
+      </div>
+      <aside class="cal-fiche cal-fiche--dialogue" aria-live="polite" data-cal-fiche>
+        <p class="cal-fiche-titre">Séance choisie</p>
+        <div data-cal-fiche-contenu><p class="cal-fiche-theme"><span class="cal-point" aria-hidden="true"></span>Dialogue intérieur</p>
+      <p class="cal-fiche-seance">Séance 1 sur 4</p>
+      <p class="cal-fiche-date">samedi 7 novembre</p>
+      <p class="cal-fiche-heure">De 10 h 30 à 12 h</p>
+      <ol class="cal-fiche-graines" aria-hidden="true"><li class="ici"></li><li class=""></li><li class=""></li><li class=""></li></ol>
+      <p class="cal-fiche-periode">Les 4 séances : du 7 novembre au 28 novembre, les samedis matin</p>
+      <p class="cal-fiche-statut"><span class="atelier-etiquette">À venir</span> dans 4 jours</p>
+      <p class="cal-fiche-action"><a href="/tarifs-et-rendez-vous?sujet=atelier&amp;atelier=dialogue-interieur-samedis-matin#rappel" class="bouton bouton--petit" data-libelle="Tarifs et rendez-vous">Demander une place</a></p></div>
+      </aside>
+    </div>
+  </div>
+</section>
+<section class="seance-section conteneur" id="seance" data-sablier-zone>
+  <div class="seance-tete">
+    <div>
+      <h2 class="titre-section" data-anime>Une séance de 1 h 30</h2>
+      <p data-anime>Chaque séance suit le même fil, en visio, avec quatre personnes au plus.</p>
+    </div>
+    <figure class="media seance-media" data-grok style="--cadrage:50% 55%">
+  <picture>
+    <img src="/assets/images/grok/ateliers-visio-1280.webp" srcset="/assets/images/grok/ateliers-visio-640.webp 640w, /assets/images/grok/ateliers-visio-1280.webp 1280w, /assets/images/grok/ateliers-visio-1536.webp 1536w" sizes="(max-width: 760px) 92vw, 44vw" alt="Coin de bureau le soir : ordinateur fermé, carnet ouvert, tasse de tisane et lampe" width="1280" height="853" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  </div>
+  <div class="seance-grille">
+    <div class="sablier-colonne">
+      <figure class="sablier" data-sablier data-visuel>
+        <svg viewBox="0 0 160 240" aria-hidden="true">
+          <defs>
+            <clipPath id="sablier-haut"><path d="M34 34 H126 C126 78 92 96 82 118 H78 C68 96 34 78 34 34 Z" /></clipPath>
+            <clipPath id="sablier-bas"><path d="M78 122 H82 C92 144 126 162 126 206 H34 C34 162 68 144 78 122 Z" /></clipPath>
+          </defs>
+          <path class="sablier-arche" d="M8 236 V80 A72 72 0 0 1 152 80 V236" />
+          <g clip-path="url(#sablier-haut)"><rect class="sablier-sable" data-sable-haut x="20" y="34" width="120" height="88" /></g>
+          <g clip-path="url(#sablier-bas)"><rect class="sablier-sable" data-sable-bas x="20" y="206" width="120" height="0" /></g>
+          <path class="sablier-filet" data-sable-filet d="M80 118 V206" />
+          <path class="sablier-verre" d="M34 34 H126 C126 78 92 96 82 118 H78 C68 96 34 78 34 34 Z M78 122 H82 C92 144 126 162 126 206 H34 C34 162 68 144 78 122 Z" />
+          <path class="sablier-bois" d="M24 26 H136 M24 214 H136" />
+        </svg>
+        <figcaption class="sablier-total"><span class="chiffres">1 h 30</span></figcaption>
+      </figure>
+    </div>
+    <ol class="moments">
+      <li class="moment actif" data-moment="0">
+        <span class="moment-num" aria-hidden="true">1</span>
+        <h3>Une introduction pédagogique</h3>
+        <p>Le thème de l’atelier et les mécanismes de l’hypnose, expliqués simplement.</p>
+      </li><li class="moment" data-moment="1">
+        <span class="moment-num" aria-hidden="true">2</span>
+        <h3>Des questionnaires de prise de conscience</h3>
+        <p>Faire le point sur soi, et suivre son évolution d’une séance à l’autre.</p>
+      </li><li class="moment" data-moment="2">
+        <span class="moment-num" aria-hidden="true">3</span>
+        <h3>Des exercices préparatoires</h3>
+        <p>Respiration et détente : le corps et l’esprit se préparent au voyage.</p>
+      </li><li class="moment" data-moment="3">
+        <span class="moment-num" aria-hidden="true">4</span>
+        <h3>Un voyage hypnotique guidé</h3>
+        <p>Une hypnose guidée de 30 à 40 minutes, et une méthode d’induction simple, à reproduire ensuite chez vous.</p>
+        <p class="moment-duree"><span class="chiffres">30 à 40 min</span></p>
+      </li>
+    </ol>
+  </div>
+</section>
+<section class="visio conteneur" id="visio">
+  <figure class="media visio-media" style="--cadrage:52% 38%">
+  <picture>
+    <img src="/assets/images/visio-laurence-1280.webp" srcset="/assets/images/visio-laurence-640.webp 640w, /assets/images/visio-laurence-1280.webp 1280w" sizes="(max-width: 760px) 92vw, 46vw" alt="Laurence en visioconférence, casque sur les oreilles, souriante" width="1280" height="701" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  <div class="visio-texte">
+    <h2 class="titre-section" data-anime>En visio, depuis chez vous</h2>
+    <p class="texte-fort" data-anime>Les ateliers ont lieu sur Zoom : le lien vous est envoyé par e-mail après le paiement.</p>
+    <ul class="visio-liste"><li data-anime>Une connexion internet et Zoom : rien d’autre à prévoir.</li><li data-anime>Quatre personnes au plus, pour que chaque personne ait sa place.</li><li data-anime>Un groupe déjà constitué ? Les dates et les horaires peuvent être adaptés sur demande.</li></ul>
+    <div class="places" data-places data-visuel>
+      <span class="tasses tasses--places" aria-hidden="true"><svg viewBox="0 0 40 44" aria-hidden="true"><path class="tasse-vapeur" d="M15 15 C12 11 18 9 15 4" /><path class="tasse-vapeur tasse-vapeur--2" d="M23 15 C20 11 26 9 23 4" /><path class="tasse-corps" d="M7 19 H31 V26 C31 33 26 37 19 37 C12 37 7 33 7 26 Z" /><path class="tasse-anse" d="M31 22 C37 22 37 30 31 30" /><path class="tasse-soucoupe" d="M3 40 H35" /></svg><svg viewBox="0 0 40 44" aria-hidden="true"><path class="tasse-vapeur" d="M15 15 C12 11 18 9 15 4" /><path class="tasse-vapeur tasse-vapeur--2" d="M23 15 C20 11 26 9 23 4" /><path class="tasse-corps" d="M7 19 H31 V26 C31 33 26 37 19 37 C12 37 7 33 7 26 Z" /><path class="tasse-anse" d="M31 22 C37 22 37 30 31 30" /><path class="tasse-soucoupe" d="M3 40 H35" /></svg><svg viewBox="0 0 40 44" aria-hidden="true"><path class="tasse-vapeur" d="M15 15 C12 11 18 9 15 4" /><path class="tasse-vapeur tasse-vapeur--2" d="M23 15 C20 11 26 9 23 4" /><path class="tasse-corps" d="M7 19 H31 V26 C31 33 26 37 19 37 C12 37 7 33 7 26 Z" /><path class="tasse-anse" d="M31 22 C37 22 37 30 31 30" /><path class="tasse-soucoupe" d="M3 40 H35" /></svg><svg viewBox="0 0 40 44" aria-hidden="true"><path class="tasse-vapeur" d="M15 15 C12 11 18 9 15 4" /><path class="tasse-vapeur tasse-vapeur--2" d="M23 15 C20 11 26 9 23 4" /><path class="tasse-corps" d="M7 19 H31 V26 C31 33 26 37 19 37 C12 37 7 33 7 26 Z" /><path class="tasse-anse" d="M31 22 C37 22 37 30 31 30" /><path class="tasse-soucoupe" d="M3 40 H35" /></svg></span>
+      <p class="places-legende">4 places</p>
+    </div>
+    <p class="visio-anime" data-anime>Animé par Laurence Katchavenda, maître praticienne en hypnose ericksonienne (IFHE), membre affiliée au SNH. <a href="/mon-parcours" class="lien-trace" data-libelle="Mon parcours">Découvrir son parcours</a></p>
+  </div>
+</section>
+<section class="ateliers ateliers--page" id="sessions">
+  <div class="conteneur ateliers-tete">
+    <div>
+      <h2 class="titre-section" data-anime>Les ateliers de l’automne</h2>
+      <p data-anime>Cinq ateliers entre novembre et décembre : choisissez le jour et l’horaire qui vous conviennent.</p>
+    </div>
+    <figure class="media ateliers-media" data-grok style="--cadrage:50% 55%">
+  <picture>
+    <img src="/assets/images/grok/atelier-seance-1280.webp" srcset="/assets/images/grok/atelier-seance-640.webp 640w, /assets/images/grok/atelier-seance-1280.webp 1280w, /assets/images/grok/atelier-seance-1536.webp 1536w" sizes="(max-width: 760px) 92vw, 44vw" alt="Carnet ouvert, crayon, petit sablier de bois et tasse de camomille près d’une fenêtre" width="1280" height="853" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  </div>
+  <div class="conteneur">
+    <p class="indication-glisser" aria-hidden="true">Faites glisser</p>
+    <div class="ateliers-defile" data-galerie tabindex="0" role="region" aria-label="Les ateliers, défilement horizontal"><ol class="ateliers-liste" data-ateliers data-textes="{&quot;aVenir&quot;:&quot;À venir&quot;,&quot;enCours&quot;:&quot;En cours&quot;,&quot;termine&quot;:&quot;Terminé&quot;,&quot;dans&quot;:&quot;dans {n} jours&quot;,&quot;demain&quot;:&quot;demain&quot;,&quot;aujourdhui&quot;:&quot;aujourd’hui&quot;,&quot;passee1&quot;:&quot;1 séance sur 4 passée&quot;,&quot;passees&quot;:&quot;{n} séances sur 4 passées&quot;}">
+  <li class="atelier" id="atelier-stress-sommeil-lundis" data-atelier="{&quot;id&quot;:&quot;stress-sommeil-lundis&quot;,&quot;theme&quot;:&quot;Stress et sommeil&quot;,&quot;jour&quot;:&quot;les lundis&quot;,&quot;debut&quot;:&quot;19:30&quot;,&quot;fin&quot;:&quot;21:00&quot;,&quot;seances&quot;:[&quot;2026-11-02&quot;,&quot;2026-11-09&quot;,&quot;2026-11-16&quot;,&quot;2026-11-23&quot;],&quot;texte&quot;:&quot;Des outils simples et concrets pour mieux gérer les moments de tension et favoriser le relâchement.&quot;,&quot;themeId&quot;:&quot;stress&quot;}" data-etat="encours">
+    <p class="atelier-statut"><span class="atelier-etiquette" data-atelier-etiquette>En cours</span> <span class="atelier-relatif" data-atelier-relatif>1 séance sur 4 passée</span></p>
+    <h3 class="atelier-titre">Stress et sommeil</h3>
+    <p class="atelier-quand">Du 2 novembre au 23 novembre<br>les lundis, de 19 h 30 à 21 h</p>
+    <ol class="atelier-seances" aria-label="Stress et sommeil"><li class="atelier-seance passee" data-seance="2026-11-02"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">2 nov.</span></li><li class="atelier-seance" data-seance="2026-11-09"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">9 nov.</span></li><li class="atelier-seance" data-seance="2026-11-16"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">16 nov.</span></li><li class="atelier-seance" data-seance="2026-11-23"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">23 nov.</span></li></ol>
+    <p class="atelier-texte">Des outils simples et concrets pour mieux gérer les moments de tension et favoriser le relâchement.</p>
+    <p class="atelier-action" data-atelier-action><span class="atelier-ferme">Atelier commencé : inscriptions closes</span> <a href="/tarifs-et-rendez-vous?sujet=prochain#rappel" class="bouton bouton--petit bouton--contour" data-libelle="Tarifs et rendez-vous">Me prévenir du prochain atelier</a></p>
+  </li><li class="atelier" id="atelier-dialogue-interieur-samedis-matin" data-atelier="{&quot;id&quot;:&quot;dialogue-interieur-samedis-matin&quot;,&quot;theme&quot;:&quot;Dialogue intérieur&quot;,&quot;jour&quot;:&quot;les samedis matin&quot;,&quot;debut&quot;:&quot;10:30&quot;,&quot;fin&quot;:&quot;12:00&quot;,&quot;seances&quot;:[&quot;2026-11-07&quot;,&quot;2026-11-14&quot;,&quot;2026-11-21&quot;,&quot;2026-11-28&quot;],&quot;texte&quot;:&quot;Apprendre à formuler vos objectifs et à dialoguer avec votre inconscient pour faire émerger des solutions.&quot;,&quot;themeId&quot;:&quot;dialogue&quot;}" data-etat="avenir">
+    <p class="atelier-statut"><span class="atelier-etiquette" data-atelier-etiquette>À venir</span> <span class="atelier-relatif" data-atelier-relatif>dans 4 jours</span></p>
+    <h3 class="atelier-titre">Dialogue intérieur</h3>
+    <p class="atelier-quand">Du 7 novembre au 28 novembre<br>les samedis matin, de 10 h 30 à 12 h</p>
+    <ol class="atelier-seances" aria-label="Dialogue intérieur"><li class="atelier-seance" data-seance="2026-11-07"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">7 nov.</span></li><li class="atelier-seance" data-seance="2026-11-14"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">14 nov.</span></li><li class="atelier-seance" data-seance="2026-11-21"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">21 nov.</span></li><li class="atelier-seance" data-seance="2026-11-28"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">28 nov.</span></li></ol>
+    <p class="atelier-texte">Apprendre à formuler vos objectifs et à dialoguer avec votre inconscient pour faire émerger des solutions.</p>
+    <p class="atelier-action" data-atelier-action><a href="/tarifs-et-rendez-vous?sujet=atelier&amp;atelier=dialogue-interieur-samedis-matin#rappel" class="bouton bouton--petit" data-libelle="Tarifs et rendez-vous">Demander une place</a></p>
+  </li><li class="atelier" id="atelier-confiance-en-soi-mardis" data-atelier="{&quot;id&quot;:&quot;confiance-en-soi-mardis&quot;,&quot;theme&quot;:&quot;Confiance en soi&quot;,&quot;jour&quot;:&quot;les mardis&quot;,&quot;debut&quot;:&quot;19:00&quot;,&quot;fin&quot;:&quot;20:30&quot;,&quot;seances&quot;:[&quot;2026-11-17&quot;,&quot;2026-11-24&quot;,&quot;2026-12-01&quot;,&quot;2026-12-08&quot;],&quot;texte&quot;:&quot;Des outils simples pour mieux mobiliser vos ressources et avancer avec davantage de sérénité.&quot;,&quot;themeId&quot;:&quot;confiance&quot;}" data-etat="avenir">
+    <p class="atelier-statut"><span class="atelier-etiquette" data-atelier-etiquette>À venir</span> <span class="atelier-relatif" data-atelier-relatif>dans 14 jours</span></p>
+    <h3 class="atelier-titre">Confiance en soi</h3>
+    <p class="atelier-quand">Du 17 novembre au 8 décembre<br>les mardis, de 19 h à 20 h 30</p>
+    <ol class="atelier-seances" aria-label="Confiance en soi"><li class="atelier-seance" data-seance="2026-11-17"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">17 nov.</span></li><li class="atelier-seance" data-seance="2026-11-24"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">24 nov.</span></li><li class="atelier-seance" data-seance="2026-12-01"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">1er déc.</span></li><li class="atelier-seance" data-seance="2026-12-08"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">8 déc.</span></li></ol>
+    <p class="atelier-texte">Des outils simples pour mieux mobiliser vos ressources et avancer avec davantage de sérénité.</p>
+    <p class="atelier-action" data-atelier-action><a href="/tarifs-et-rendez-vous?sujet=atelier&amp;atelier=confiance-en-soi-mardis#rappel" class="bouton bouton--petit" data-libelle="Tarifs et rendez-vous">Demander une place</a></p>
+  </li><li class="atelier" id="atelier-stress-sommeil-mercredis" data-atelier="{&quot;id&quot;:&quot;stress-sommeil-mercredis&quot;,&quot;theme&quot;:&quot;Stress et sommeil&quot;,&quot;jour&quot;:&quot;les mercredis&quot;,&quot;debut&quot;:&quot;19:00&quot;,&quot;fin&quot;:&quot;20:30&quot;,&quot;seances&quot;:[&quot;2026-11-18&quot;,&quot;2026-11-25&quot;,&quot;2026-12-02&quot;,&quot;2026-12-09&quot;],&quot;texte&quot;:&quot;Des outils simples et concrets pour mieux gérer les moments de tension et favoriser le relâchement.&quot;,&quot;themeId&quot;:&quot;stress&quot;}" data-etat="avenir">
+    <p class="atelier-statut"><span class="atelier-etiquette" data-atelier-etiquette>À venir</span> <span class="atelier-relatif" data-atelier-relatif>dans 15 jours</span></p>
+    <h3 class="atelier-titre">Stress et sommeil</h3>
+    <p class="atelier-quand">Du 18 novembre au 9 décembre<br>les mercredis, de 19 h à 20 h 30</p>
+    <ol class="atelier-seances" aria-label="Stress et sommeil"><li class="atelier-seance" data-seance="2026-11-18"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">18 nov.</span></li><li class="atelier-seance" data-seance="2026-11-25"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">25 nov.</span></li><li class="atelier-seance" data-seance="2026-12-02"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">2 déc.</span></li><li class="atelier-seance" data-seance="2026-12-09"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">9 déc.</span></li></ol>
+    <p class="atelier-texte">Des outils simples et concrets pour mieux gérer les moments de tension et favoriser le relâchement.</p>
+    <p class="atelier-action" data-atelier-action><a href="/tarifs-et-rendez-vous?sujet=atelier&amp;atelier=stress-sommeil-mercredis#rappel" class="bouton bouton--petit" data-libelle="Tarifs et rendez-vous">Demander une place</a></p>
+  </li><li class="atelier" id="atelier-dialogue-interieur-samedis-apres-midi" data-atelier="{&quot;id&quot;:&quot;dialogue-interieur-samedis-apres-midi&quot;,&quot;theme&quot;:&quot;Dialogue intérieur&quot;,&quot;jour&quot;:&quot;les samedis après-midi&quot;,&quot;debut&quot;:&quot;13:00&quot;,&quot;fin&quot;:&quot;14:30&quot;,&quot;seances&quot;:[&quot;2026-11-21&quot;,&quot;2026-11-28&quot;,&quot;2026-12-05&quot;,&quot;2026-12-12&quot;],&quot;texte&quot;:&quot;Apprendre à formuler vos objectifs et à dialoguer avec votre inconscient pour faire émerger des solutions.&quot;,&quot;themeId&quot;:&quot;dialogue&quot;}" data-etat="avenir">
+    <p class="atelier-statut"><span class="atelier-etiquette" data-atelier-etiquette>À venir</span> <span class="atelier-relatif" data-atelier-relatif>dans 18 jours</span></p>
+    <h3 class="atelier-titre">Dialogue intérieur</h3>
+    <p class="atelier-quand">Du 21 novembre au 12 décembre<br>les samedis après-midi, de 13 h à 14 h 30</p>
+    <ol class="atelier-seances" aria-label="Dialogue intérieur"><li class="atelier-seance" data-seance="2026-11-21"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">21 nov.</span></li><li class="atelier-seance" data-seance="2026-11-28"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">28 nov.</span></li><li class="atelier-seance" data-seance="2026-12-05"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">5 déc.</span></li><li class="atelier-seance" data-seance="2026-12-12"><span class="pastille" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="pousse" d="M12 21 V11 M12 14 C9 13 7.5 11 7.5 8.5 C10 8.7 11.6 10.2 12 12.5 M12 12.5 C12.4 9.6 14.2 7.6 17 7.4 C17 10.2 15 12.2 12 12.8" /></svg></span><span class="seance-date">12 déc.</span></li></ol>
+    <p class="atelier-texte">Apprendre à formuler vos objectifs et à dialoguer avec votre inconscient pour faire émerger des solutions.</p>
+    <p class="atelier-action" data-atelier-action><a href="/tarifs-et-rendez-vous?sujet=atelier&amp;atelier=dialogue-interieur-samedis-apres-midi#rappel" class="bouton bouton--petit" data-libelle="Tarifs et rendez-vous">Demander une place</a></p>
+  </li>
+  <li class="atelier atelier--autre" data-atelier-autre>
+    <span class="atelier-autre-arche" aria-hidden="true"></span>
+    <h3 class="atelier-titre">Un autre thème, un autre horaire ?</h3>
+    <p class="atelier-texte">Les ateliers reviennent au fil des saisons. Laissez vos coordonnées : Laurence vous prévient de la prochaine session.</p>
+    <p class="atelier-action"><a href="/tarifs-et-rendez-vous?sujet=prochain#rappel" class="bouton bouton--petit bouton--clair" data-libelle="Tarifs et rendez-vous">Me prévenir</a></p>
+  </li>
+</ol></div>
+  </div>
+</section>
+<section class="savoir conteneur" id="conditions">
+  <div class="savoir-colonne">
+    <h2 class="titre-section" data-anime>Bon à savoir</h2>
+    <ol class="savoir-etapes"><li data-anime><span class="savoir-arche" aria-hidden="true">1</span><div><h3>Réserver</h3><p>Votre demande est confirmée par e-mail, avec les modalités de paiement. La réservation est valable une semaine.</p></div></li><li data-anime><span class="savoir-arche" aria-hidden="true">2</span><div><h3>Régler</h3><p>Par chèque ou par virement, dans les 7 jours. Sans paiement, la place peut être libérée, après une tentative de contact.</p></div></li><li data-anime><span class="savoir-arche" aria-hidden="true">3</span><div><h3>S’engager</h3><p>L’inscription vaut pour les 4 séances. Annulation au moins 48 h avant la première séance : remboursement complet ; plus tard, report possible sur une autre prestation. Aucun remboursement après la première séance, ni pour une séance manquée.</p></div></li></ol>
+    <h2 class="titre-section titre-section--suite" id="questions" data-anime>Questions sur les ateliers</h2>
+    <details class="faq-item" data-anime><summary>Faut-il déjà connaître l’hypnose ?</summary><div class="faq-reponse"><p>Non. L’atelier est une initiation : il démystifie l’hypnose et l’autohypnose, et vous apprend une méthode simple.</p></div></details><details class="faq-item" data-anime><summary>De quoi ai-je besoin ?</summary><div class="faq-reponse"><p>D’une connexion internet et de Zoom. Le lien vous est envoyé par e-mail après le paiement.</p></div></details><details class="faq-item" data-anime><summary>Peut-on venir à plusieurs, en groupe déjà constitué ?</summary><div class="faq-reponse"><p>Oui. Pour un groupe déjà constitué, les dates et les horaires peuvent être adaptés sur demande.</p></div></details><details class="faq-item" data-anime><summary>L’atelier remplace-t-il un suivi ?</summary><div class="faq-reponse"><p>Non. C’est un premier pas possible vers un suivi individuel, au cabinet ou en visio.</p></div></details>
+  </div>
+  <figure class="media savoir-media" data-grok style="--cadrage:35% 40%">
+  <picture>
+    <img src="/assets/images/grok/suivi-faq-1280.webp" srcset="/assets/images/grok/suivi-faq-640.webp 640w, /assets/images/grok/suivi-faq-1280.webp 1280w, /assets/images/grok/suivi-faq-1536.webp 1536w" sizes="(max-width: 760px) 92vw, 36vw" alt="Feuilles de chêne couvertes de rosée, pré dans la brume en arrière-plan" width="1280" height="853" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+</section>
+<section class="grand-final" id="inscription">
+  <figure class="media grand-final-fond" data-grok style="--cadrage:50% 70%;--cadrage-mobile:50% 70%">
+  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/grok/respirer-aube-mobile-640.webp 640w, /assets/images/grok/respirer-aube-mobile-941.webp 941w" sizes="100vw">
+    <img src="/assets/images/grok/respirer-aube-1280.webp" srcset="/assets/images/grok/respirer-aube-640.webp 640w, /assets/images/grok/respirer-aube-1280.webp 1280w, /assets/images/grok/respirer-aube-1672.webp 1672w" sizes="100vw" alt="Ciel pâle de l’aube au-dessus de collines dans la brume" width="1280" height="720" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  <div class="conteneur">
+    <div class="grand-final-carte">
+      <span class="tasses tasses--final" aria-hidden="true"><svg viewBox="0 0 40 44" aria-hidden="true"><path class="tasse-vapeur" d="M15 15 C12 11 18 9 15 4" /><path class="tasse-vapeur tasse-vapeur--2" d="M23 15 C20 11 26 9 23 4" /><path class="tasse-corps" d="M7 19 H31 V26 C31 33 26 37 19 37 C12 37 7 33 7 26 Z" /><path class="tasse-anse" d="M31 22 C37 22 37 30 31 30" /><path class="tasse-soucoupe" d="M3 40 H35" /></svg><svg viewBox="0 0 40 44" aria-hidden="true"><path class="tasse-vapeur" d="M15 15 C12 11 18 9 15 4" /><path class="tasse-vapeur tasse-vapeur--2" d="M23 15 C20 11 26 9 23 4" /><path class="tasse-corps" d="M7 19 H31 V26 C31 33 26 37 19 37 C12 37 7 33 7 26 Z" /><path class="tasse-anse" d="M31 22 C37 22 37 30 31 30" /><path class="tasse-soucoupe" d="M3 40 H35" /></svg><svg viewBox="0 0 40 44" aria-hidden="true"><path class="tasse-vapeur" d="M15 15 C12 11 18 9 15 4" /><path class="tasse-vapeur tasse-vapeur--2" d="M23 15 C20 11 26 9 23 4" /><path class="tasse-corps" d="M7 19 H31 V26 C31 33 26 37 19 37 C12 37 7 33 7 26 Z" /><path class="tasse-anse" d="M31 22 C37 22 37 30 31 30" /><path class="tasse-soucoupe" d="M3 40 H35" /></svg><svg viewBox="0 0 40 44" aria-hidden="true"><path class="tasse-vapeur" d="M15 15 C12 11 18 9 15 4" /><path class="tasse-vapeur tasse-vapeur--2" d="M23 15 C20 11 26 9 23 4" /><path class="tasse-corps" d="M7 19 H31 V26 C31 33 26 37 19 37 C12 37 7 33 7 26 Z" /><path class="tasse-anse" d="M31 22 C37 22 37 30 31 30" /><path class="tasse-soucoupe" d="M3 40 H35" /></svg></span>
+      <h2 class="titre-section" data-anime>Envie d’essayer ?</h2>
+      <p data-anime>Une question avant de vous inscrire ? Demandez à être rappelé, ou appelez directement Laurence.</p>
+      <p class="fin-actions" data-anime>
+        <a href="/tarifs-et-rendez-vous?sujet=atelier#rappel" class="bouton" data-libelle="Tarifs et rendez-vous" data-magnetique>Demander une place</a>
+        <a class="bouton bouton--contour" href="tel:+33953725114">Appeler le 09 53 72 51 14</a>
+      </p>
+      <p class="grand-final-lien" data-anime><a href="/tarifs-et-rendez-vous?sujet=prochain#rappel" class="lien-trace lien-seul" data-libelle="Tarifs et rendez-vous">Me prévenir du prochain atelier</a></p>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="pied" id="pied">
+  <div class="conteneur pied-grille">
+    <div class="pied-marque">
+      <img src="/assets/images/logo-pastille.svg" alt="" width="88" height="88" loading="lazy">
+      <p>Hypnothérapie au cabinet ou en visio, ateliers d’autohypnose en petits groupes.</p>
+    </div>
+    <div>
+      <p class="pied-titre">Contact</p>
+      <p>6, rue Victor de Lanneau<br><span class="insecable">21460 Bard-lès-Époisses</span></p>
+      <ul><li><a href="tel:+33953725114">09 53 72 51 14</a></li><li><a href="mailto:elkahypnose@free.fr">elkahypnose@free.fr</a></li><li><a href="https://www.resalib.fr/praticien/106137-laurence-katchavenda-ei-elkahypnose-praticien-en-hypnose-bard-les-epoisses" target="_blank" rel="noopener">Rendez-vous sur Résalib<span class="visuellement-cache"> (nouvel onglet)</span></a></li></ul>
+    </div>
+    <nav aria-label="Sommaire">
+      <p class="pied-titre">Sommaire</p>
+      <ul><li><a href="/" data-libelle="Accueil">Accueil</a></li><li><a href="/hypnose-et-suivi" data-libelle="L’hypnose et le suivi">L’hypnose et le suivi</a></li><li><a href="/ateliers" data-libelle="Ateliers" aria-current="page">Ateliers</a></li><li><a href="/mon-parcours" data-libelle="Mon parcours">Mon parcours</a></li><li><a href="/tarifs-et-rendez-vous" data-libelle="Tarifs et rendez-vous">Tarifs et rendez-vous</a></li></ul>
+    </nav>
+    <div>
+      <p class="pied-titre">Informations</p>
+      <ul><li><a href="/mentions-legales" data-libelle="Mentions légales">Mentions légales</a></li><li><a href="/confidentialite" data-libelle="Confidentialité">Confidentialité</a></li><li><a href="/conditions-generales-de-vente" data-libelle="Conditions générales de vente">Conditions générales de vente</a></li></ul>
+      <p class="pied-titre pied-titre--suite">Suivre Elka Hypnose</p>
+      <ul><li><a href="https://www.facebook.com/profile.php?id=61572601529462" target="_blank" rel="noopener">Facebook<span class="visuellement-cache"> (nouvel onglet)</span></a></li><li><a href="https://instagram.com/elkahypnose/" target="_blank" rel="noopener">Instagram<span class="visuellement-cache"> (nouvel onglet)</span></a></li></ul>
+    </div>
+  </div>
+  <div class="conteneur pied-bas">
+    <p class="pied-avertissement">Je ne suis pas médecin : l’hypnothérapie ne remplace pas un suivi ou un traitement médical.</p>
+    <ul class="pied-confort">
+      <li><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></li>
+      <li><a href="#haut" data-sans-transition>Retour en haut</a></li>
+    </ul>
+    <p>Maquette : les informations marquées « à compléter » seront fournies par Laurence Katchavenda.</p>
+    <p>© Elka Hypnose</p>
+  </div>
+</footer>
+<div data-barre-fixe>
+  <a class="bouton bouton--contour" href="tel:+33953725114">Appeler</a>
+  <a class="bouton" href="/tarifs-et-rendez-vous#rendez-vous" data-libelle="Tarifs et rendez-vous">Rendez-vous</a>
+</div>
+</body>
+</html>

@@ -4,7 +4,7 @@
    - Densité de pixels limitée (1,25 sur ordinateur, 1 sur téléphone), 60 images par seconde au plus,
      résolution réduite d'elle-même si les images prennent trop de temps.
    - Le shader sort tout de suite là où il n'y a pas de brume (haut de l'image). */
-import { boucle, etat, quand } from './socle/index.js?v=1';
+import { boucle, etat, quand } from './socle/index.js?v=2';
 
 const VERT = 'attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
 const FRAG = `precision mediump float;

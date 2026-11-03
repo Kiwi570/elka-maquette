@@ -45,10 +45,6 @@
     "fermeture": "Fermeture exceptionnelle",
     "horaires": "Lundi au vendredi 9 h – 12 h et 13 h 30 – 19 h, samedi 9 h – 12 h"
   },
-  "nav": {
-    "ateliers": "Ateliers",
-    "parcours": "Mon parcours"
-  },
   "pages": {
     "accueil": {
       "titre": "Elka Hypnose : hypnothérapie à Bard-lès-Époisses et en visio",
@@ -98,6 +94,20 @@
       "nav": "Page introuvable",
       "partageAlt": "Chemin qui se perd dans la brume",
       "accroche": "Page introuvable"
+    },
+    "ateliers": {
+      "titre": "Ateliers d’autohypnose en visio : Elka Hypnose",
+      "description": "Ateliers d’autohypnose en visio avec Laurence Katchavenda : 3 thèmes, 4 séances de 1 h 30, 4 places, 80 €. Calendrier de novembre et décembre 2026, déroulé d’une séance et conditions.",
+      "nav": "Ateliers",
+      "partageAlt": "Quatre tasses de tisane sur une table de bois, vues à travers une arche",
+      "accroche": "Apprendre l’autohypnose en petit groupe"
+    },
+    "parcours": {
+      "titre": "Mon parcours : Laurence Katchavenda, Elka Hypnose",
+      "description": "Le parcours de Laurence Katchavenda : environ 25 ans professeure des écoles, puis formée à l’hypnose ericksonienne et humaniste à l’IFHE, membre affiliée au SNH. Son approche et son cabinet à Bard-lès-Époisses.",
+      "nav": "Mon parcours",
+      "partageAlt": "Pupitre d’écolier dans un pré au petit matin, vu à travers une arche",
+      "accroche": "De l’école au cabinet"
     }
   },
   "accueil": {
@@ -157,10 +167,11 @@
     },
     "parcours": {
       "titre": "Mon parcours",
-      "texte": "Après environ 25 ans auprès d’enfants de 4 à 11 ans comme professeure des écoles, Laurence s’est formée à l’hypnose à partir de 2023, à l’Institut français d’hypnose humaniste et ericksonienne (IFHE).",
+      "texte": "Après environ 25 ans auprès d’enfants de 4 à 11 ans comme professeure des écoles, j’ai amorcé ma reconversion en 2023, puis je me suis formée à l’hypnose à l’Institut français d’hypnose humaniste et ericksonienne (IFHE).",
       "snh": "Membre affiliée au Syndicat national des hypnothérapeutes",
       "snhAlt": "Syndicat national des hypnothérapeutes",
-      "alt": "Laurence en entretien au cabinet, ses diplômes au mur"
+      "alt": "Vieux pupitre d’écolier et sa chaise dans un pré au lever du soleil",
+      "lien": "Lire mon parcours"
     },
     "ateliers": {
       "titre": "Ateliers d’autohypnose",
@@ -180,7 +191,7 @@
       "passees": "{n} séances sur 4 passées",
       "inscrire": "Demander une place",
       "ferme": "Atelier commencé : inscriptions closes",
-      "prochain": "Être prévenu du prochain atelier",
+      "prochain": "Me prévenir du prochain atelier",
       "horaire": "{jour}, de {debut} à {fin}",
       "periode": "Du {d1} au {d2}",
       "engagement": "Engagement sur les 4 séances. Annulation remboursée si elle a lieu au moins 48 h avant la première séance ; moins de 48 h avant, report possible sur une autre prestation ; aucun remboursement après la première séance.",
@@ -189,12 +200,14 @@
       "prochainCourt": "Me prévenir du prochain atelier",
       "autreTitre": "Un autre thème, un autre horaire ?",
       "autreTexte": "Les ateliers reviennent au fil des saisons. Laissez vos coordonnées : Laurence vous prévient de la prochaine session.",
-      "autreAction": "Être prévenu"
+      "autreAction": "Me prévenir",
+      "voir": "Les thèmes et le calendrier",
+      "themesTitre": "Trois thèmes au choix"
     },
     "avis": {
       "titre": "Ce qu’en disent les personnes accompagnées",
       "note": "5,0 sur 5",
-      "nombre": "· 4 avis publiés sur Résalib",
+      "nombre": "(4 avis publiés sur Résalib)",
       "source": "Extraits d’avis publiés sur Résalib.",
       "voir": "Voir les avis sur Résalib",
       "etoiles": "Note de 5 sur 5"
@@ -318,7 +331,8 @@
       "paiement2": "En visio : virement, avant la séance.",
       "paiement3": "Carte bancaire : lors de la réservation sur Résalib.",
       "paiement4": "Une facture vous est remise après paiement.",
-      "alt": "Tasse de tisane et carnet ouvert sur une nappe de lin"
+      "alt": "Tasse de tisane et carnet ouvert sur une nappe de lin",
+      "atelierLien": "Voir les thèmes et les dates"
     },
     "rdv": {
       "titre": "Prendre rendez-vous",
@@ -416,5 +430,173 @@
     "retour": "Revenir à l’accueil",
     "rdv": "Prendre rendez-vous",
     "alt": "Chemin de campagne bordé de piquets, qui se perd dans un épais brouillard"
+  },
+  "ateliers": {
+    "tete": {
+      "surtitre": "Ateliers d’autohypnose · en visio",
+      "titre1": "Apprendre",
+      "titreMot": "l’autohypnose",
+      "titre2": "en petit groupe",
+      "texte": "Quatre séances de 1 h 30 en visio, une par semaine, pour apprendre une méthode simple, à reproduire ensuite chez soi.",
+      "prix": "80 €",
+      "prixUnite": "par personne, les 4 séances",
+      "places": "4 places par atelier",
+      "action": "Demander une place",
+      "calendrier": "Voir le calendrier",
+      "prochain": "Prochain atelier : {theme}, dès le {date}",
+      "aucun": "Les prochaines dates arrivent bientôt.",
+      "alt": "Quatre tasses de tisane en céramique sur une table ronde en bois, près d’une fenêtre"
+    },
+    "themes": {
+      "titre": "Trois thèmes, trois portes",
+      "texte": "Trois thèmes au choix, avec la même méthode : choisissez celui qui vous parle.",
+      "objectifs": "Ce que l’on y travaille",
+      "dates": "Ses ateliers",
+      "voir": "Voir ses dates",
+      "commun": "Pour chaque thème : une méthode d’induction simple, à reproduire ensuite en autonomie."
+    },
+    "calendrier": {
+      "titre": "Le calendrier des séances",
+      "texte": "Novembre et décembre 2026 : chaque graine est une séance. Choisissez-en une pour voir son atelier.",
+      "filtres": "Afficher les séances",
+      "tous": "Tous les thèmes",
+      "jours": "lun. mar. mer. jeu. ven. sam. dim.",
+      "joursLongs": "lundi mardi mercredi jeudi vendredi samedi dimanche",
+      "seance": "Séance {n} sur 4",
+      "aujourdhui": "Aujourd’hui",
+      "choisie": "Séance choisie",
+      "detailDate": "{jour} {date}",
+      "detailHoraire": "De {debut} à {fin}",
+      "detailPeriode": "Les 4 séances : du {d1} au {d2}, {jour}",
+      "region": "Calendrier de novembre et décembre 2026",
+      "mois": "janvier février mars avril mai juin juillet août septembre octobre novembre décembre",
+      "seanceSuite": "séance {n} sur 4, {date}"
+    },
+    "seance": {
+      "titre": "Une séance de 1 h 30",
+      "texte": "Chaque séance suit le même fil, en visio, avec quatre personnes au plus.",
+      "m1Titre": "Une introduction pédagogique",
+      "m1Texte": "Le thème de l’atelier et les mécanismes de l’hypnose, expliqués simplement.",
+      "m2Titre": "Des questionnaires de prise de conscience",
+      "m2Texte": "Faire le point sur soi, et suivre son évolution d’une séance à l’autre.",
+      "m3Titre": "Des exercices préparatoires",
+      "m3Texte": "Respiration et détente : le corps et l’esprit se préparent au voyage.",
+      "m4Titre": "Un voyage hypnotique guidé",
+      "m4Texte": "Une hypnose guidée de 30 à 40 minutes, et une méthode d’induction simple, à reproduire ensuite chez vous.",
+      "m4Duree": "30 à 40 min",
+      "total": "1 h 30",
+      "alt": "Coin de bureau le soir : ordinateur fermé, carnet ouvert, tasse de tisane et lampe"
+    },
+    "visio": {
+      "titre": "En visio, depuis chez vous",
+      "texte": "Les ateliers ont lieu sur Zoom : le lien vous est envoyé par e-mail après le paiement.",
+      "l1": "Une connexion internet et Zoom : rien d’autre à prévoir.",
+      "l2": "Quatre personnes au plus, pour que chaque personne ait sa place.",
+      "l3": "Un groupe déjà constitué ? Les dates et les horaires peuvent être adaptés sur demande.",
+      "places": "4 places",
+      "anime": "Animé par Laurence Katchavenda, maître praticienne en hypnose ericksonienne (IFHE), membre affiliée au SNH.",
+      "animeLien": "Découvrir son parcours"
+    },
+    "sessions": {
+      "titre": "Les ateliers de l’automne",
+      "texte": "Cinq ateliers entre novembre et décembre : choisissez le jour et l’horaire qui vous conviennent.",
+      "alt": "Carnet ouvert, crayon, petit sablier de bois et tasse de camomille près d’une fenêtre"
+    },
+    "conditions": {
+      "titre": "Bon à savoir",
+      "c1Titre": "Réserver",
+      "c1Texte": "Votre demande est confirmée par e-mail, avec les modalités de paiement. La réservation est valable une semaine.",
+      "c2Titre": "Régler",
+      "c2Texte": "Par chèque ou par virement, dans les 7 jours. Sans paiement, la place peut être libérée, après une tentative de contact.",
+      "c3Titre": "S’engager",
+      "c3Texte": "L’inscription vaut pour les 4 séances. Annulation au moins 48 h avant la première séance : remboursement complet ; plus tard, report possible sur une autre prestation. Aucun remboursement après la première séance, ni pour une séance manquée."
+    },
+    "faq": {
+      "titre": "Questions sur les ateliers",
+      "q1": "Faut-il déjà connaître l’hypnose ?",
+      "r1": "Non. L’atelier est une initiation : il démystifie l’hypnose et l’autohypnose, et vous apprend une méthode simple.",
+      "q2": "De quoi ai-je besoin ?",
+      "r2": "D’une connexion internet et de Zoom. Le lien vous est envoyé par e-mail après le paiement.",
+      "q3": "Et si je manque une séance ?",
+      "r3": "L’inscription engage pour les 4 séances : une séance manquée n’est pas remboursée, même en partie.",
+      "q4": "Peut-on venir à plusieurs, en groupe déjà constitué ?",
+      "r4": "Oui. Pour un groupe déjà constitué, les dates et les horaires peuvent être adaptés sur demande.",
+      "q5": "L’atelier remplace-t-il un suivi ?",
+      "r5": "Non. C’est un premier pas possible vers un suivi individuel, au cabinet ou en visio."
+    },
+    "fin": {
+      "titre": "Envie d’essayer ?",
+      "texte": "Une question avant de vous inscrire ? Demandez à être rappelé, ou appelez directement Laurence.",
+      "action": "Demander une place",
+      "prochain": "Me prévenir du prochain atelier"
+    }
+  },
+  "parcours": {
+    "tete": {
+      "surtitre": "Laurence Katchavenda, hypnothérapeute",
+      "titre1": "De l’école",
+      "titreMot": "au cabinet",
+      "texte": "Une ancienne professeure des écoles, devenue hypnothérapeute à Bard-lès-Époisses : voici le chemin qui m’a menée jusqu’au cabinet.",
+      "info": "Maître praticienne en hypnose ericksonienne · IFHE · membre affiliée au SNH",
+      "action": "Prendre rendez-vous",
+      "alt": "Vieux pupitre d’écolier et sa chaise dans un pré au lever du soleil, un cahier ouvert dessus"
+    },
+    "rencontre": {
+      "titre": "Enseigner, puis accompagner",
+      "texte1": "Pendant environ 25 ans, j’ai enseigné à des enfants de 4 à 11 ans.",
+      "texte2": "En 2023, j’ai amorcé ma reconversion vers l’hypnose. Aujourd’hui, j’accompagne les enfants dès 5 ans, les adolescents et les adultes, au cabinet ou en visio.",
+      "citation": "Le mieux-être ne se limite pas au temps passé en séance."
+    },
+    "chemin": {
+      "titre": "Le chemin parcouru",
+      "texte": "De la classe au cabinet, sept étapes : à chacune, la graine pousse un peu plus.",
+      "region": "Le chemin parcouru, défilement horizontal"
+    },
+    "formations": {
+      "titre": "Mes formations",
+      "texte": "Pour l’essentiel à l’IFHE, l’Institut français d’hypnose humaniste et ericksonienne, présenté comme une école de référence, fondé par Olivier Lockert et Patricia d’Angeli.",
+      "f1": "Maître praticienne en hypnose ericksonienne, nouvelle hypnose et PNL, à l’IFHE",
+      "f2": "Praticienne en hypnothérapie de l’enfance",
+      "f3": "Praticienne en hypnose humaniste et thérapie symbolique avancée, à l’IFHE",
+      "specialisations": "Spécialisations",
+      "s1": "Stress, anxiété et dépression",
+      "s2": "Traumatismes",
+      "s3": "Addictions",
+      "s4": "Accompagnement des enfants",
+      "alt": "Trois vieux livres reliés, carnet ouvert et crayon sur une nappe de lin, près d’une fenêtre",
+      "a1": "2024",
+      "a2": "2024",
+      "a3": "2025"
+    },
+    "approche": {
+      "titre": "Ma façon d’accompagner",
+      "a1Titre": "Ericksonienne et humaniste",
+      "a1Texte": "L’hypnose ericksonienne et l’hypnose humaniste, une approche consciente du changement : deux méthodes complémentaires.",
+      "a2Titre": "À votre rythme",
+      "a2Texte": "L’objectif : vous aider à retrouver vos propres ressources, en douceur.",
+      "a3Titre": "Entre les séances aussi",
+      "a3Texte": "Quand c’est utile, je vous propose des outils respiratoires et de régulation émotionnelle à utiliser chez vous.",
+      "a4Titre": "Un cadre clair",
+      "a4Texte": "Je ne suis pas médecin et je ne pose pas de diagnostic : l’hypnothérapie ne remplace pas un suivi médical.",
+      "lien": "Lire la charte d’engagement",
+      "alt": "Banc de bois sous un grand chêne, au-dessus d’un village dans la brume"
+    },
+    "cabinet": {
+      "titre": "Le cabinet",
+      "texte": "Un lieu calme à Bard-lès-Époisses, entre murs vert d’eau et papier peint végétal. Choisissez une photo pour l’agrandir.",
+      "agrandir": "Agrandir la photo",
+      "fermer": "Fermer",
+      "precedente": "Photo précédente",
+      "suivante": "Photo suivante",
+      "compteur": "{n} sur {total}",
+      "visionneuse": "Photos du cabinet",
+      "visioAlt": "Laurence en visio depuis le cabinet, casque sur les oreilles, souriante"
+    },
+    "fin": {
+      "titre": "Faisons connaissance",
+      "texte": "Le premier rendez-vous dure environ 1 h 30 : le temps de faire connaissance et de définir ensemble vos objectifs.",
+      "action": "Prendre rendez-vous",
+      "suivi": "Comment se passe un suivi"
+    }
   }
 }

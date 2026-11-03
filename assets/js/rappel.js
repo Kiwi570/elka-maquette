@@ -2,7 +2,7 @@
    Le choix arrive déjà fait selon le bouton d'origine (?sujet=atelier&atelier=… : le socle remplit les champs).
    Champs qui dépendent du sujet, hauteur animée entre les étapes, récapitulatif en direct.
    L'envoi lui-même (vérification, pas de double envoi, message « rien n'a été envoyé ») est fait par le socle. */
-import { etat, rafraichir } from './socle/index.js?v=1';
+import { etat, rafraichir } from './socle/index.js?v=2';
 
 const gsap = window.gsap;
 

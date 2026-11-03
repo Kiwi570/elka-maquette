@@ -2,7 +2,7 @@
    L'arche de lumière s'ouvre en 5 s à l'inspiration et se referme en 5 s à l'expiration, six fois.
    La boucle ne tourne que pendant l'exercice et seulement si la section est à l'écran (boucle du socle).
    En mode calme, rien ne bouge : seules la consigne et le temps restant changent. */
-import { boucle, etat } from './socle/index.js?v=1';
+import { boucle, etat } from './socle/index.js?v=2';
 
 const CYCLE = 10, DUREE = 60;
 

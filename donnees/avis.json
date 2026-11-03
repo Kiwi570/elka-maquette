@@ -1,6 +1,18 @@
 [
-  { "nom": "Raphaelle B.", "texte": "Son écoute active, sa bienveillance et les techniques mises en oeuvre" },
-  { "nom": "Eva M.", "texte": "Ma fille se sent beaucoup mieux." },
-  { "nom": "Anne Laure M.", "texte": "je me sens extrêmement bien" },
-  { "nom": "Caroline E.", "texte": "Merveilleuse" }
+  {
+    "nom": "Raphaelle B.",
+    "texte": "Son écoute active, sa bienveillance et les techniques mises en œuvre"
+  },
+  {
+    "nom": "Eva M.",
+    "texte": "Ma fille se sent beaucoup mieux."
+  },
+  {
+    "nom": "Anne Laure M.",
+    "texte": "[…] je me sens extrêmement bien"
+  },
+  {
+    "nom": "Caroline E.",
+    "texte": "Merveilleuse"
+  }
 ]

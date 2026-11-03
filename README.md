@@ -10,8 +10,10 @@ Adresse prévue : https://elka-maquette.vercel.app
 
 | Page | Fichier | Contenu |
 |---|---|---|
-| Accueil | `index.html` | Le seuil, rencontre, accompagnements, chemin d'un suivi, respirer un instant, parcours, ateliers, avis, carnet, venir au cabinet |
+| Accueil | `index.html` | Le seuil, rencontre, accompagnements, chemin d'un suivi, respirer un instant, aperçus du parcours et des ateliers, avis, carnet, venir au cabinet |
 | L'hypnose et le suivi | `hypnose-et-suivi.html` | Trois étapes, cabinet ou visio, enfants, cadre et limites, charte, questions fréquentes |
+| Ateliers | `ateliers.html` | Trois thèmes derrière des portes, calendrier des séances (filtre `?theme=stress`, `dialogue` ou `confiance`), une séance de 1 h 30 (sablier), visio et 4 places, les ateliers avec leur statut, bon à savoir, questions |
+| Mon parcours | `mon-parcours.html` | Rencontre, le chemin parcouru (galerie horizontale épinglée, plantes qui poussent), formations et cachets, façon d'accompagner, le cabinet (visionneuse), avis |
 | Tarifs et rendez-vous | `tarifs-et-rendez-vous.html` | Tarifs, trois façons de réserver, demande de rappel simulée, conditions, horaires, accès |
 | Pages légales | `mentions-legales.html`, `confidentialite.html`, `conditions-generales-de-vente.html` | Avec la fiche des informations à fournir |
 | Page introuvable | `404.html` | « Vous avez fait un détour » |
@@ -26,7 +28,8 @@ node outils/images-partage.mjs   images de partage 1200×630
 node _audit/audit.mjs            audit complet (avant chaque livraison)
 ```
 
-- Textes : `donnees/textes/fr.json` ; ateliers : `donnees/ateliers.json` (dates des 4 séances, horaires) ;
+- Textes : `donnees/textes/fr.json` ; ateliers : `donnees/ateliers.json` (dates des 4 séances, horaires, thème `themeId`) ;
+  thèmes des ateliers : `donnees/themes.json` ; étapes du parcours : `donnees/parcours.json` ;
   horaires et fermetures du cabinet : `donnees/horaires.json` (liste `fermetures` : `{ "du": "2026-12-24", "au": "2027-01-02" }`) ;
   pages légales : `donnees/legal.json`.
 - Les statuts « Joignable maintenant » et ceux des ateliers sont calculés à l'heure de Paris, jours fériés compris.
@@ -57,6 +60,7 @@ Garder : la mention « Illustration générée » sur chaque image créée par I
 - Conditions de paiement et d'annulation à harmoniser entre les CGV et les fiches de réservation.
 - Mention de TVA : « TVA non applicable, art. 293 B du CGI » jusqu'au 31 décembre 2026 (le site actuel cite déjà le CIBS).
 - IBAN affiché sur la page de réservation visio du site actuel : à retirer.
+- Ateliers : afficher ou non le nombre de places restantes par atelier ; extraits d'avis plus complets si Laurence le souhaite.
 
 ## Images reçues (non livrées dans le zip)
 

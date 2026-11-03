@@ -2,13 +2,13 @@
   "nom": "Elka Hypnose",
   "adresse": "https://elka-maquette.vercel.app",
   "siteActuel": "elkahypnose.fr",
-  "version": 1,
+  "version": 2,
   "langues": ["fr"],
   "navigation": [
     "accueil",
     { "page": "suivi" },
-    { "page": "accueil", "ancre": "ateliers", "libelle": "nav.ateliers" },
-    { "page": "accueil", "ancre": "parcours", "libelle": "nav.parcours" },
+    { "page": "ateliers" },
+    { "page": "parcours" },
     { "page": "tarifs-rendez-vous" }
   ],
   "actionEntete": { "page": "tarifs-rendez-vous", "ancre": "rendez-vous" },

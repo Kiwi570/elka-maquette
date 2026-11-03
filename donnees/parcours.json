@@ -1,7 +1,10 @@
 [
   {
     "quand": "Environ 25 ans",
-    "quoi": "Professeure des écoles auprès d’enfants de 4 à 11 ans"
+    "quoi": "Professeure des écoles auprès d’enfants de 4 à 11 ans",
+    "image": "grok/parcours-ecole",
+    "cadrage": "50% 45%",
+    "alt": "Dessins d’enfants à la craie sur une vieille ardoise : soleils, maisons et fleurs"
   },
   {
     "quand": "2023",
@@ -22,5 +25,12 @@
   {
     "quand": "2025",
     "quoi": "Praticienne en hypnose humaniste et thérapie symbolique avancée, à l’IFHE"
+  },
+  {
+    "quand": "Aujourd’hui",
+    "quoi": "Le cabinet de Bard-lès-Époisses, et les séances en visio",
+    "image": "cabinet-salle",
+    "cadrage": "40% 60%",
+    "alt": "Le cabinet : murs vert d’eau, bureau, deux fauteuils et un tapis rouge"
   }
 ]
